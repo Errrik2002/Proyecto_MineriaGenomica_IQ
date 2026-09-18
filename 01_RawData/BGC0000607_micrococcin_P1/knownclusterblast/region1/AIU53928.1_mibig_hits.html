@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AIU53928.1</td>
+              <td>putative_integrase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000607.5">BGC0000607.5</a></td>
+              <td>ribosomal:RiPP:Thiopeptide</td>
+              <td>100.0</td>
+              <td>100.0</td>
+              <td>369.0</td>
+              <td>1.88e-132</td>
+          </tr>
+    
+          <tr>
+              <td>EOO99813.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001861.4">BGC0001861.4</a></td>
+              <td>ribosomal:RiPP:Glycocin</td>
+              <td>47.0</td>
+              <td>93.6</td>
+              <td>144.0</td>
+              <td>8.84e-44</td>
+          </tr>
+    
+          <tr>
+              <td>WP_002130744.1</td>
+              <td>tyrosine-type_recombinase/integrase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001863.4">BGC0001863.4</a></td>
+              <td>ribosomal:RiPP:Glycocin+terpene</td>
+              <td>46.0</td>
+              <td>93.6</td>
+              <td>140.0</td>
+              <td>4.03e-42</td>
+          </tr>
+    
+          <tr>
+              <td>AXH03897.1</td>
+              <td>integrase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001894.2">BGC0001894.2</a></td>
+              <td>saccharide</td>
+              <td>40.0</td>
+              <td>93.1</td>
+              <td>125.0</td>
+              <td>2.24e-36</td>
+          </tr>
+    
+          <tr>
+              <td>EFJ68973.1</td>
+              <td>site-specific_recombinase,_phage_integrase_family</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000628.4">BGC0000628.4</a></td>
+              <td>ribosomal:RiPP:Thiopeptide</td>
+              <td>31.0</td>
+              <td>101.6</td>
+              <td>82.0</td>
+              <td>2.58e-19</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

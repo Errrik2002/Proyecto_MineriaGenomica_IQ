@@ -2,20 +2,22 @@
 if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 
-install.packages("seqinr")
-BiocManager::install("msa")
-BiocManager::install("ggmsa")
-BiocManager::install("Biostrings")
-install.packages("ape")
-BiocManager::install("ggtree")
+install.packages("seqinr") #manejar secuencias 
+BiocManager::install("msa") #Hacer el alineamiento
+BiocManager::install("ggmsa") #Visualizacion del alineamiento
+BiocManager::install("Biostrings") #Manejar secuencias
+install.packages("ape") #Realizar el arbol filogenetico
+BiocManager::install("ggtree") #Visualizar el arbol filogenetico
+BiocManager::install("DECIPHER") #Hacer alineamiento y curation
 
+#Cargar los paquetes instalados
 library(Biostrings)
 library(msa)
 library(seqinr)
 library(ggmsa)
 library(ape)
 library(ggtree)
-
+library(DECIPHER)
 
 
 secuencias_fasta <- readAAStringSet("01_RawData/txt-to-fasta_17-sequences.fasta")
@@ -82,3 +84,51 @@ ggtree(ycaotree)+
   geom_nodelab(geom='label')+
   hexpand(0.05)
 dev.off()
+
+#### USANDO DECIPHER ####
+
+?DECIPHER
+?DB2Seqs()
+?TreeLine()
+?AdjustAlignment()
+
+
+dna_fasta <- readDNAStringSet("01_RawData/txt-to-fasta_17-sequences.fasta")
+dna_fasta
+
+
+fasta_alineado <- AlignSeqs(dna_fasta)
+fasta_alineado
+
+#Ver en un browser
+?BrowseSeqs()
+BrowseSeqs(fasta_alineado)
+
+writeXStringSet(fasta_alineado, "aligned_seqs.fasta")
+
+fasta_ajustado <- AdjustAlignment(fasta_alineado)
+
+BrowseSeqs(fasta_ajustado)
+
+arbol_patito <- TreeLine(fasta_alineado)
+
+
+#forma de imprimirlo, pero raro
+p <- par(mar=c(1, 1, 1, 30),
+   xpd=FALSE)
+plot(arbol_patito,
+   yaxt="n",
+   horiz=TRUE)
+arrows(-0.2, 2, 0, 2,
+   angle=45,
+   length=0.5,
+   code=3)
+text(-0.1, 2,
+   "0.2 subs./site",
+   pos=3)
+par(p)
+
+class(arbol_patito) #sale como dndograma
+?ggtree
+
+ggtree(arbol_patito)

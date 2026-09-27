@@ -26,23 +26,55 @@ nosiheptide_YcaO
 #### Realizar los Multiple Sequence Alignment ####
 
 
-#Thiopeptina
+###Thiopeptina
 msa_thiopeptina_Ycao <- msa(thiopeptina_YcaO)
-
 msa_thiopeptina_Ycao_Decipher <- AlignSeqs(thiopeptina_YcaO)
 #DECIPHER no puedo modificar el algoritmo
 
-
 #Visualizar MSA en Browser
-
 #Pasar el msa original a XStringSet
 msa_thiopeptina_Ycao_compatible <- unmasked(msa_thiopeptina_Ycao)
 BrowseSeqs(msa_thiopeptina_Ycao_compatible, highlight = 1)
 
 #### Guardar el MSA ####
-
 writeXStringSet(msa_thiopeptina_Ycao_compatible, "03_Results/msa_thiopeptina.fasta")
 
-#Syomicina
 
-msa_syiomicina_Ycao <- msa
+
+###Syomicina
+#msa
+msa_syiomicina_Ycao <- msa(syomicina_YcaO)
+msa_syiomicina_Ycao_decipher <- AlignSeqs(syomicina_YcaO)
+
+#Visualizar en Browser, hacerlo compatible con BrowSeqs
+msa_syiomicina_Ycao_compatible <- unmasked(msa_syiomicina_Ycao)
+BrowseSeqs(msa_syiomicina_Ycao_compatible)
+
+#Guardar MSA
+writeXStringSet(msa_syiomicina_Ycao_compatible, "03_Results/msa_syomicina_ycao.fasta")
+
+
+
+
+###GE37468A
+msa_GE37468A_Ycao <- msa(GE37468A_YcaO)
+msa_GE37468A_Ycao_DECIPHER <- AlignSeqs(GE37468A_YcaO)
+
+#Visualizar en Browser
+msa_GE37468A_Ycao_compatible <- unmasked(msa_GE37468A_Ycao)
+BrowseSeqs(msa_GE37468A_Ycao_compatible)
+
+#Guardar MSA 
+writeXStringSet(msa_GE37468A_Ycao_compatible, "03_Results/msa_GE37468A_Ycao.fasta")
+
+
+###Nosiheptide
+msa_nosiheptide_Ycao <- msa(nosiheptide_YcaO)
+msa_nosiheptide_Ycao_decipher <- AlignSeqs(nosiheptide_YcaO)
+
+#Visualizar en Browser
+msa_nosiheptide_Ycao_compatible <- unmasked(msa_nosiheptide_Ycao)
+BrowseSeqs(msa_nosiheptide_Ycao_compatible)
+
+#Guardar MSA
+writeXStringSet(msa_nosiheptide_Ycao_compatible, "03_Results/msa_nosiheptide_ycao.fasta")

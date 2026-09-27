@@ -21,8 +21,12 @@ GE37468A_YcaO
 nosiheptide_YcaO <- readAAStringSet("01_RawData/nosiheptide_BGC0000610_BLAST_24-09-26/nosiheptide_ACR48336.1_YCAO.txt")
 nosiheptide_YcaO
 
-#Realizar los Multiple Sequence Alignment
 
+
+#### Realizar los Multiple Sequence Alignment ####
+
+
+#Thiopeptina
 msa_thiopeptina_Ycao <- msa(thiopeptina_YcaO)
 
 msa_thiopeptina_Ycao_Decipher <- AlignSeqs(thiopeptina_YcaO)
@@ -35,7 +39,10 @@ msa_thiopeptina_Ycao_Decipher <- AlignSeqs(thiopeptina_YcaO)
 msa_thiopeptina_Ycao_compatible <- unmasked(msa_thiopeptina_Ycao)
 BrowseSeqs(msa_thiopeptina_Ycao_compatible, highlight = 1)
 
-
 #### Guardar el MSA ####
 
 writeXStringSet(msa_thiopeptina_Ycao_compatible, "03_Results/msa_thiopeptina.fasta")
+
+#Syomicina
+
+msa_syiomicina_Ycao <- msa

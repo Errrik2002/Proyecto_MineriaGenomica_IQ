@@ -1,3 +1,12 @@
+#Guardar objetos
+# saveRDS()
+# readRDS()
+
+install.packages("phangorn")
+install.packages("igraph")
+
+#### Carga de paquetes ya instalados ####
+
 library(pacman)
 library(Biostrings)
 library(msa)
@@ -6,6 +15,7 @@ library(ggmsa)
 library(ape)
 library(ggtree)
 library(DECIPHER)
+library(phangorn)
 
 
 #Cargar las secuencias 
@@ -24,7 +34,7 @@ nosiheptide_YcaO
 
 
 #### Realizar los Multiple Sequence Alignment ####
-
+?msa()
 
 ###Thiopeptina
 msa_thiopeptina_Ycao <- msa(thiopeptina_YcaO)
@@ -34,7 +44,7 @@ msa_thiopeptina_Ycao_Decipher <- AlignSeqs(thiopeptina_YcaO)
 #Visualizar MSA en Browser
 #Pasar el msa original a XStringSet
 msa_thiopeptina_Ycao_compatible <- unmasked(msa_thiopeptina_Ycao)
-BrowseSeqs(msa_thiopeptina_Ycao_compatible, highlight = 1)
+BrowseSeqs(msa_thiopeptina_Ycao_compatible, highlight = 0)
 
 #### Guardar el MSA ####
 writeXStringSet(msa_thiopeptina_Ycao_compatible, "03_Results/msa_thiopeptina.fasta")
@@ -78,3 +88,60 @@ BrowseSeqs(msa_nosiheptide_Ycao_compatible)
 
 #Guardar MSA
 writeXStringSet(msa_nosiheptide_Ycao_compatible, "03_Results/msa_nosiheptide_ycao.fasta")
+
+
+?TreeLine()
+?ape
+library(help = ape)
+?nj()
+?upgma()
+
+
+
+#### POSTERIOR AL AJUSTE POR CLIPKIT ####
+
+#Thiopeptina
+msa_thiopeptina_ycao_AJclipkit <- readAAMultipleAlignment("03_Results/msa_thiopeptina_ycao_AJclipkit.fasta")
+msa_thiopeptina_ycao_AJclipkit <- unmasked(msa_thiopeptina_ycao_AJclipkit)
+
+msa_thiopeptina_original <- readAAMultipleAlignment("03_Results/msa_thiopeptina.fasta")
+msa_thiopeptina_original <- unmasked(msa_thiopeptina_original)
+
+BrowseSeqs(msa_thiopeptina)
+BrowseSeqs(msa_thiopeptina_ycao_AJclipkit)
+
+
+
+#Syomicina
+msa_syiomicina_Ycao_Ajustado_clipkit <- readAAMultipleAlignment("03_Results/msa_syomicina_ycao_ajustado_Clipkit.fasta")
+msa_syiomicina_Ycao_Ajustado_clipkit <- unmasked(msa_syiomicina_Ycao_Ajustado_clipkit)
+
+msa_syomicina_original <- readAAMultipleAlignment("03_Results/msa_syomicina_ycao.fasta")
+msa_syomicina_original <- unmasked(msa_syomicina_original)
+
+BrowseSeqs(msa_syiomicina_Ycao_Ajustado_clipkit)
+BrowseSeqs(msa_syomicina_original)
+
+
+
+#GE37468A
+msa_GE37468A_Ycao_ajustado_Clipkit <- readAAMultipleAlignment("03_Results/msa_GE37468A_Ycao_ajustado_Clipkit.fasta")
+msa_GE37468A_Ycao_ajustado_Clipkit <- unmasked(msa_GE37468A_Ycao_ajustado_Clipkit)
+
+msa_GE37468A_Ycao_original <- readAAMultipleAlignment("03_Results/msa_GE37468A_Ycao.fasta")
+msa_GE37468A_Ycao_original <- unmasked(msa_GE37468A_Ycao_original)
+
+BrowseSeqs(msa_GE37468A_Ycao_original)
+BrowseSeqs(msa_GE37468A_Ycao_ajustado_Clipkit)
+
+
+
+#nosiheptide
+msa_nosiheptide_Ycao_ajustado_clipkit <- readAAMultipleAlignment("03_Results/msa_nosiheptide_ycao_ajustado_Clipkit.fasta")
+msa_nosiheptide_Ycao_ajustado_clipkit <- unmasked(msa_nosiheptide_Ycao_ajustado_clipkit)
+
+msa_nosiheptide_Ycao_original <- readAAMultipleAlignment("03_Results/msa_nosiheptide_ycao.fasta")
+msa_nosiheptide_Ycao_original <- unmasked(msa_nosiheptide_Ycao_original)
+
+BrowseSeqs(msa_nosiheptide_Ycao_original)
+BrowseSeqs(msa_nosiheptide_Ycao_ajustado_clipkit)

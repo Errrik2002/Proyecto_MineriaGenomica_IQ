@@ -1,10 +1,11 @@
+#############################################
+#ARBOLES FILOGENETICOS DE LA ENZIMA YCAO#
+#############################################
+
+
 #Guardar objetos
 # saveRDS()
 # readRDS()
-
-install.packages("phangorn")
-install.packages("igraph")
-
 #### Carga de paquetes ya instalados ####
 
 library(pacman)
@@ -16,29 +17,41 @@ library(ape)
 library(ggtree)
 library(DECIPHER)
 library(phangorn)
+library(iqtree)
+library(ips)
 
 
-#Cargar las secuencias 
+##############################
+####Cargar las secuencias ####
+##############################
+
 thiopeptina_YcaO <- readAAStringSet("01_RawData/thiopeptina_BGC0001474_blast_240926/ycao_blast_sequences/thiopeptina_PYC80225.1_YcaO.txt")
-thiopeptina_YcaO #No debo pasarlo a fasta necesariamente. 
+thiopeptina_YcaO #No debo pasarlo a fasta necesariamente. #403SECUENCIAS 
+summary(width(thiopeptina_YcaO))
 
 syomicina_YcaO <- readAAStringSet("01_RawData/syiomicina_BGC0000611_BLAST_26-09-26/siomicina_GAP53284.1_YCAO.txt")
-syomicina_YcaO
+syomicina_YcaO  #POCAS SECUENCIAS 19 #CLUSTALW
+summary(width(syomicina_YcaO))
 
 GE37468A_YcaO <- readAAStringSet("01_RawData/GE37468A_BGC0000605_BLAST_240926/GE37468A_AEM00626.1_YCAO.txt")
-GE37468A_YcaO
+GE37468A_YcaO #273SECUENCIAS
+summary(width(GE37468A_YcaO))
 
 nosiheptide_YcaO <- readAAStringSet("01_RawData/nosiheptide_BGC0000610_BLAST_24-09-26/nosiheptide_ACR48336.1_YCAO.txt")
-nosiheptide_YcaO
+nosiheptide_YcaO #POCAS SECUENCIAS 37 #CLUSTALW
+summary(width(nosiheptide_YcaO))
 
 
-
+##################################################
 #### Realizar los Multiple Sequence Alignment ####
+##################################################
+
+
 ?msa()
 
 ###Thiopeptina
-msa_thiopeptina_Ycao <- msa(thiopeptina_YcaO)
-msa_thiopeptina_Ycao_Decipher <- AlignSeqs(thiopeptina_YcaO)
+msa_thiopeptina_Ycao <- msa(thiopeptina_YcaO, method="Muscle")
+#msa_thiopeptina_Ycao_Decipher <- AlignSeqs(thiopeptina_YcaO)
 #DECIPHER no puedo modificar el algoritmo
 
 #Visualizar MSA en Browser
@@ -47,14 +60,14 @@ msa_thiopeptina_Ycao_compatible <- unmasked(msa_thiopeptina_Ycao)
 BrowseSeqs(msa_thiopeptina_Ycao_compatible, highlight = 0)
 
 #### Guardar el MSA ####
-writeXStringSet(msa_thiopeptina_Ycao_compatible, "03_Results/msa_thiopeptina.fasta")
+writeXStringSet(msa_thiopeptina_Ycao_compatible, "03_Results/msa_thiopeptina_ycao.fasta")
 
 
 
 ###Syomicina
 #msa
 msa_syiomicina_Ycao <- msa(syomicina_YcaO)
-msa_syiomicina_Ycao_decipher <- AlignSeqs(syomicina_YcaO)
+#msa_syiomicina_Ycao_decipher <- AlignSeqs(syomicina_YcaO)
 
 #Visualizar en Browser, hacerlo compatible con BrowSeqs
 msa_syiomicina_Ycao_compatible <- unmasked(msa_syiomicina_Ycao)
@@ -67,8 +80,8 @@ writeXStringSet(msa_syiomicina_Ycao_compatible, "03_Results/msa_syomicina_ycao.f
 
 
 ###GE37468A
-msa_GE37468A_Ycao <- msa(GE37468A_YcaO)
-msa_GE37468A_Ycao_DECIPHER <- AlignSeqs(GE37468A_YcaO)
+msa_GE37468A_Ycao <- msa(GE37468A_YcaO,method = "Muscle")
+#msa_GE37468A_Ycao_DECIPHER <- AlignSeqs(GE37468A_YcaO)
 
 #Visualizar en Browser
 msa_GE37468A_Ycao_compatible <- unmasked(msa_GE37468A_Ycao)
@@ -96,18 +109,21 @@ library(help = ape)
 ?nj()
 ?upgma()
 
-
+#########################################
 
 #### POSTERIOR AL AJUSTE POR CLIPKIT ####
 
+#########################################
+
+
 #Thiopeptina
-msa_thiopeptina_ycao_AJclipkit <- readAAMultipleAlignment("03_Results/msa_thiopeptina_ycao_AJclipkit.fasta")
+msa_thiopeptina_ycao_AJclipkit <- readAAMultipleAlignment("03_Results/msa_thiopeptina_ycao_ajustado_clipkit.fasta")
 msa_thiopeptina_ycao_AJclipkit <- unmasked(msa_thiopeptina_ycao_AJclipkit)
 
 msa_thiopeptina_original <- readAAMultipleAlignment("03_Results/msa_thiopeptina.fasta")
 msa_thiopeptina_original <- unmasked(msa_thiopeptina_original)
 
-BrowseSeqs(msa_thiopeptina)
+BrowseSeqs(msa_thiopeptina_original)
 BrowseSeqs(msa_thiopeptina_ycao_AJclipkit)
 
 
@@ -125,7 +141,7 @@ BrowseSeqs(msa_syomicina_original)
 
 
 #GE37468A
-msa_GE37468A_Ycao_ajustado_Clipkit <- readAAMultipleAlignment("03_Results/msa_GE37468A_Ycao_ajustado_Clipkit.fasta")
+msa_GE37468A_Ycao_ajustado_Clipkit <- readAAMultipleAlignment("03_Results/msa_GE37468A_Ycao_ajustado_clipkit.fasta")
 msa_GE37468A_Ycao_ajustado_Clipkit <- unmasked(msa_GE37468A_Ycao_ajustado_Clipkit)
 
 msa_GE37468A_Ycao_original <- readAAMultipleAlignment("03_Results/msa_GE37468A_Ycao.fasta")
@@ -145,3 +161,65 @@ msa_nosiheptide_Ycao_original <- unmasked(msa_nosiheptide_Ycao_original)
 
 BrowseSeqs(msa_nosiheptide_Ycao_original)
 BrowseSeqs(msa_nosiheptide_Ycao_ajustado_clipkit)
+
+
+
+
+###############################
+#### Matrices de distancia ####
+###############################
+
+
+#Modificar clase y poder hacer la matriz de distancia
+
+msa_tree_thiopeptina_ycao <- msaConvert(msa_thiopeptina_ycao_AJclipkit, type="seqinr::alignment")
+msa_tree_syomicina_ycao <- msaConvert(msa_syiomicina_Ycao_Ajustado_clipkit, type="seqinr::alignment")
+msa_tree_GE37468A_ycao <- msaConvert(msa_GE37468A_Ycao_ajustado_Clipkit, type= "seqinr::alignment")
+msa_tree_nosiheptide_ycao <- msaConvert(msa_nosiheptide_Ycao_ajustado_clipkit, type= "seqinr::alignment")
+
+#?dist.alignment()
+dm_thiopeptina_ycao <- dist.alignment(msa_tree_thiopeptina_ycao, matrix="identity")
+dm_syomicina_ycao <- dist.alignment(msa_tree_syomicina_ycao, "identity")
+dm_GE37468A_ycao <- dist.alignment(msa_tree_GE37468A_ycao, "identity")
+dm_nosiheptide_ycao <- dist.alignment(msa_tree_nosiheptide_ycao, "identity")
+
+
+###############################
+#### Arboles filogeneticos ####
+###############################
+
+####Neighbor joining
+
+nj_tree_thiopeptina_ycao <- nj(dm_thiopeptina_ycao)
+plot(nj_tree_thiopeptina_ycao)
+
+nj_tree_syomicina_ycao <- nj(dm_syomicina_ycao)
+plot(nj_tree_syomicina_ycao)
+
+nj_tree_GE37468A_ycao <- nj(dm_GE37468A_ycao)
+plot(nj_tree_GE37468A_ycao)
+
+nj_tree_nosiheptide_ycao <- nj(dm_nosiheptide_ycao)
+plot(nj_tree_nosiheptide_ycao)
+
+
+
+
+#Maximum parsimony desde terminal IQtree
+
+####syomicina
+
+#Cargar mir arbol
+syomicina_tree_ycao <- read.tree("03_Results/syomicina_ycao_tree/msa_syomicina_ycao_ajustado_Clipkit.fasta.treefile")
+
+#Visaulizar el arbol
+plot(syomicina_tree_ycao, main= "Arbol ML de Ycao de Syomicina")
+nodelabels(syomicina_tree_ycao$node.label, cex=0.7, frame="none")
+
+
+####Nosiheptide 
+
+nosiheptide_tree_Ycao <- read.tree("03_Results/nosiheptide_ycao_tree/msa_nosiheptide_ycao_ajustado_Clipkit.fasta.treefile")
+
+plot(nosiheptide_tree_Ycao, main="Arbol ML de YcaO de nosiheptide")
+nodelabels(nosiheptide_tree_Ycao$node.label, cex=0.7, frame="none")

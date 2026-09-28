@@ -1,0 +1,235 @@
+IQ-TREE multicore version 2.0.7 for Linux 64-bit built Jan 21 2022
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    Errik (AVX2, FMA3, 7 GB RAM)
+Command: iqtree2 -s 03_Results/msa_nosiheptide_ycao_ajustado_Clipkit.fasta -m MFP -bb 1000 -nt AUTO
+Seed:    516971 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sun Sep 27 22:37:50 2026
+Kernel:  AVX+FMA - auto-detect threads (4 CPU cores detected)
+
+Reading alignment file 03_Results/msa_nosiheptide_ycao_ajustado_Clipkit.fasta ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 37 sequences with 770 columns, 703 distinct patterns
+499 parsimony-informative, 184 singleton sites, 87 constant sites
+                Gap/Ambiguity  Composition  p-value
+   1  HHO53648.1       18.05%    failed      0.96%
+   2  MCA9710370.1     20.13%    passed      7.19%
+   3  HEU4766848.1     17.27%    failed      0.08%
+   4  HEU4711115.1     17.27%    failed      0.00%
+   5  HWF89104.1       16.88%    failed      0.03%
+   6  WP_357815810.1   20.65%    passed     86.62%
+   7  WP_083886123.1   14.42%    passed     53.17%
+   8  MHH6669848.1     15.45%    passed     99.90%
+   9  HET8640714.1     24.29%    passed     88.62%
+  10  WP_317795710.1   17.92%    passed     70.59%
+  11  WP_401908521.1    8.44%    passed     98.57%
+  12  WSZ97823.1        9.87%    passed     99.71%
+  13  WP_243379609.1   14.81%    passed     99.95%
+  14  WP_384935259.1   11.56%    passed     88.96%
+  15  WP_397823629.1   14.81%    passed     91.21%
+  16  WP_189890807.1   15.32%    passed     89.29%
+  17  WP_158632304.1   18.31%    passed     85.78%
+  18  WP_089009179.1   18.05%    passed     99.56%
+  19  WP_387020027.1   17.27%    passed     99.93%
+  20  WP_412734799.1   18.18%    passed     84.75%
+  21  WP_396096602.1   17.79%    passed     78.54%
+  22  WP_455575445.1   18.96%    passed     98.74%
+  23  WP_189212693.1   19.74%    passed     90.90%
+  24  ADR01083.1       18.05%    passed     92.86%
+  25  HIR6077977.1     18.05%    passed     84.60%
+  26  MFC7614602.1     16.75%    passed     99.93%
+  27  WP_167477801.1   18.70%    passed     37.58%
+  28  HEY0639635.1     12.60%    passed     90.70%
+  29  MBA2696829.1     17.14%    passed     99.60%
+  30  HEX4704538.1     18.18%    passed     98.35%
+  31  HVV20613.1       22.73%    passed     84.93%
+  32  WP_408669612.1   18.44%    passed     17.51%
+  33  WP_165949786.1   20.78%    passed     49.48%
+  34  TDC60105.1       14.16%    passed     10.94%
+  35  WP_084468136.1   21.56%    passed     97.76%
+  36  XWB32777.1       19.09%    passed     32.95%
+  37  MHX8997433.1     14.42%    failed      0.00%
+****  TOTAL            17.19%  5 sequences failed composition chi2 test (p-value<5%; df=19)
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.014 seconds
+Measuring multi-threading efficiency up to 4 CPU cores
+Increase to 10 rounds for branch lengths
+5 trees examined
+Threads: 1 / Time: 4.337 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -31828
+Threads: 2 / Time: 2.687 sec / Speedup: 1.614 / Efficiency: 81% / LogL: -31828
+Threads: 3 / Time: 2.683 sec / Speedup: 1.617 / Efficiency: 54% / LogL: -31828
+Threads: 4 / Time: 2.301 sec / Speedup: 1.885 / Efficiency: 47% / LogL: -31828
+BEST NUMBER OF THREADS: 2
+
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -26436.988
+Optimal log-likelihood: -26436.880
+Proportion of invariable sites: 0.054
+Gamma shape alpha: 0.851
+Parameters optimization took 1 rounds (0.274 sec)
+Time for fast ML tree search: 1.885 seconds
+
+NOTE: ModelFinder requires 44 MB RAM!
+ModelFinder will test up to 546 protein models (sample size: 770) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  LG            28134.511    71  56411.022    56425.670    56740.916
+  2  LG+I          27657.463    72  55458.927    55474.008    55793.467
+  3  LG+G4         26446.114    72  53036.227    53051.309    53370.767
+  4  LG+I+G4       26436.853    73  53019.705    53035.228    53358.892
+  5  LG+R2         26710.048    73  53566.096    53581.619    53905.282
+  6  LG+R3         26486.537    75  53123.075    53139.501    53471.554
+  7  LG+R4         26431.597    77  53017.195    53034.553    53374.967
+  8  LG+R5         26423.874    79  53005.748    53024.067    53372.813
+  9  LG+R6         26423.843    81  53009.687    53028.995    53386.044
+ 17  LG+F+I+G4     25644.310    92  51472.620    51497.896    51900.088
+ 30  WAG+I+G4      26296.902    73  52739.804    52755.327    53078.991
+ 43  WAG+F+I+G4    25665.005    92  51514.010    51539.286    51941.478
+ 56  JTT+I+G4      26257.001    73  52660.002    52675.525    52999.189
+ 69  JTT+F+I+G4    25741.457    92  51666.915    51692.191    52094.383
+ 82  JTTDCMut+I+G4 26270.153    73  52686.306    52701.829    53025.493
+ 95  JTTDCMut+F+I+G4 25743.238    92  51670.476    51695.752    52097.944
+108  DCMut+I+G4    26597.236    73  53340.472    53355.995    53679.658
+121  DCMut+F+I+G4  25921.872    92  52027.743    52053.020    52455.211
+134  VT+I+G4       26379.772    73  52905.543    52921.066    53244.730
+147  VT+F+I+G4     25744.778    92  51673.557    51698.833    52101.025
+160  PMB+I+G4      26570.122    73  53286.244    53301.767    53625.431
+173  PMB+F+I+G4    25946.530    92  52077.060    52102.336    52504.528
+186  Blosum62+I+G4 26687.077    73  53520.155    53535.678    53859.341
+199  Blosum62+F+I+G4 25939.339    92  52062.679    52087.955    52490.147
+212  Dayhoff+I+G4  26596.391    73  53338.781    53354.304    53677.968
+225  Dayhoff+F+I+G4 25920.096    92  52024.192    52049.468    52451.660
+238  mtREV+I+G4    28181.659    73  56509.317    56524.840    56848.504
+251  mtREV+F+I+G4  26088.420    92  52360.840    52386.116    52788.308
+264  mtART+I+G4    29338.928    73  58823.856    58839.379    59163.042
+277  mtART+F+I+G4  27079.000    92  54341.999    54367.275    54769.467
+290  mtZOA+I+G4    28086.888    73  56319.777    56335.300    56658.963
+303  mtZOA+F+I+G4  26414.599    92  53013.198    53038.474    53440.666
+316  mtMet+I+G4    28779.078    73  57704.155    57719.678    58043.342
+329  mtMet+F+I+G4  26213.503    92  52611.005    52636.281    53038.473
+342  mtVer+I+G4    28467.199    73  57080.398    57095.921    57419.585
+355  mtVer+F+I+G4  26365.393    92  52914.785    52940.061    53342.253
+368  mtInv+I+G4    29158.787    73  58463.575    58479.098    58802.761
+381  mtInv+F+I+G4  26079.714    92  52343.429    52368.705    52770.897
+394  mtMAM+I+G4    28807.552    73  57761.104    57776.627    58100.290
+407  mtMAM+F+I+G4  26624.242    92  53432.483    53457.759    53859.951
+420  HIVb+I+G4     27040.664    73  54227.329    54242.852    54566.515
+433  HIVb+F+I+G4   26298.711    92  52781.422    52806.698    53208.890
+446  HIVw+I+G4     28454.901    73  57055.803    57071.326    57394.989
+459  HIVw+F+I+G4   27067.362    92  54318.725    54344.001    54746.193
+472  FLU+I+G4      27272.491    73  54690.982    54706.505    55030.169
+485  FLU+F+I+G4    26012.321    92  52208.642    52233.918    52636.110
+498  rtREV+I+G4    26835.396    73  53816.793    53832.316    54155.979
+511  rtREV+F+I+G4  25827.106    92  51838.211    51863.488    52265.679
+524  cpREV+I+G4    26683.969    73  53513.937    53529.460    53853.124
+537  cpREV+F+I+G4  25782.245    92  51748.491    51773.767    52175.958
+Akaike Information Criterion:           LG+F+I+G4
+Corrected Akaike Information Criterion: LG+F+I+G4
+Bayesian Information Criterion:         LG+F+I+G4
+Best-fit model: LG+F+I+G4 chosen according to BIC
+
+All model information printed to 03_Results/msa_nosiheptide_ycao_ajustado_Clipkit.fasta.model.gz
+CPU time for ModelFinder: 276.249 seconds (0h:4m:36s)
+Wall-clock time for ModelFinder: 137.771 seconds (0h:2m:17s)
+Generating 1000 samples for ultrafast bootstrap (seed: 516971)...
+
+NOTE: 19 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Thoroughly optimizing +I+G parameters from 10 start values...
+Init pinv, alpha: 0.000, 0.859 / Estimate: 0.000, 0.727 / LogL: -25652.083
+Init pinv, alpha: 0.013, 0.859 / Estimate: 0.047, 0.841 / LogL: -25644.351
+Init pinv, alpha: 0.025, 0.859 / Estimate: 0.047, 0.841 / LogL: -25644.347
+Init pinv, alpha: 0.038, 0.859 / Estimate: 0.047, 0.840 / LogL: -25644.356
+Init pinv, alpha: 0.050, 0.859 / Estimate: 0.051, 0.851 / LogL: -25644.279
+Init pinv, alpha: 0.063, 0.859 / Estimate: 0.056, 0.864 / LogL: -25644.341
+Init pinv, alpha: 0.075, 0.859 / Estimate: 0.055, 0.861 / LogL: -25644.316
+Init pinv, alpha: 0.088, 0.859 / Estimate: 0.056, 0.864 / LogL: -25644.335
+Init pinv, alpha: 0.100, 0.859 / Estimate: 0.054, 0.861 / LogL: -25644.306
+Init pinv, alpha: 0.113, 0.859 / Estimate: 0.055, 0.862 / LogL: -25644.314
+Optimal pinv,alpha: 0.051, 0.851 / LogL: -25644.279
+
+Parameters optimization took 11.220 sec
+Computing ML distances based on estimated model parameters... 0.266 sec
+Computing BIONJ tree...
+0.010 seconds
+Log-likelihood of BIONJ tree: -25634.036
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 1.164 second
+Computing log-likelihood of 98 initial trees ... 6.263 seconds
+Current best score: -25634.036
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -25629.117
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 3: -25624.429
+Iteration 10 / LogL: -25629.720 / Time: 0h:0m:29s
+Iteration 20 / LogL: -25629.653 / Time: 0h:0m:39s
+Finish initializing candidate tree set (9)
+Current best tree score: -25624.429 / CPU time: 27.189
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 22: -25623.568
+Iteration 30 / LogL: -25624.315 / Time: 0h:0m:52s (0h:2m:45s left)
+Iteration 40 / LogL: -25624.977 / Time: 0h:1m:4s (0h:2m:15s left)
+Iteration 50 / LogL: -25623.699 / Time: 0h:1m:16s (0h:1m:52s left)
+Log-likelihood cutoff on original alignment: -25680.553
+Iteration 60 / LogL: -25624.475 / Time: 0h:1m:28s (0h:1m:32s left)
+Iteration 70 / LogL: -25629.829 / Time: 0h:1m:39s (0h:1m:15s left)
+Iteration 80 / LogL: -25624.656 / Time: 0h:1m:51s (0h:0m:59s left)
+Iteration 90 / LogL: -25624.315 / Time: 0h:2m:2s (0h:0m:43s left)
+Iteration 100 / LogL: -25623.713 / Time: 0h:2m:14s (0h:0m:29s left)
+Log-likelihood cutoff on original alignment: -25680.553
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+Iteration 110 / LogL: -25624.624 / Time: 0h:2m:26s (0h:2m:0s left)
+Iteration 120 / LogL: -25624.790 / Time: 0h:2m:37s (0h:1m:45s left)
+TREE SEARCH COMPLETED AFTER 123 ITERATIONS / Time: 0h:2m:41s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -25623.568
+Optimal log-likelihood: -25623.562
+Proportion of invariable sites: 0.053
+Gamma shape alpha: 0.853
+Parameters optimization took 1 rounds (0.235 sec)
+BEST SCORE FOUND : -25623.562
+Creating bootstrap support values...
+Split supports printed to NEXUS file 03_Results/msa_nosiheptide_ycao_ajustado_Clipkit.fasta.splits.nex
+Total tree length: 17.041
+
+Total number of iterations: 123
+CPU time used for tree search: 293.688 sec (0h:4m:53s)
+Wall-clock time used for tree search: 149.085 sec (0h:2m:29s)
+Total CPU time used: 317.936 sec (0h:5m:17s)
+Total wall-clock time used: 161.580 sec (0h:2m:41s)
+
+Computing bootstrap consensus tree...
+Reading input file 03_Results/msa_nosiheptide_ycao_ajustado_Clipkit.fasta.splits.nex...
+37 taxa and 221 splits.
+Consensus tree written to 03_Results/msa_nosiheptide_ycao_ajustado_Clipkit.fasta.contree
+Reading input trees file 03_Results/msa_nosiheptide_ycao_ajustado_Clipkit.fasta.contree
+Log-likelihood of consensus tree: -25624.419
+
+Analysis results written to: 
+  IQ-TREE report:                03_Results/msa_nosiheptide_ycao_ajustado_Clipkit.fasta.iqtree
+  Maximum-likelihood tree:       03_Results/msa_nosiheptide_ycao_ajustado_Clipkit.fasta.treefile
+  Likelihood distances:          03_Results/msa_nosiheptide_ycao_ajustado_Clipkit.fasta.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          03_Results/msa_nosiheptide_ycao_ajustado_Clipkit.fasta.splits.nex
+  Consensus tree:                03_Results/msa_nosiheptide_ycao_ajustado_Clipkit.fasta.contree
+  Screen log file:               03_Results/msa_nosiheptide_ycao_ajustado_Clipkit.fasta.log
+
+Date and Time: Sun Sep 27 22:42:50 2026

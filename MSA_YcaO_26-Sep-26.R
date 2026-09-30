@@ -21,7 +21,7 @@ library(phangorn)
 
 
 ##############################
-####Cargar las secuencias ####
+#### Cargar las secuencias ####
 ##############################
 
 thiopeptina_YcaO <- readAAStringSet("01_RawData/thiopeptina_BGC0001474_blast_240926/ycao_blast_sequences/thiopeptina_PYC80225.1_YcaO.txt")

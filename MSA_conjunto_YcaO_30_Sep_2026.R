@@ -11,6 +11,7 @@ install.packages("ape") #Realizar el arbol filogenetico
 BiocManager::install("ggtree") #Visualizar el arbol filogenetico
 BiocManager::install("DECIPHER") #Hacer alineamiento y curation
 BiocManager::install("microseq")
+devtools::install_github('grunwaldlab/heattree')
 
 ?DECIPHER
 library(Biostrings)
@@ -21,6 +22,7 @@ library(ape)
 library(ggtree)
 library(DECIPHER)
 library(microseq)
+library(heattree)
 
 ######################################
 #### Leer las secuencias cargadas ####
@@ -160,9 +162,8 @@ print(col_gaps_porcentaje)
 }
 }
 
-
-x1 <- readAAMultipleAlignment("03_Results/msa_GE37468A_Ycao.fasta")
-x2 <- readAAMultipleAlignment("03_Results/msa_GE37468A_Ycao_ajustado_Clipkit.fasta")
+x1 <- readAAMultipleAlignment("03_Results/MSA_YcaO_juntas_original.fasta")
+x2 <- readAAMultipleAlignment("03_Results/Msa_YcaO_juntas_arbol/MSA_Ycao_juntas_curadas_Clipkit.fasta")
 #prueba
 porcentaje_de_gaps(x2)
 
@@ -209,3 +210,28 @@ ycao_juntas_arbol_ML <- read.tree("03_Results/Msa_YcaO_juntas_arbol/MSA_Ycao_jun
 
 #Visualizar el arbol
 plot(ycao_juntas_arbol_ML, main= "Arbol ML de YcaO juntas (Thiopeptina, syomicina, GE37468A, nosiheptide)")
+ml_ycao_conjunta_arbol <- ggtree(ycao_juntas_arbol_ML, layout="circular")+
+  geom_tiplab(size=0.5, aes(angle=angle))
+
+pdf("03_Results/Msa_YcaO_juntas_arbol/arbol_ML_YcaO_.pdf", width = 500, height = 500)
+print(ml_ycao_conjunta_arbol)
+dev.off()
+
+#nodelabels(ml_ycao_conjunta_arbol$node.label, cex=5, frame="none")
+
+class(ycao_juntas_arbol_ML)
+
+heat_tree(tree = ycao_juntas_arbol_ML, layout = 'circular')
+
+
+heat_tree(
+  tree = weisberg_2020_mlsa,
+  metadata = weisberg_2020_metadata,
+  aesthetics = c(tipLabelColor = 'host_type'),
+  layout = 'circular')
+
+class(weisberg_2020_metadata)
+class(weisberg_2020_mlsa)
+
+
+

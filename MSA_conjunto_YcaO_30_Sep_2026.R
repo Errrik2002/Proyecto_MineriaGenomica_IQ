@@ -161,7 +161,6 @@ print(col_gaps_porcentaje)
 } else {
   print("Solo introduce un numero, del 1 al 4, solo uno por favor")
 }
-
 }
 
 

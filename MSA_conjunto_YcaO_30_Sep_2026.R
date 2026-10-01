@@ -166,7 +166,7 @@ print(col_gaps_porcentaje)
 
 x1 <- readAAMultipleAlignment("03_Results/msa_GE37468A_Ycao.fasta")
 x2 <- readAAMultipleAlignment("03_Results/msa_GE37468A_Ycao_ajustado_Clipkit.fasta")
-
+#prueba
 porcentaje_de_gaps(x2)
 
 #gaps

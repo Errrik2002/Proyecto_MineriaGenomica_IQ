@@ -127,7 +127,6 @@ porcentaje_de_gaps <- function(x){
  resultado <- readline(prompt = "Si quieres ver el %GAPS por renglon, pon 1. Si quieres ver por renglon, pon 2. Si quieres el global del MSA, pon 3. Si quieres ver todos. Pon 4:")
  resultado <- as.numeric(resultado)
   
-  
   #Renglones/Rows
 x_gaps_compatible <- unmasked(x)
 gaps_row <- letterFrequency(x_gaps_compatible, letters = "-")
@@ -142,12 +141,10 @@ seq_totales <- nrow(x)
 #
 col_gaps_porcentaje <- (gaps_col_x / seq_totales) * 100
 # 
-
 mcompleta_x <- as.matrix(x)
 gaps_global <- (sum(mcompleta_x=="-") / length(mcompleta_x)) * 100
   
-#cat("El alineamiento tiene un", gaps_global,"% de GAPS")  
-
+#Condicional
 if (resultado == 1){
 print(porcen_gaps_row)
 } else if (resultado == 2) { 

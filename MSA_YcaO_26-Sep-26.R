@@ -8,7 +8,7 @@
 # readRDS()
 #### Carga de paquetes ya instalados ####
 
-library(pacman)
+#library(pacman)
 library(Biostrings)
 library(msa)
 library(seqinr)
@@ -16,7 +16,7 @@ library(ggmsa)
 library(ape)
 library(ggtree)
 library(DECIPHER)
-library(phangorn)
+#library(phangorn)
 
 
 

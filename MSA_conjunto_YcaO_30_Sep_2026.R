@@ -221,7 +221,9 @@ dev.off()
 
 class(ycao_juntas_arbol_ML)
 
-heat_tree(tree = ycao_juntas_arbol_ML, layout = 'circular')
+df_especies <- readRDS("03_Results/Msa_YcaO_juntas_arbol/metadata.rds")
+
+heat_tree(tree = ycao_juntas_arbol_ML, metadata=df_especies,  layout = 'circular')
 
 
 heat_tree(
@@ -230,7 +232,7 @@ heat_tree(
   aesthetics = c(tipLabelColor = 'host_type'),
   layout = 'circular')
 
-class(weisberg_2020_metadata)
+View(weisberg_2020_metadata)
 class(weisberg_2020_mlsa)
 
 

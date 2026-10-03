@@ -18,6 +18,10 @@ summary(width(macrociclacion_junta))
 #Hay secuencias repetidas, hay que eliminarlas
 macrociclacion_junta_unicas <- macrociclacion_junta[!duplicated(as.character(macrociclacion_junta))]
 macrociclacion_junta_unicas
+
+#Guardar secuencias unicas. 
+saveRDS(macrociclacion_junta_unicas,"03_Results/macrociclacion_resultados_021026/secuencias_fasta_unicas_macrociclacion.fasta")
+
 #quedan un total de 42 seq
 summary(width(macrociclacion_junta_unicas))
 
@@ -136,6 +140,11 @@ ggtree_arbol_macrociclacion <- ggtree(iqtree_arbol_macrociclacion, layout="circu
 
 ggtree_arbol_macrociclacion
 
+##### Cargar metadatos #####
+arbol_macro_metadatos <- readRDS("03_Results/macrociclacion_resultados_021026/metadatos_completos_arbol.rds")
+arbol_macro_metadatos <- as.data.frame(arbol_macro_metadatos)
 
-heat_tree(tree= iqtree_arbol_macrociclacion, layout="circular")
-heat_tree(tree= iqtree_arbol_macrociclacion)
+
+heat_tree(tree= iqtree_arbol_macrociclacion, 
+  metadata = arbol_macro_metadatos, 
+  layout="circular")

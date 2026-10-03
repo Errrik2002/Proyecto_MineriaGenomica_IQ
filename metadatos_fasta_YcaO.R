@@ -15,28 +15,20 @@ meta <- as.data.frame(meta)
 #meta <- as.matrix(meta)
 metacopia <- meta
 
-
-meta_separada <- separate_wider_delim(meta, meta, sep="/",into= c("access", "especies"))
-
 #Extrae todo lo de dentro de corchetes
 str_meta <- str_extract(metacopia[,1], "(?<=\\[).*?(?=\\])")
 especies <- str_meta
-especies
-
 
 
 #############
 str_meta <- str_extract(metacopia[,1], "(?<=\\[).*?(?=\\])")
 especies <- str_meta
 df_especies <- as.data.frame(especies)
-class(especies)
-
 
 saveRDS(df_especies, "03_Results/Msa_YcaO_juntas_arbol/metadata.rds")
-view(df_especies)
 
 
-class(metacopia)
+
 
 #####Separar base de datos por espacios####
 

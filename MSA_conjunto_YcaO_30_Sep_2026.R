@@ -223,17 +223,12 @@ class(ycao_juntas_arbol_ML)
 
 df_especies <- readRDS("03_Results/Msa_YcaO_juntas_arbol/metadata.rds")
 
-heat_tree(tree = ycao_juntas_arbol_ML, metadata=df_especies,  layout = 'circular')
+metdata_final <- readRDS("03_Results/Msa_YcaO_juntas_arbol/metadata_especie_genero_access_number.rds")
+metdata_final <- as.data.frame(metdata_final)
+class(metdata_final)
 
 
-heat_tree(
-  tree = weisberg_2020_mlsa,
-  metadata = weisberg_2020_metadata,
-  aesthetics = c(tipLabelColor = 'host_type'),
-  layout = 'circular')
-
-View(weisberg_2020_metadata)
-class(weisberg_2020_mlsa)
-
+#ARBOL FINAL DE LA YCAO JUNTAS
+heat_tree(tree = ycao_juntas_arbol_ML, metadata=metdata_final,  layout = 'circular')
 
 

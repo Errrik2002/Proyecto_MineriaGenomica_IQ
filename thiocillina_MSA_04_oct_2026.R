@@ -18,5 +18,5 @@ summary(width(thiocillina_ycao))
 thiocillina_MSA_YcaO <- msa(thiocillina_ycao, method= "Muscle")
 #No me deja hacer el alineamiento, MUSCLE finaliza sin razon alguna, 
 #ando corriendo al mismo tiempo el IQTREE, sera que no hay suficiente CPU para el MSA
-
-#cerre abruptamente la terminal de bash
+thiocillina_MSA_ycao_compatible <- unmasked(thiocillina_MSA_YcaO)
+BrowseSeqs(thiocillina_MSA_ycao_compatible)

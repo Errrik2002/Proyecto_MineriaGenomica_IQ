@@ -11,7 +11,7 @@ no_actino_metadatos
 no_actino_metadatos_df <- as.data.frame(no_actino_metadatos) 
 
 especies_noactino <- rownames(no_actino_metadatos_df) |> 
-  as.data.frame() 
+   as.data.frame() 
 
 
 especies_nombres <- str_extract(especies_noactino[,1], "(?<=\\[).*?(?=\\])")
@@ -20,6 +20,7 @@ class(especies_nombres)
 especies_nombres
 
 #### LOS WP de acceso 
+
 max_words_noactino <- max(str_count(especies_noactino$`rownames(no_actino_metadatos_df)`, "\\s+")) +1
 max_words_noactino
 

@@ -74,3 +74,10 @@ View(metadata_hoy)
 
 
 write.csv(metadata_hoy$numero_access_node_id, "03_Results/conjunto_noactinomicetos_YcaO/prueba.csv")
+
+
+metadatos_completos_Claude <- read.csv("metadata_enriched.csv", header= TRUE)
+dim(metadatos_completos_Claude)
+dim(metadata_hoy)
+
+

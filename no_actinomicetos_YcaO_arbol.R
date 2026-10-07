@@ -101,8 +101,11 @@ heat_tree(tree = tree_conjunto_noactinomicetos_Ycao_NJ)
 ##### Arbol con IQTREE
 metadata_no_actinos <- readRDS("03_Results/conjunto_noactinomicetos_YcaO/metadata_base_FASTA.rds")
 
+metadata_claude <- read.csv("metadata_enriched.csv", header=TRUE)
+metadata_claude <- as.data.frame(metadata_claude)
 
 iqtree_conjunto_noactinomicetos_Ycao_ML <- read.tree("03_Results/conjunto_noactinomicetos_YcaO/conjunto_MSA_ajustado_clipkit.fasta.treefile")
-heat_tree(iqtree_conjunto_noactinomicetos_Ycao_ML, metadata = metadata_no_actinos)
+heat_tree(iqtree_conjunto_noactinomicetos_Ycao_ML, metadata = metadata_claude)
 
 
+metadata_claude["WP_172686359.1",]

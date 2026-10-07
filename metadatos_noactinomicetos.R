@@ -69,3 +69,8 @@ saveRDS(metadata_noactinos, "03_Results/conjunto_noactinomicetos_YcaO/metadata_b
 
 
 write.csv(metadata_noactinos,"03_Results/conjunto_noactinomicetos_YcaO/metadata_noactinos.csv", row.names = FALSE)
+metadata_hoy <- readRDS("03_Results/conjunto_noactinomicetos_YcaO/metadata_base_FASTA.rds")
+View(metadata_hoy)
+
+
+write.csv(metadata_hoy$numero_access_node_id, "03_Results/conjunto_noactinomicetos_YcaO/prueba.csv")

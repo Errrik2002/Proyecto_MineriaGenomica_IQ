@@ -107,9 +107,11 @@ metadata_claude <- as.data.frame(metadata_claude)
 View(metadata_claude)
 
 iqtree_conjunto_noactinomicetos_Ycao_ML <- read.tree("03_Results/conjunto_noactinomicetos_YcaO/conjunto_MSA_ajustado_clipkit.fasta.treefile")
-arbol_noactinomicetos <- heat_tree(iqtree_conjunto_noactinomicetos_Ycao_ML, metadata = metadata_claude)
 
-class(arbol_noactinomicetos)
+metadata_Query <- readRDS("03_Results/conjunto_noactinomicetos_YcaO/metadata_con_Query.rds")
 
-save_html(arbol_noactinomicetos, "03_Results/conjunto_noactinomicetos_YcaO/arbol_metadata.html",
-background = "black", libdir="lib")
+heat_tree(iqtree_conjunto_noactinomicetos_Ycao_ML, metadata = metadata_Query)
+
+
+
+

@@ -77,8 +77,27 @@ View(metadata_hoy)
 write.csv(metadata_hoy$numero_access_node_id, "03_Results/conjunto_noactinomicetos_YcaO/prueba.csv")
 
 
-metadatos_completos_Claude <- read.csv("metadata_enriched.csv", header= TRUE)
+metadatos_completos_Claude <- read.csv("03_Results/conjunto_noactinomicetos_YcaO/metadata_enriched.csv", header= TRUE)
 dim(metadatos_completos_Claude)
 dim(metadata_hoy)
 
 
+View(metadatos_completos_Claude)
+
+metadata_conQuery <- add_column(metadatos_completos_Claude)
+?add_column()
+
+View(metadata_conQuery)
+
+df <- df %>%
+        mutate(status= if_else(.$points > 20, 'Good', 'Bad'))
+
+#, "WP_172686359.1", "AAP11954.1"
+
+metadata_conQuery <- metadata_conQuery |> 
+  mutate(query = if_else(metadata_conQuery$accession %in% c("WP_259592873.1","WP_172686359.1", "AAP11954.1" ), 'query', 'no'))  
+
+View(metadata_conQuery)
+metadata_conQuery <- as.data.frame(metadata_conQuery)
+
+saveRDS(metadata_conQuery, "03_Results/conjunto_noactinomicetos_YcaO/metadata_con_Query.rds")

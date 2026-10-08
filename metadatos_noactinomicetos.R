@@ -101,3 +101,25 @@ View(metadata_conQuery)
 metadata_conQuery <- as.data.frame(metadata_conQuery)
 
 saveRDS(metadata_conQuery, "03_Results/conjunto_noactinomicetos_YcaO/metadata_con_Query.rds")
+metadata_Query <- readRDS("03_Results/conjunto_noactinomicetos_YcaO/metadata_con_Query.rds")
+
+
+View(metadata_Query)
+
+metadata_query_homologos <- metadata_Query |> 
+  mutate(homologos= if_else(str_detect(especie, "^(Lactobacillus paragasseri | Macrococcoides caseolyticum | Bacillus cereus)"),"si", "no"))
+
+
+metadata_query_homologos <- metadata_Query |> 
+  mutate(
+    query_homologos= case_when(
+      str_detect(metadata_Query$especie, "Lactobacillus paragasseri") ~ "Lactobacillus Paragasseri",
+      str_detect(metadata_Query$especie, "Macrococcoides caseolyticum") ~ "Macrococcoides caseolyticum",
+      str_detect(metadata_Query$especie, "Bacillus cereus") ~ "Bacillus cereus",
+      TRUE ~ "Otros"
+    )
+  )
+
+View(metadata_query_homologos)
+
+saveRDS(metadata_query_homologos, "03_Results/conjunto_noactinomicetos_YcaO/metadata_homologos.rds")

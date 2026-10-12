@@ -115,5 +115,4 @@ heat_tree(iqtree_conjunto_noactinomicetos_Ycao_ML, metadata = metadata_Query)
 candidato1 <- subset(metadata_Query, metadata_Query$accession == "MBP3040987.1")
 candidato1
 candidato2 <- subset(metadata_Query, metadata_Query$accession == "WP_239432773.1")
-candidato2
- 
+candidato2 

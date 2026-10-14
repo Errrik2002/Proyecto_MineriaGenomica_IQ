@@ -111,5 +111,75 @@ row.names = FALSE, col.names = FALSE)
 ############################################
 ############################################
 colnames(clado_df_A)
-clado_A_explorar <- select(clado_df_A, c("especie","host", "isolation_source", "geo_loc_name"))
+clado_A_explorar <- select(clado_df_A, c("accession","especie","host", "isolation_source", "geo_loc_name"))
 View(clado_A_explorar)
+
+
+colnames(clado_B_df)
+clado_B_explorar <- select(clado_B_df, c("accession","especie","host", "isolation_source", "geo_loc_name"))
+View(clado_B_explorar)
+
+
+
+
+#############################################
+#############################################
+### Especies finales ########################
+#############################################
+
+library(dplyr)
+#####################
+#### Clado A ########
+#####################
+
+candidatos_finales_cladoA <- c("WP_110044842.1", "WP_162357576.1", "WP_211020662.1",  "WP_068780233.1" ,"WP_233696727.1","WP_405452319.1", "WP_246061953.1", "WP_316561576.1", "WP_041047436.1", "WP_167056766.1", "WP_155701669.1",  "WP_230460689.1", "WP_144699461.1" )
+candidatos_finales_cladoA <- as.list(candidatos_finales_cladoA)
+
+
+c <- 1
+clado_A_Final <- list()
+clado_A_Final <- vector("list", length= length(candidatos_finales_cladoA))
+
+for (i in 1:length(candidatos_finales_cladoA)){
+  clado_final <- subset(clado_df_A, clado_df_A$accession == candidatos_finales_cladoA[c])
+  clado_final <- as.data.frame(clado_final)
+  print(i)
+
+  clado_A_Final[[c]] <- clado_final
+
+  c <- c + 1
+}
+
+clado_A_Final_df <- do.call(rbind, clado_A_Final)
+View(clado_A_Final_df)
+
+
+write.table(clado_A_Final_df$assembly, sep = ",", "01_RawData/candidatos_genomas/cladoA/candidatos_finales_cladoA.csv", 
+row.names = FALSE, col.names = FALSE)
+
+############################
+####### Clado B ############
+############################
+candidatos_finales_cladoB <- c("MBP3040987.1", "WP_335424268.1", "WP_091587821.1", "WP_213104404.1", "WP_060206736.1", "WP_239432773.1", "WP_213106905.1", "WP_101569076.1", "WP_338753039.1", "WP_251525773.1", "MGM0852453.1", "WP_136351696.1")
+candidatos_finales_cladoB <- as.list(candidatos_finales_cladoB)
+
+
+d <- 1
+clado_B_Final <- list()
+clado_B_Final <- vector("list", length= length(candidatos_finales_cladoB))
+
+for (i in 1:length(candidatos_finales_cladoB)){
+  clado_finalB <- subset(clado_B_df, clado_B_df$accession == candidatos_finales_cladoB[d])
+  clado_finalB <- as.data.frame(clado_finalB)
+  print(i)
+
+  clado_B_Final[[d]] <- clado_finalB
+
+  d <- d + 1
+}
+
+clado_B_Final_df <- do.call(rbind, clado_B_Final)
+View(clado_B_Final_df)
+
+write.table(clado_B_Final_df$assembly, sep = ",", "01_RawData/candidatos_genomas/cladoB/candidatos_cladoB_finales.csv", 
+row.names = FALSE, col.names = FALSE)

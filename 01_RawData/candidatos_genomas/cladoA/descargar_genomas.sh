@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # metadata
-metadata="candidatos_genomas_cladoA.csv"
+metadata="candidatos_finales_cladoA.csv"
 
 Red="$(tput setaf 1)"
 Green="$(tput setaf 2)"

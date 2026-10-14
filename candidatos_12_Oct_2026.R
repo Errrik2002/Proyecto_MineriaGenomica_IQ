@@ -21,22 +21,15 @@ metadata_Query <- readRDS("03_Results/conjunto_noactinomicetos_YcaO/metadata_hom
 View(metadata_Query)
 
 
-
-#arbol_ordenado <- Preorder(iqtree_conjunto_noactinomicetos_Ycao_ML)
-#arbol_ordenado$tip.label
-#arbol_ordenado2 <- Cladewise(iqtree_conjunto_noactinomicetos_Ycao_ML)
-#class(arbol_ordenado2)
-
 #Ver los clados
 ggtree(iqtree_conjunto_noactinomicetos_Ycao_ML, layout = "rectangular", size= 0.2) + 
   geom_text2(aes(subset = !isTip, label = node), size = 0.5, color = "red", hjust = -0.3) +
   geom_tiplab(size= 0.5) +
   theme_tree2()
 
-
-#lista_clados <- subtrees(iqtree_conjunto_noactinomicetos_Ycao_ML)
-#iqtree_conjunto_noactinomicetos_Ycao_ML$Nnode
-#extraer los clados una vez visto su numero del clado/nodo
+##############################################################
+#extraer los clados una vez visto su numero del clado/nodo####
+##############################################################
 
 ###Clado A
 cladoA <- extract.clade(iqtree_conjunto_noactinomicetos_Ycao_ML, node = 573)$tip.label
@@ -53,10 +46,14 @@ cladoB_total
 cladoB_total[1]
 length(cladoB_total)#42
 
-############## obtener los datos de los clados
-#pasarlos a un solo csv
+##########################################################################
+############## obtener los datos de los clados ###########################
+##############pasarlos a un solo csv######################################
+##########################################################################
 
-####CICLO FOR PARA EL CLADo A
+#### CICLO FOR PARA EL CLADo A ####
+
+
 a <- 1
 clado_A_total_FOR <- list()
 clado_A_total_FOR <- vector("list", length = length(cladoA))
@@ -72,6 +69,47 @@ for (i in 1:length(cladoA)){
 clado_df_A <- do.call(rbind, clado_A_total_FOR)
 View(clado_df_A)
 class(clado_df_A)
+saveRDS(clado_df_A, "03_Results/candidatos_antismash/clado_A.rds")
 
 #escribe los accession numbers sin header en el csv
 write.table(clado_df_A$assembly,sep=",", "01_RawData/candidatos_genomas/candidatos_genomas_cladoA.csv", row.names=FALSE, col.names= FALSE)
+
+
+####################################################
+################ Proceso clado B ###################
+####################################################
+
+b <- 1
+clado_B_FOR <- list()
+clado_B_FOR <- vector("list", length= length(cladoB_total))
+
+for (i in 1:length(cladoB_total)){
+  clado_dos <- subset(metadata_Query, metadata_Query$accession == cladoB_total[b])
+  clado_dos <- as.data.frame(clado_dos)
+  print(i)
+
+  clado_B_FOR[[b]] <- clado_dos
+
+  b <- b + 1
+}
+
+clado_B_df <- do.call(rbind, clado_B_FOR)
+View(clado_B_df)
+saveRDS(clado_B_df, "03_Results/candidatos_antismash/clado_B.rds")
+
+
+#### escribir el csv con los genomas del clado que quiero que selccione ####
+write.table(clado_B_df$assembly, sep = ",", "01_RawData/candidatos_genomas/cladoB/candidatos_cladoB.csv", 
+row.names = FALSE, col.names = FALSE)
+
+
+
+
+############################################
+############################################
+# Exploracion de los clados ################
+############################################
+############################################
+colnames(clado_df_A)
+clado_A_explorar <- select(clado_df_A, c("especie","host", "isolation_source", "geo_loc_name"))
+View(clado_A_explorar)

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # metadata
-metadata="candidatos.csv"
+metadata="candidatos_cladoB.csv"
 
 Red="$(tput setaf 1)"
 Green="$(tput setaf 2)"

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAA68240.1</td>
+              <td>glutamate_N-acetyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000895.5">BGC0000895.5</a></td>
+              <td>other:other</td>
+              <td>49.0</td>
+              <td>95.6</td>
+              <td>346.0</td>
+              <td>1.33e-116</td>
+          </tr>
+    
+          <tr>
+              <td>EDY47126.1</td>
+              <td>glutamate_N-acetyltransferase_2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000845.5">BGC0000845.5</a></td>
+              <td>other:non-nrp beta-lactam</td>
+              <td>40.0</td>
+              <td>99.0</td>
+              <td>244.0</td>
+              <td>4.33e-77</td>
+          </tr>
+    
+          <tr>
+              <td>AFH74301.1</td>
+              <td>ornithine_acetyltransferase_3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001151.5">BGC0001151.5</a></td>
+              <td>other:non-nrp beta-lactam</td>
+              <td>39.0</td>
+              <td>98.8</td>
+              <td>242.0</td>
+              <td>4.93e-76</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf1258</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001752.4">BGC0001752.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>39.0</td>
+              <td>96.1</td>
+              <td>234.0</td>
+              <td>2.45e-73</td>
+          </tr>
+    
+          <tr>
+              <td>EFE73304.1</td>
+              <td>N2-acetyl-L-ornithine:L-glutamate_N-acetyltransferase_ArgJ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000431.5">BGC0000431.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>38.0</td>
+              <td>96.4</td>
+              <td>230.0</td>
+              <td>1.54e-71</td>
+          </tr>
+    
+          <tr>
+              <td>EFG04563.1</td>
+              <td>Probable_glutamate_N-acetyltransferase_1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000841.5">BGC0000841.5</a></td>
+              <td>other:non-nrp beta-lactam</td>
+              <td>32.0</td>
+              <td>98.1</td>
+              <td>150.0</td>
+              <td>1.79e-40</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

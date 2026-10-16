@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AYM52865.1</td>
+              <td>transcriptional_regulator_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001964.2">BGC0001964.2</a></td>
+              <td>PKS</td>
+              <td>45.0</td>
+              <td>74.2</td>
+              <td>90.0</td>
+              <td>2.26e-24</td>
+          </tr>
+    
+          <tr>
+              <td>BBM95954.1</td>
+              <td>transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002558.2">BGC0002558.2</a></td>
+              <td>PKS</td>
+              <td>46.0</td>
+              <td>72.5</td>
+              <td>81.0</td>
+              <td>1.89e-20</td>
+          </tr>
+    
+          <tr>
+              <td>ABB69766.1</td>
+              <td>PlaR3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000654.4">BGC0000654.4</a></td>
+              <td>terpene:Diterpene+saccharide:hybrid/tailoring</td>
+              <td>43.0</td>
+              <td>66.7</td>
+              <td>72.0</td>
+              <td>2.64e-17</td>
+          </tr>
+    
+          <tr>
+              <td>ARM20289.1</td>
+              <td>Hxl-family_transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001523.5">BGC0001523.5</a></td>
+              <td>PKS</td>
+              <td>38.0</td>
+              <td>71.7</td>
+              <td>72.0</td>
+              <td>6.27e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AUO16408.1</td>
+              <td>HxlR_family_transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001700.5">BGC0001700.5</a></td>
+              <td>PKS</td>
+              <td>38.0</td>
+              <td>71.7</td>
+              <td>72.0</td>
+              <td>6.27e-17</td>
+          </tr>
+    
+          <tr>
+              <td>WP_091316350.1</td>
+              <td>helix-turn-helix_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002007.2">BGC0002007.2</a></td>
+              <td>terpene</td>
+              <td>36.0</td>
+              <td>75.8</td>
+              <td>65.0</td>
+              <td>1.96e-14</td>
+          </tr>
+    
+          <tr>
+              <td>ABK32276.1</td>
+              <td>Amb8</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000014.5">BGC0000014.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>80.0</td>
+              <td>61.0</td>
+              <td>7.53e-12</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf532</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001199.5">BGC0001199.5</a></td>
+              <td>PKS</td>
+              <td>40.0</td>
+              <td>63.3</td>
+              <td>58.0</td>
+              <td>1.03e-11</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

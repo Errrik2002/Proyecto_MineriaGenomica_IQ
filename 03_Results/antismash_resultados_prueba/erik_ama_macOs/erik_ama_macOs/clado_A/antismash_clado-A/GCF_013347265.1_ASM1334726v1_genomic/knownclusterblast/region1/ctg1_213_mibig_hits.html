@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>QIQ28614.1</td>
+              <td>Nbc18</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002541.2">BGC0002541.2</a></td>
+              <td>other:other</td>
+              <td>23.0</td>
+              <td>97.8</td>
+              <td>77.0</td>
+              <td>5.18e-15</td>
+          </tr>
+    
+          <tr>
+              <td>ACN29718.1</td>
+              <td>N-glycosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000814.3">BGC0000814.3</a></td>
+              <td>other:other</td>
+              <td>22.0</td>
+              <td>97.0</td>
+              <td>64.0</td>
+              <td>1.04e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ADE22284.1</td>
+              <td>putative_inactive_gylcosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000279.5">BGC0000279.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>26.1</td>
+              <td>59.0</td>
+              <td>2.91e-09</td>
+          </tr>
+    
+          <tr>
+              <td>BAC10673.1</td>
+              <td>N-glycosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000821.5">BGC0000821.5</a></td>
+              <td>other:other</td>
+              <td>22.0</td>
+              <td>94.9</td>
+              <td>59.0</td>
+              <td>3.14e-09</td>
+          </tr>
+    
+          <tr>
+              <td>CAM00067.1</td>
+              <td>glycosyl_transferase,_NDP-D-desosamine_:_3-L-mycarosyl_erythronolide_B</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000055.5">BGC0000055.5</a></td>
+              <td>PKS:Type I+saccharide:hybrid/tailoring</td>
+              <td>27.0</td>
+              <td>31.7</td>
+              <td>51.0</td>
+              <td>9.36e-07</td>
+          </tr>
+    
+          <tr>
+              <td>BAC76489.1</td>
+              <td>glycosyltransferase_LkmI</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000085.5">BGC0000085.5</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>29.6</td>
+              <td>49.0</td>
+              <td>6.85e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

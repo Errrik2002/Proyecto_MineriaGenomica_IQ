@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABX24506.1</td>
+              <td>ATPase_E1-E2_type</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000877.5">BGC0000877.5</a></td>
+              <td>other:other</td>
+              <td>34.0</td>
+              <td>64.1</td>
+              <td>463.0</td>
+              <td>6.01e-144</td>
+          </tr>
+    
+          <tr>
+              <td>ACB01052.1</td>
+              <td>ATPase,_P-type_(transporting),_HAD_superfamily,_subfamily_IC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002470.2">BGC0002470.2</a></td>
+              <td>other:other</td>
+              <td>34.0</td>
+              <td>61.0</td>
+              <td>408.0</td>
+              <td>4.99e-123</td>
+          </tr>
+    
+          <tr>
+              <td>ACH85563.1</td>
+              <td>putative_ATPase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000283.4">BGC0000283.4</a></td>
+              <td>other:cyclitol</td>
+              <td>33.0</td>
+              <td>58.0</td>
+              <td>326.0</td>
+              <td>3.02e-93</td>
+          </tr>
+    
+          <tr>
+              <td>AMQ23502.1</td>
+              <td>haloacid_dehalogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002584.2">BGC0002584.2</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>31.0</td>
+              <td>62.3</td>
+              <td>327.0</td>
+              <td>7.75e-92</td>
+          </tr>
+    
+          <tr>
+              <td>XP_011392714.1</td>
+              <td>K,_P-type_ATPase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001281.3">BGC0001281.3</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>58.4</td>
+              <td>287.0</td>
+              <td>6.16e-80</td>
+          </tr>
+    
+          <tr>
+              <td>ABB90287.1</td>
+              <td>Ca2+_ATPase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001057.4">BGC0001057.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>28.0</td>
+              <td>59.9</td>
+              <td>260.0</td>
+              <td>2.46e-70</td>
+          </tr>
+    
+          <tr>
+              <td>AAY93339.1</td>
+              <td>magnesium-importing_ATPase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000413.5">BGC0000413.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>53.4</td>
+              <td>253.0</td>
+              <td>2.98e-69</td>
+          </tr>
+    
+          <tr>
+              <td>CAB38587.1</td>
+              <td>putative_integral_membrane_ATPase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000315.5">BGC0000315.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>45.2</td>
+              <td>163.0</td>
+              <td>1.25e-40</td>
+          </tr>
+    
+          <tr>
+              <td>ALV82383.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001370.4">BGC0001370.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>34.4</td>
+              <td>154.0</td>
+              <td>5.05e-39</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

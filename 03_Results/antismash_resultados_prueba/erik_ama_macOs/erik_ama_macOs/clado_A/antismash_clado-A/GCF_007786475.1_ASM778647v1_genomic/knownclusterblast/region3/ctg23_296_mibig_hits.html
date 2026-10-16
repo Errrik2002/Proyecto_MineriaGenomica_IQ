@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ACB47079.1</td>
+              <td>putative_carbon_monoxide_dehydrogenase_small_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001060.5">BGC0001060.5</a></td>
+              <td>PKS</td>
+              <td>47.0</td>
+              <td>83.9</td>
+              <td>143.0</td>
+              <td>1.08e-43</td>
+          </tr>
+    
+          <tr>
+              <td>WP_020636866.1</td>
+              <td>(2Fe-2S)-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002011.3">BGC0002011.3</a></td>
+              <td>PKS</td>
+              <td>47.0</td>
+              <td>81.2</td>
+              <td>136.0</td>
+              <td>6.03e-41</td>
+          </tr>
+    
+          <tr>
+              <td>BAI23325.1</td>
+              <td>putative_carbonmonoxide_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000949.5">BGC0000949.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>44.0</td>
+              <td>86.0</td>
+              <td>131.0</td>
+              <td>5.85e-39</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54213.1</td>
+              <td>Pau46</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001731.5">BGC0001731.5</a></td>
+              <td>other:other</td>
+              <td>43.0</td>
+              <td>87.6</td>
+              <td>121.0</td>
+              <td>9.82e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54266.1</td>
+              <td>PauY46</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001732.5">BGC0001732.5</a></td>
+              <td>other:other</td>
+              <td>43.0</td>
+              <td>87.6</td>
+              <td>121.0</td>
+              <td>9.82e-35</td>
+          </tr>
+    
+          <tr>
+              <td>ADZ13535.1</td>
+              <td>YtkC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000466.5">BGC0000466.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>41.0</td>
+              <td>79.6</td>
+              <td>119.0</td>
+              <td>6.1e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AZS52684.1</td>
+              <td>2Fe-2S-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001972.4">BGC0001972.4</a></td>
+              <td>other:other</td>
+              <td>39.0</td>
+              <td>86.0</td>
+              <td>107.0</td>
+              <td>1.98e-29</td>
+          </tr>
+    
+          <tr>
+              <td>BAO84851.1</td>
+              <td>putative_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000414.5">BGC0000414.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>44.0</td>
+              <td>79.0</td>
+              <td>110.0</td>
+              <td>3.61e-28</td>
+          </tr>
+    
+          <tr>
+              <td>NKI69301.1</td>
+              <td>2Fe-2S_iron-sulfur_cluster_binding_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002408.3">BGC0002408.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>77.4</td>
+              <td>87.0</td>
+              <td>9.8e-22</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

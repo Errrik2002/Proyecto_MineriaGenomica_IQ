@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AFV52113.1</td>
+              <td>putative_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000081.5">BGC0000081.5</a></td>
+              <td>NRPS:Type I+PKS:Iterative type I</td>
+              <td>37.0</td>
+              <td>99.2</td>
+              <td>236.0</td>
+              <td>1.23e-73</td>
+          </tr>
+    
+          <tr>
+              <td>AFV27433.1</td>
+              <td>transmembrane_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000375.5">BGC0000375.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>34.0</td>
+              <td>99.5</td>
+              <td>220.0</td>
+              <td>1.52e-67</td>
+          </tr>
+    
+          <tr>
+              <td>QDX19368.1</td>
+              <td>MFS_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002295.3">BGC0002295.3</a></td>
+              <td>NRPS:Type I+saccharide</td>
+              <td>35.0</td>
+              <td>99.8</td>
+              <td>218.0</td>
+              <td>1.57e-66</td>
+          </tr>
+    
+          <tr>
+              <td>AAL65278.2</td>
+              <td>QbsM</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000925.5">BGC0000925.5</a></td>
+              <td>other:other</td>
+              <td>31.0</td>
+              <td>96.2</td>
+              <td>169.0</td>
+              <td>3.17e-48</td>
+          </tr>
+    
+          <tr>
+              <td>QCR99102.1</td>
+              <td>TalB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002573.2">BGC0002573.2</a></td>
+              <td>other:other</td>
+              <td>30.0</td>
+              <td>96.2</td>
+              <td>130.0</td>
+              <td>1.4e-33</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

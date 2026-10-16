@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ATY37597.1</td>
+              <td>BogJ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001532.4">BGC0001532.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>40.0</td>
+              <td>98.7</td>
+              <td>190.0</td>
+              <td>2.11e-60</td>
+          </tr>
+    
+          <tr>
+              <td>AAD21211.1</td>
+              <td>BacT</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000310.5">BGC0000310.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>98.7</td>
+              <td>177.0</td>
+              <td>1.94e-55</td>
+          </tr>
+    
+          <tr>
+              <td>ABD14710.1</td>
+              <td>CesT</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000320.5">BGC0000320.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>98.7</td>
+              <td>163.0</td>
+              <td>7.84e-50</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ76283.1</td>
+              <td>putative_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000972.5">BGC0000972.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>34.0</td>
+              <td>99.6</td>
+              <td>160.0</td>
+              <td>9.62e-49</td>
+          </tr>
+    
+          <tr>
+              <td>ABS75105.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002641.2">BGC0002641.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>91.2</td>
+              <td>159.0</td>
+              <td>3.23e-48</td>
+          </tr>
+    
+          <tr>
+              <td>AFD30951.1</td>
+              <td>CrmJ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000966.5">BGC0000966.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>33.0</td>
+              <td>97.1</td>
+              <td>155.0</td>
+              <td>8.11e-47</td>
+          </tr>
+    
+          <tr>
+              <td>AFY58517.1</td>
+              <td>putative_thioesterase_involved_in_non-ribosomal_peptide_biosynthesis</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002411.3">BGC0002411.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>32.0</td>
+              <td>96.2</td>
+              <td>149.0</td>
+              <td>2.39e-44</td>
+          </tr>
+    
+          <tr>
+              <td>UHJ79950.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002654.2">BGC0002654.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>98.3</td>
+              <td>149.0</td>
+              <td>6.1e-44</td>
+          </tr>
+    
+          <tr>
+              <td>AFV52205.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000081.5">BGC0000081.5</a></td>
+              <td>NRPS:Type I+PKS:Iterative type I</td>
+              <td>34.0</td>
+              <td>96.2</td>
+              <td>148.0</td>
+              <td>1.03e-43</td>
+          </tr>
+    
+          <tr>
+              <td>BAH43770.1</td>
+              <td>putative_type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000452.5">BGC0000452.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>99.2</td>
+              <td>140.0</td>
+              <td>8.77e-41</td>
+          </tr>
+    
+          <tr>
+              <td>ACC80696.1</td>
+              <td>Thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002677.2">BGC0002677.2</a></td>
+              <td>other:other</td>
+              <td>33.0</td>
+              <td>99.6</td>
+              <td>139.0</td>
+              <td>6.12e-40</td>
+          </tr>
+    
+          <tr>
+              <td>CBJ89763.1</td>
+              <td>Thioesterase_involved_in_xenocoumacin_synthesis</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001054.5">BGC0001054.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>34.0</td>
+              <td>98.3</td>
+              <td>137.0</td>
+              <td>1.98e-39</td>
+          </tr>
+    
+          <tr>
+              <td>AMB48441.1</td>
+              <td>polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001357.3">BGC0001357.3</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>89.5</td>
+              <td>144.0</td>
+              <td>3.62e-39</td>
+          </tr>
+    
+          <tr>
+              <td>AFV96142.1</td>
+              <td>polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001064.5">BGC0001064.5</a></td>
+              <td>PKS:Type I</td>
+              <td>33.0</td>
+              <td>90.3</td>
+              <td>144.0</td>
+              <td>4.96e-39</td>
+          </tr>
+    
+          <tr>
+              <td>ARU81122.1</td>
+              <td>CylH</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001566.3">BGC0001566.3</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>90.3</td>
+              <td>144.0</td>
+              <td>4.96e-39</td>
+          </tr>
+    
+          <tr>
+              <td>AFR69340.1</td>
+              <td>type_II_thioesterase_SpiJ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001045.5">BGC0001045.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>31.0</td>
+              <td>98.3</td>
+              <td>137.0</td>
+              <td>5.42e-39</td>
+          </tr>
+    
+          <tr>
+              <td>AHF21225.1</td>
+              <td>TriA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000449.5">BGC0000449.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>98.3</td>
+              <td>135.0</td>
+              <td>2.4e-38</td>
+          </tr>
+    
+          <tr>
+              <td>CAD29792.1</td>
+              <td>microcystin_synthetase_associated_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001015.5">BGC0001015.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>30.0</td>
+              <td>97.1</td>
+              <td>134.0</td>
+              <td>3.63e-38</td>
+          </tr>
+    
+          <tr>
+              <td>ACR33073.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000017.5">BGC0000017.5</a></td>
+              <td>PKS:Type I+other:other</td>
+              <td>32.0</td>
+              <td>98.3</td>
+              <td>132.0</td>
+              <td>1.06e-37</td>
+          </tr>
+    
+          <tr>
+              <td>WP_069848016.1</td>
+              <td>thioesterase_II_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002472.2">BGC0002472.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>99.2</td>
+              <td>132.0</td>
+              <td>1.82e-37</td>
+          </tr>
+    
+          <tr>
+              <td>BAH43865.1</td>
+              <td>putative_type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000367.5">BGC0000367.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>97.9</td>
+              <td>132.0</td>
+              <td>1.86e-37</td>
+          </tr>
+    
+          <tr>
+              <td>ctg3_25</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001853.3">BGC0001853.3</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>32.0</td>
+              <td>97.5</td>
+              <td>130.0</td>
+              <td>6.14e-37</td>
+          </tr>
+    
+          <tr>
+              <td>CAQ34930.1</td>
+              <td>type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000986.5">BGC0000986.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>32.0</td>
+              <td>97.5</td>
+              <td>130.0</td>
+              <td>1.48e-36</td>
+          </tr>
+    
+          <tr>
+              <td>ABP55205.1</td>
+              <td>Thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000142.3">BGC0000142.3</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>98.3</td>
+              <td>129.0</td>
+              <td>1.94e-36</td>
+          </tr>
+    
+          <tr>
+              <td>ABV56586.1</td>
+              <td>KtzF</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000378.5">BGC0000378.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>34.0</td>
+              <td>94.5</td>
+              <td>129.0</td>
+              <td>3.15e-36</td>
+          </tr>
+    
+          <tr>
+              <td>EJK79839.1</td>
+              <td>putative_thioesterase_involved_in_non-ribosomal_peptide_biosynthesis</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000436.5">BGC0000436.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>97.9</td>
+              <td>129.0</td>
+              <td>3.23e-36</td>
+          </tr>
+    
+          <tr>
+              <td>EWM63009.1</td>
+              <td>gramicidin_S_biosynthesis_protein_GrsT</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001328.5">BGC0001328.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>28.0</td>
+              <td>97.5</td>
+              <td>127.0</td>
+              <td>4.16e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AHF22856.1</td>
+              <td>MarJ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000091.5">BGC0000091.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>98.7</td>
+              <td>126.0</td>
+              <td>4.65e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AZF85923.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001963.2">BGC0001963.2</a></td>
+              <td>PKS:Type I</td>
+              <td>34.0</td>
+              <td>97.1</td>
+              <td>125.0</td>
+              <td>5.08e-35</td>
+          </tr>
+    
+          <tr>
+              <td>QES95493.1</td>
+              <td>putative_discrete_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002453.2">BGC0002453.2</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>92.0</td>
+              <td>125.0</td>
+              <td>5.74e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AKQ22666.1</td>
+              <td>malonyl_CoA-acyl_carrier_protein_transacylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001656.3">BGC0001656.3</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>90.8</td>
+              <td>125.0</td>
+              <td>7.28e-35</td>
+          </tr>
+    
+          <tr>
+              <td>QES95482.1</td>
+              <td>type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002453.2">BGC0002453.2</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>97.5</td>
+              <td>125.0</td>
+              <td>1.06e-34</td>
+          </tr>
+    
+          <tr>
+              <td>WP_084212913.1</td>
+              <td>alpha/beta_fold_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001327.5">BGC0001327.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>28.0</td>
+              <td>97.5</td>
+              <td>125.0</td>
+              <td>1.15e-34</td>
+          </tr>
+    
+          <tr>
+              <td>ATY69585.1</td>
+              <td>type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001823.4">BGC0001823.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>34.0</td>
+              <td>90.3</td>
+              <td>124.0</td>
+              <td>1.38e-34</td>
+          </tr>
+    
+          <tr>
+              <td>BAQ21958.1</td>
+              <td>putative_type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001204.5">BGC0001204.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>89.5</td>
+              <td>123.0</td>
+              <td>3.08e-34</td>
+          </tr>
+    
+          <tr>
+              <td>ADJ63839.1</td>
+              <td>thioesterase_involved_in_non-ribosomal_peptide_biosynthesis_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000424.5">BGC0000424.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>98.3</td>
+              <td>121.0</td>
+              <td>2.01e-33</td>
+          </tr>
+    
+          <tr>
+              <td>WP_047890615.1</td>
+              <td>alpha/beta_fold_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001330.5">BGC0001330.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>32.0</td>
+              <td>97.5</td>
+              <td>121.0</td>
+              <td>2.01e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ABY83171.1</td>
+              <td>Azi33</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000960.5">BGC0000960.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>34.0</td>
+              <td>91.2</td>
+              <td>120.0</td>
+              <td>3.97e-33</td>
+          </tr>
+    
+          <tr>
+              <td>WP_019032752.1</td>
+              <td>alpha/beta_fold_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001331.5">BGC0001331.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>32.0</td>
+              <td>90.8</td>
+              <td>120.0</td>
+              <td>3.97e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ADU85986.1</td>
+              <td>putative_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000165.4">BGC0000165.4</a></td>
+              <td>PKS:Type I</td>
+              <td>32.0</td>
+              <td>94.1</td>
+              <td>120.0</td>
+              <td>5.45e-33</td>
+          </tr>
+    
+          <tr>
+              <td>AAN85527.1</td>
+              <td>thioesterase_type_II</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001101.5">BGC0001101.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>30.0</td>
+              <td>98.7</td>
+              <td>120.0</td>
+              <td>6.04e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ABA59546.1</td>
+              <td>discrete_type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000453.5">BGC0000453.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>96.6</td>
+              <td>118.0</td>
+              <td>2.71e-32</td>
+          </tr>
+    
+          <tr>
+              <td>ANZ22996.1</td>
+              <td>ZinH</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001828.5">BGC0001828.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>91.6</td>
+              <td>118.0</td>
+              <td>3.77e-32</td>
+          </tr>
+    
+          <tr>
+              <td>QCP68966.1</td>
+              <td>VatW</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002296.2">BGC0002296.2</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>30.0</td>
+              <td>97.9</td>
+              <td>124.0</td>
+              <td>4.45e-32</td>
+          </tr>
+    
+          <tr>
+              <td>AAQ84143.1</td>
+              <td>Plm8</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000123.5">BGC0000123.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>91.2</td>
+              <td>117.0</td>
+              <td>9.96e-32</td>
+          </tr>
+    
+          <tr>
+              <td>ADI59536.1</td>
+              <td>CorM</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001091.5">BGC0001091.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>29.0</td>
+              <td>97.1</td>
+              <td>116.0</td>
+              <td>1.9e-31</td>
+          </tr>
+    
+          <tr>
+              <td>ATY69552.1</td>
+              <td>type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001611.4">BGC0001611.4</a></td>
+              <td>PKS:Type I</td>
+              <td>30.0</td>
+              <td>89.9</td>
+              <td>116.0</td>
+              <td>2.51e-31</td>
+          </tr>
+    
+          <tr>
+              <td>WCB70654.1</td>
+              <td>Type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002760.2">BGC0002760.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>91.2</td>
+              <td>116.0</td>
+              <td>4.98e-31</td>
+          </tr>
+    
+          <tr>
+              <td>CAC17504.1</td>
+              <td>putative_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000324.5">BGC0000324.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>95.0</td>
+              <td>115.0</td>
+              <td>1.21e-30</td>
+          </tr>
+    
+          <tr>
+              <td>ALA09374.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001303.5">BGC0001303.5</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>87.0</td>
+              <td>112.0</td>
+              <td>2.82e-30</td>
+          </tr>
+    
+          <tr>
+              <td>QPB41102.1</td>
+              <td>thioesterase/alpha/beta_fold_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002503.3">BGC0002503.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>32.0</td>
+              <td>90.8</td>
+              <td>113.0</td>
+              <td>3.3e-30</td>
+          </tr>
+    
+          <tr>
+              <td>CAC37888.1</td>
+              <td>thioesterase_II</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000038.5">BGC0000038.5</a></td>
+              <td>PKS:Type I</td>
+              <td>31.0</td>
+              <td>92.0</td>
+              <td>113.0</td>
+              <td>3.84e-30</td>
+          </tr>
+    
+          <tr>
+              <td>CAP20361.1</td>
+              <td>putative_non-ribosomal_peptide_synthesis_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000347.5">BGC0000347.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>98.7</td>
+              <td>112.0</td>
+              <td>6.96e-30</td>
+          </tr>
+    
+          <tr>
+              <td>AAO65810.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000100.5">BGC0000100.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>92.4</td>
+              <td>112.0</td>
+              <td>7.39e-30</td>
+          </tr>
+    
+          <tr>
+              <td>ANZ52473.1</td>
+              <td>MonAX</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001670.5">BGC0001670.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>92.4</td>
+              <td>112.0</td>
+              <td>7.39e-30</td>
+          </tr>
+    
+          <tr>
+              <td>AAN85542.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001101.5">BGC0001101.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>31.0</td>
+              <td>90.3</td>
+              <td>112.0</td>
+              <td>8.22e-30</td>
+          </tr>
+    
+          <tr>
+              <td>AJK49768.1</td>
+              <td>thioesterase_type_II,_NRPS/PKS/S-FAS_family</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002565.2">BGC0002565.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>92.4</td>
+              <td>112.0</td>
+              <td>1.06e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AAC69333.1</td>
+              <td>thioesterase_II_PikAV</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000094.5">BGC0000094.5</a></td>
+              <td>PKS:Type I+saccharide:hybrid/tailoring</td>
+              <td>28.0</td>
+              <td>92.4</td>
+              <td>112.0</td>
+              <td>1.39e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AWC08648.1</td>
+              <td>putative_type_II_TE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001662.4">BGC0001662.4</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>97.1</td>
+              <td>111.0</td>
+              <td>1.57e-29</td>
+          </tr>
+    
+          <tr>
+              <td>QKV49763.1</td>
+              <td>type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002526.3">BGC0002526.3</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>90.8</td>
+              <td>111.0</td>
+              <td>2.2e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AEC13083.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000060.5">BGC0000060.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>90.8</td>
+              <td>111.0</td>
+              <td>2.35e-29</td>
+          </tr>
+    
+          <tr>
+              <td>ALG65337.1</td>
+              <td>Var1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002416.3">BGC0002416.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>32.0</td>
+              <td>91.2</td>
+              <td>111.0</td>
+              <td>2.51e-29</td>
+          </tr>
+    
+          <tr>
+              <td>BAV55991.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001597.4">BGC0001597.4</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>98.3</td>
+              <td>110.0</td>
+              <td>2.52e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AZY92015.1</td>
+              <td>putative_type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002022.4">BGC0002022.4</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>91.6</td>
+              <td>110.0</td>
+              <td>3.36e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AEP40917.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000021.5">BGC0000021.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>90.8</td>
+              <td>110.0</td>
+              <td>5.02e-29</td>
+          </tr>
+    
+          <tr>
+              <td>CBZ42142.1</td>
+              <td>putative_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001117.5">BGC0001117.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>94.1</td>
+              <td>109.0</td>
+              <td>7.09e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AAM88351.1</td>
+              <td>NbmB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000899.4">BGC0000899.4</a></td>
+              <td>saccharide</td>
+              <td>27.0</td>
+              <td>92.4</td>
+              <td>110.0</td>
+              <td>1.04e-28</td>
+          </tr>
+    
+          <tr>
+              <td>BAF50718.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001116.5">BGC0001116.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>30.0</td>
+              <td>94.5</td>
+              <td>109.0</td>
+              <td>1.1e-28</td>
+          </tr>
+    
+          <tr>
+              <td>DAC80065.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001836.3">BGC0001836.3</a></td>
+              <td>PKS:Trans-AT type I</td>
+              <td>28.0</td>
+              <td>94.1</td>
+              <td>109.0</td>
+              <td>1.38e-28</td>
+          </tr>
+    
+          <tr>
+              <td>WP_234025150.1</td>
+              <td>alpha/beta_fold_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001332.5">BGC0001332.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>28.0</td>
+              <td>98.3</td>
+              <td>108.0</td>
+              <td>3e-28</td>
+          </tr>
+    
+          <tr>
+              <td>BBA84061.1</td>
+              <td>type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001649.3">BGC0001649.3</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>89.9</td>
+              <td>108.0</td>
+              <td>3.27e-28</td>
+          </tr>
+    
+          <tr>
+              <td>SCO70311.1</td>
+              <td>Type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001433.5">BGC0001433.5</a></td>
+              <td>PKS:Type I</td>
+              <td>29.0</td>
+              <td>96.6</td>
+              <td>108.0</td>
+              <td>3.41e-28</td>
+          </tr>
+    
+          <tr>
+              <td>BAW35601.1</td>
+              <td>putative_type_II_TE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002357.3">BGC0002357.3</a></td>
+              <td>PKS+other:other</td>
+              <td>29.0</td>
+              <td>100.8</td>
+              <td>107.0</td>
+              <td>4.3e-28</td>
+          </tr>
+    
+          <tr>
+              <td>AGZ15461.1</td>
+              <td>putative_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001036.5">BGC0001036.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>31.0</td>
+              <td>92.0</td>
+              <td>107.0</td>
+              <td>5.4e-28</td>
+          </tr>
+    
+          <tr>
+              <td>AFU82629.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000998.5">BGC0000998.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>30.0</td>
+              <td>98.7</td>
+              <td>107.0</td>
+              <td>7.13e-28</td>
+          </tr>
+    
+          <tr>
+              <td>AXI91544.1</td>
+              <td>FunA11</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001944.2">BGC0001944.2</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>90.8</td>
+              <td>107.0</td>
+              <td>9.18e-28</td>
+          </tr>
+    
+          <tr>
+              <td>QHZ99319.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001875.4">BGC0001875.4</a></td>
+              <td>PKS:Type I</td>
+              <td>31.0</td>
+              <td>92.9</td>
+              <td>106.0</td>
+              <td>1.62e-27</td>
+          </tr>
+    
+          <tr>
+              <td>CAC20922.1</td>
+              <td>PimI_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000125.5">BGC0000125.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>90.8</td>
+              <td>105.0</td>
+              <td>2.47e-27</td>
+          </tr>
+    
+          <tr>
+              <td>AQT01392.1</td>
+              <td>SgnI</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001690.5">BGC0001690.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>90.8</td>
+              <td>105.0</td>
+              <td>2.47e-27</td>
+          </tr>
+    
+          <tr>
+              <td>CAQ18835.1</td>
+              <td>polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000954.5">BGC0000954.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>31.0</td>
+              <td>97.5</td>
+              <td>110.0</td>
+              <td>3.6e-27</td>
+          </tr>
+    
+          <tr>
+              <td>ANC94977.1</td>
+              <td>AlmM</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001396.5">BGC0001396.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>92.4</td>
+              <td>105.0</td>
+              <td>4.94e-27</td>
+          </tr>
+    
+          <tr>
+              <td>ABB52527.1</td>
+              <td>type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000047.5">BGC0000047.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>92.4</td>
+              <td>105.0</td>
+              <td>5.08e-27</td>
+          </tr>
+    
+          <tr>
+              <td>AAS79448.1</td>
+              <td>putative_thioesterase_TEII_family</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000035.5">BGC0000035.5</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>99.2</td>
+              <td>104.0</td>
+              <td>1.62e-26</td>
+          </tr>
+    
+          <tr>
+              <td>CAL58678.1</td>
+              <td>type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000149.5">BGC0000149.5</a></td>
+              <td>PKS:Type I</td>
+              <td>28.0</td>
+              <td>90.3</td>
+              <td>103.0</td>
+              <td>2.18e-26</td>
+          </tr>
+    
+          <tr>
+              <td>ABV56601.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000378.5">BGC0000378.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>90.8</td>
+              <td>102.0</td>
+              <td>2.6e-26</td>
+          </tr>
+    
+          <tr>
+              <td>AGD80621.1</td>
+              <td>thioesterase_II</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000394.5">BGC0000394.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>95.0</td>
+              <td>103.0</td>
+              <td>2.7e-26</td>
+          </tr>
+    
+          <tr>
+              <td>AXG22403.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002024.3">BGC0002024.3</a></td>
+              <td>PKS:Type I</td>
+              <td>30.0</td>
+              <td>92.0</td>
+              <td>103.0</td>
+              <td>2.82e-26</td>
+          </tr>
+    
+          <tr>
+              <td>CAQ52621.1</td>
+              <td>type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001066.5">BGC0001066.5</a></td>
+              <td>PKS:Type I</td>
+              <td>29.0</td>
+              <td>89.9</td>
+              <td>103.0</td>
+              <td>3.21e-26</td>
+          </tr>
+    
+          <tr>
+              <td>WP_018960019.1</td>
+              <td>alpha/beta_fold_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002010.4">BGC0002010.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>30.0</td>
+              <td>100.0</td>
+              <td>102.0</td>
+              <td>4.35e-26</td>
+          </tr>
+    
+          <tr>
+              <td>EFE73309.1</td>
+              <td>conserved_hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000431.5">BGC0000431.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>92.9</td>
+              <td>102.0</td>
+              <td>4.99e-26</td>
+          </tr>
+    
+          <tr>
+              <td>WP_003982111.1</td>
+              <td>alpha/beta_fold_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002106.3">BGC0002106.3</a></td>
+              <td>PKS:Modular type I</td>
+              <td>31.0</td>
+              <td>90.8</td>
+              <td>102.0</td>
+              <td>5.08e-26</td>
+          </tr>
+    
+          <tr>
+              <td>QFU19822.1</td>
+              <td>type_II_Thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002431.3">BGC0002431.3</a></td>
+              <td>PKS+saccharide</td>
+              <td>29.0</td>
+              <td>90.8</td>
+              <td>103.0</td>
+              <td>6.41e-26</td>
+          </tr>
+    
+          <tr>
+              <td>BAW35648.1</td>
+              <td>putative_type_II_TE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002356.3">BGC0002356.3</a></td>
+              <td>PKS+other:other</td>
+              <td>30.0</td>
+              <td>87.8</td>
+              <td>100.0</td>
+              <td>8.38e-26</td>
+          </tr>
+    
+          <tr>
+              <td>CAD91231.1</td>
+              <td>putative_type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000289.5">BGC0000289.5</a></td>
+              <td>NRPS:Type I+saccharide:hybrid/tailoring</td>
+              <td>30.0</td>
+              <td>92.0</td>
+              <td>100.0</td>
+              <td>1.79e-25</td>
+          </tr>
+    
+          <tr>
+              <td>QSI97716.1</td>
+              <td>type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002499.2">BGC0002499.2</a></td>
+              <td>PKS+NRPS:Type I</td>
+              <td>28.0</td>
+              <td>98.7</td>
+              <td>99.0</td>
+              <td>6.97e-25</td>
+          </tr>
+    
+          <tr>
+              <td>AKJ15830.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002735.2">BGC0002735.2</a></td>
+              <td>PKS+NRPS:Type I</td>
+              <td>30.0</td>
+              <td>90.3</td>
+              <td>99.0</td>
+              <td>1.16e-24</td>
+          </tr>
+    
+          <tr>
+              <td>AXF14781.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002563.3">BGC0002563.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>101.3</td>
+              <td>99.0</td>
+              <td>1.35e-24</td>
+          </tr>
+    
+          <tr>
+              <td>PVC99874.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002100.2">BGC0002100.2</a></td>
+              <td>NRPS:Type I+other:other</td>
+              <td>29.0</td>
+              <td>89.9</td>
+              <td>98.0</td>
+              <td>1.52e-24</td>
+          </tr>
+    
+          <tr>
+              <td>ATG32079.1</td>
+              <td>thioesterase_domain</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001750.4">BGC0001750.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>25.0</td>
+              <td>98.7</td>
+              <td>98.0</td>
+              <td>2.82e-24</td>
+          </tr>
+    
+          <tr>
+              <td>BAT51068.1</td>
+              <td>type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001296.3">BGC0001296.3</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>90.3</td>
+              <td>97.0</td>
+              <td>7.1e-24</td>
+          </tr>
+    
+          <tr>
+              <td>AIU36104.1</td>
+              <td>LglE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000180.5">BGC0000180.5</a></td>
+              <td>PKS:Trans-AT type I</td>
+              <td>26.0</td>
+              <td>110.5</td>
+              <td>100.0</td>
+              <td>1.35e-23</td>
+          </tr>
+    
+          <tr>
+              <td>CAC11138.1</td>
+              <td>NikP2_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000876.5">BGC0000876.5</a></td>
+              <td>other:other</td>
+              <td>27.0</td>
+              <td>99.6</td>
+              <td>96.0</td>
+              <td>2.08e-23</td>
+          </tr>
+    
+          <tr>
+              <td>AFB35636.1</td>
+              <td>EsmB5</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000935.5">BGC0000935.5</a></td>
+              <td>other:aminocoumarin+PKS</td>
+              <td>29.0</td>
+              <td>89.5</td>
+              <td>93.0</td>
+              <td>2.47e-22</td>
+          </tr>
+    
+          <tr>
+              <td>BAQ25498.1</td>
+              <td>type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001288.5">BGC0001288.5</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>92.4</td>
+              <td>92.0</td>
+              <td>5.22e-22</td>
+          </tr>
+    
+          <tr>
+              <td>ARE67865.1</td>
+              <td>AbsN</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001492.5">BGC0001492.5</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>100.8</td>
+              <td>89.0</td>
+              <td>5.88e-21</td>
+          </tr>
+    
+          <tr>
+              <td>AIL50171.1</td>
+              <td>putative_type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000213.4">BGC0000213.4</a></td>
+              <td>PKS:Type II</td>
+              <td>26.0</td>
+              <td>96.2</td>
+              <td>89.0</td>
+              <td>6.28e-21</td>
+          </tr>
+    
+          <tr>
+              <td>AIT38307.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000382.5">BGC0000382.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>90.8</td>
+              <td>87.0</td>
+              <td>2.72e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AGN74877.1</td>
+              <td>thioestrerase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000459.5">BGC0000459.5</a></td>
+              <td>NRPS:Type I+PKS:Trans-AT type I</td>
+              <td>27.0</td>
+              <td>90.8</td>
+              <td>85.0</td>
+              <td>1.4e-19</td>
+          </tr>
+    
+          <tr>
+              <td>ACR50795.1</td>
+              <td>putative_polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000163.5">BGC0000163.5</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>100.0</td>
+              <td>86.0</td>
+              <td>1.08e-18</td>
+          </tr>
+    
+          <tr>
+              <td>ADA82585.1</td>
+              <td>hybrid_trans-AT_polyketide_synthase_-_nonribosomal_peptide_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001110.5">BGC0001110.5</a></td>
+              <td>NRPS:Type I+PKS:Trans-AT type I</td>
+              <td>21.0</td>
+              <td>102.9</td>
+              <td>74.0</td>
+              <td>7.73e-15</td>
+          </tr>
+    
+          <tr>
+              <td>BAE93739.1</td>
+              <td>type_I_polyketide_synthase-related_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000164.5">BGC0000164.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>97.9</td>
+              <td>71.0</td>
+              <td>7.8e-14</td>
+          </tr>
+    
+          <tr>
+              <td>CBL93724.1</td>
+              <td>GetN</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000360.5">BGC0000360.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>53.8</td>
+              <td>64.0</td>
+              <td>1e-11</td>
+          </tr>
+    
+          <tr>
+              <td>RLV71194.1</td>
+              <td>Discrete_type_II_thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001846.4">BGC0001846.4</a></td>
+              <td>saccharide:hybrid/tailoring+NRPS:Type I</td>
+              <td>27.0</td>
+              <td>66.0</td>
+              <td>57.0</td>
+              <td>7.27e-10</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

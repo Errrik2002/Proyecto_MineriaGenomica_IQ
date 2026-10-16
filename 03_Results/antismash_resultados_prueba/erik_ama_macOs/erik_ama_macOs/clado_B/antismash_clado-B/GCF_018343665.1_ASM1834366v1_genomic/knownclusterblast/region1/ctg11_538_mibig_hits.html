@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAS92542.1</td>
+              <td>SirJ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001044.4">BGC0001044.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>65.7</td>
+              <td>162.0</td>
+              <td>4.21e-45</td>
+          </tr>
+    
+          <tr>
+              <td>CCE28982.1</td>
+              <td>related_to_microsomal_dipeptidase_precursor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001365.3">BGC0001365.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>34.0</td>
+              <td>72.8</td>
+              <td>159.0</td>
+              <td>2.13e-43</td>
+          </tr>
+    
+          <tr>
+              <td>AQZ42165.1</td>
+              <td>putative_membrane_dipeptidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001820.3">BGC0001820.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>62.5</td>
+              <td>144.0</td>
+              <td>9.44e-39</td>
+          </tr>
+    
+          <tr>
+              <td>BAE56605.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001123.5">BGC0001123.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>68.8</td>
+              <td>145.0</td>
+              <td>1.27e-38</td>
+          </tr>
+    
+          <tr>
+              <td>EAU36747.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000292.4">BGC0000292.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>67.8</td>
+              <td>140.0</td>
+              <td>1.29e-36</td>
+          </tr>
+    
+          <tr>
+              <td>QVK45105.1</td>
+              <td>membrane_dipeptidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002438.2">BGC0002438.2</a></td>
+              <td>other:other</td>
+              <td>32.0</td>
+              <td>72.6</td>
+              <td>140.0</td>
+              <td>3.15e-36</td>
+          </tr>
+    
+          <tr>
+              <td>QPP19386.1</td>
+              <td>PenJ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002501.3">BGC0002501.3</a></td>
+              <td>other:other</td>
+              <td>32.0</td>
+              <td>57.5</td>
+              <td>134.0</td>
+              <td>3.77e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AAY93348.2</td>
+              <td>putative_dipeptidase_precursor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000413.5">BGC0000413.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>64.2</td>
+              <td>125.0</td>
+              <td>3.24e-31</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAD40109.1</td>
+              <td>ZmaE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001059.5">BGC0001059.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>55.0</td>
+              <td>93.1</td>
+              <td>387.0</td>
+              <td>4.36e-133</td>
+          </tr>
+    
+          <tr>
+              <td>CBJ89767.1</td>
+              <td>Acyl-CoA_dehydrogenase_involved_in_xenocoumacin_synthesis</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001054.5">BGC0001054.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>51.0</td>
+              <td>93.1</td>
+              <td>362.0</td>
+              <td>3.11e-123</td>
+          </tr>
+    
+          <tr>
+              <td>CCE88384.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001034.5">BGC0001034.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>45.0</td>
+              <td>93.6</td>
+              <td>315.0</td>
+              <td>4.29e-105</td>
+          </tr>
+    
+          <tr>
+              <td>CAQ43082.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000970.5">BGC0000970.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>44.0</td>
+              <td>91.3</td>
+              <td>287.0</td>
+              <td>4.81e-94</td>
+          </tr>
+    
+          <tr>
+              <td>AFV52203.1</td>
+              <td>enoyl_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000081.5">BGC0000081.5</a></td>
+              <td>NRPS:Type I+PKS:Iterative type I</td>
+              <td>41.0</td>
+              <td>90.3</td>
+              <td>272.0</td>
+              <td>6.97e-88</td>
+          </tr>
+    
+          <tr>
+              <td>AFU82610.1</td>
+              <td>acyl_CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000998.5">BGC0000998.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>41.0</td>
+              <td>89.1</td>
+              <td>262.0</td>
+              <td>2.54e-84</td>
+          </tr>
+    
+          <tr>
+              <td>AJY78088.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001902.3">BGC0001902.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>39.0</td>
+              <td>91.9</td>
+              <td>252.0</td>
+              <td>2.39e-80</td>
+          </tr>
+    
+          <tr>
+              <td>AAR87758.1</td>
+              <td>ZmaI</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001059.5">BGC0001059.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>39.0</td>
+              <td>89.1</td>
+              <td>245.0</td>
+              <td>1.36e-77</td>
+          </tr>
+    
+          <tr>
+              <td>AEW31025.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000407.5">BGC0000407.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>39.0</td>
+              <td>94.1</td>
+              <td>240.0</td>
+              <td>1.03e-75</td>
+          </tr>
+    
+          <tr>
+              <td>AAK19892.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000147.5">BGC0000147.5</a></td>
+              <td>PKS:Type I</td>
+              <td>43.0</td>
+              <td>78.4</td>
+              <td>236.0</td>
+              <td>4.29e-73</td>
+          </tr>
+    
+          <tr>
+              <td>AAF08800.1</td>
+              <td>YngJ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001103.5">BGC0001103.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>39.0</td>
+              <td>93.1</td>
+              <td>231.0</td>
+              <td>1.98e-72</td>
+          </tr>
+    
+          <tr>
+              <td>WP_055469553.1</td>
+              <td>acyl-CoA_dehydrogenase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001537.5">BGC0001537.5</a></td>
+              <td>PKS</td>
+              <td>37.0</td>
+              <td>91.3</td>
+              <td>225.0</td>
+              <td>4.93e-70</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ76294.1</td>
+              <td>putative_acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000972.5">BGC0000972.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>35.0</td>
+              <td>89.8</td>
+              <td>219.0</td>
+              <td>7.33e-68</td>
+          </tr>
+    
+          <tr>
+              <td>ABS74202.1</td>
+              <td>YngJ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001095.5">BGC0001095.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>38.0</td>
+              <td>93.1</td>
+              <td>218.0</td>
+              <td>2.29e-67</td>
+          </tr>
+    
+          <tr>
+              <td>BAE95610.1</td>
+              <td>putative_acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000706.3">BGC0000706.3</a></td>
+              <td>saccharide</td>
+              <td>34.0</td>
+              <td>98.0</td>
+              <td>206.0</td>
+              <td>3.12e-62</td>
+          </tr>
+    
+          <tr>
+              <td>ADC79623.1</td>
+              <td>BafD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000028.5">BGC0000028.5</a></td>
+              <td>PKS:Type I</td>
+              <td>36.0</td>
+              <td>89.1</td>
+              <td>201.0</td>
+              <td>9.67e-61</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ94394.1</td>
+              <td>methoxymalonate_biosynthesis_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000040.5">BGC0000040.5</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>88.8</td>
+              <td>197.0</td>
+              <td>1.83e-59</td>
+          </tr>
+    
+          <tr>
+              <td>QKG20155.1</td>
+              <td>2-hydroxy-3-oxopropionyl-S-ACP_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002124.3">BGC0002124.3</a></td>
+              <td>PKS:Type I</td>
+              <td>35.0</td>
+              <td>90.6</td>
+              <td>197.0</td>
+              <td>2.02e-59</td>
+          </tr>
+    
+          <tr>
+              <td>AEP40922.1</td>
+              <td>acyl_CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000021.5">BGC0000021.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>92.1</td>
+              <td>195.0</td>
+              <td>1.52e-58</td>
+          </tr>
+    
+          <tr>
+              <td>OKJ62003.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002147.2">BGC0002147.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>34.0</td>
+              <td>93.4</td>
+              <td>194.0</td>
+              <td>3.87e-58</td>
+          </tr>
+    
+          <tr>
+              <td>QIS20447.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002816.2">BGC0002816.2</a></td>
+              <td>PKS:Modular type I</td>
+              <td>34.0</td>
+              <td>87.8</td>
+              <td>191.0</td>
+              <td>4e-57</td>
+          </tr>
+    
+          <tr>
+              <td>AAF86388.1</td>
+              <td>FkbI</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000994.5">BGC0000994.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>35.0</td>
+              <td>88.8</td>
+              <td>190.0</td>
+              <td>1.44e-56</td>
+          </tr>
+    
+          <tr>
+              <td>WP_003981355.1</td>
+              <td>acyl-CoA_dehydrogenase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001813.4">BGC0001813.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>88.3</td>
+              <td>187.0</td>
+              <td>2.47e-55</td>
+          </tr>
+    
+          <tr>
+              <td>WP_078645621.1</td>
+              <td>acyl-CoA_dehydrogenase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001348.5">BGC0001348.5</a></td>
+              <td>PKS:Type I</td>
+              <td>32.0</td>
+              <td>98.0</td>
+              <td>187.0</td>
+              <td>6.56e-55</td>
+          </tr>
+    
+          <tr>
+              <td>AFY23017.1</td>
+              <td>isovaleryl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000274.5">BGC0000274.5</a></td>
+              <td>PKS:Type II</td>
+              <td>32.0</td>
+              <td>95.7</td>
+              <td>185.0</td>
+              <td>1.29e-54</td>
+          </tr>
+    
+          <tr>
+              <td>ATI34079.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002284.3">BGC0002284.3</a></td>
+              <td>other:other</td>
+              <td>32.0</td>
+              <td>91.9</td>
+              <td>183.0</td>
+              <td>1.08e-53</td>
+          </tr>
+    
+          <tr>
+              <td>ABA39084.2</td>
+              <td>acyl_ACP_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001106.6">BGC0001106.6</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>34.0</td>
+              <td>88.8</td>
+              <td>180.0</td>
+              <td>9.7e-53</td>
+          </tr>
+    
+          <tr>
+              <td>AHH53521.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000439.5">BGC0000439.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>87.8</td>
+              <td>179.0</td>
+              <td>1.5e-52</td>
+          </tr>
+    
+          <tr>
+              <td>AQZ37102.1</td>
+              <td>butyryl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001511.5">BGC0001511.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>92.9</td>
+              <td>179.0</td>
+              <td>1.96e-52</td>
+          </tr>
+    
+          <tr>
+              <td>AAO06923.1</td>
+              <td>GdmI</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000066.5">BGC0000066.5</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>88.5</td>
+              <td>176.0</td>
+              <td>3.14e-51</td>
+          </tr>
+    
+          <tr>
+              <td>AAM54093.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000020.3">BGC0000020.3</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>89.6</td>
+              <td>175.0</td>
+              <td>4.49e-51</td>
+          </tr>
+    
+          <tr>
+              <td>CCC55923.1</td>
+              <td>putative_acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000973.5">BGC0000973.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>34.0</td>
+              <td>90.3</td>
+              <td>176.0</td>
+              <td>5.55e-51</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf10</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000096.5">BGC0000096.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>88.8</td>
+              <td>174.0</td>
+              <td>2.15e-50</td>
+          </tr>
+    
+          <tr>
+              <td>QGJ79660.1</td>
+              <td>Acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002552.2">BGC0002552.2</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>90.1</td>
+              <td>174.0</td>
+              <td>2.32e-50</td>
+          </tr>
+    
+          <tr>
+              <td>ABI93784.1</td>
+              <td>GdmI</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000068.5">BGC0000068.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>87.5</td>
+              <td>173.0</td>
+              <td>3.33e-50</td>
+          </tr>
+    
+          <tr>
+              <td>WP_020636832.1</td>
+              <td>acyl-CoA_dehydrogenase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002011.3">BGC0002011.3</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>90.1</td>
+              <td>173.0</td>
+              <td>4.55e-50</td>
+          </tr>
+    
+          <tr>
+              <td>ABO15870.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000130.5">BGC0000130.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>93.1</td>
+              <td>172.0</td>
+              <td>1.24e-49</td>
+          </tr>
+    
+          <tr>
+              <td>ADR01057.1</td>
+              <td>Noc-8</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000609.3">BGC0000609.3</a></td>
+              <td>ribosomal:RiPP:Thiopeptide</td>
+              <td>33.0</td>
+              <td>89.6</td>
+              <td>169.0</td>
+              <td>7.99e-49</td>
+          </tr>
+    
+          <tr>
+              <td>AAY28230.1</td>
+              <td>HbmI</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000074.5">BGC0000074.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>88.5</td>
+              <td>169.0</td>
+              <td>9.66e-49</td>
+          </tr>
+    
+          <tr>
+              <td>ABW96553.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000159.5">BGC0000159.5</a></td>
+              <td>PKS:Type I</td>
+              <td>33.0</td>
+              <td>90.3</td>
+              <td>168.0</td>
+              <td>3.98e-48</td>
+          </tr>
+    
+          <tr>
+              <td>ADC45567.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000093.5">BGC0000093.5</a></td>
+              <td>PKS:Type I</td>
+              <td>30.0</td>
+              <td>93.4</td>
+              <td>168.0</td>
+              <td>5.48e-48</td>
+          </tr>
+    
+          <tr>
+              <td>BBM96657.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002452.2">BGC0002452.2</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>88.8</td>
+              <td>167.0</td>
+              <td>5.83e-48</td>
+          </tr>
+    
+          <tr>
+              <td>WP_053138427.1</td>
+              <td>acyl-CoA_dehydrogenase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002033.4">BGC0002033.4</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>91.9</td>
+              <td>163.0</td>
+              <td>2.23e-46</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_40</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001931.2">BGC0001931.2</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>92.4</td>
+              <td>162.0</td>
+              <td>6.09e-46</td>
+          </tr>
+    
+          <tr>
+              <td>CAH10179.1</td>
+              <td>ChaO_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000207.5">BGC0000207.5</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>93.9</td>
+              <td>161.0</td>
+              <td>1.66e-45</td>
+          </tr>
+    
+          <tr>
+              <td>WP_016467646.1</td>
+              <td>acyl-CoA_dehydrogenase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002381.3">BGC0002381.3</a></td>
+              <td>other:other+PKS</td>
+              <td>34.0</td>
+              <td>84.7</td>
+              <td>160.0</td>
+              <td>2.72e-45</td>
+          </tr>
+    
+          <tr>
+              <td>ACF35457.1</td>
+              <td>MbcI</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000090.4">BGC0000090.4</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>90.3</td>
+              <td>160.0</td>
+              <td>5.91e-45</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54206.1</td>
+              <td>Pau39</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001731.5">BGC0001731.5</a></td>
+              <td>other:other</td>
+              <td>33.0</td>
+              <td>94.4</td>
+              <td>159.0</td>
+              <td>7.4e-45</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54259.1</td>
+              <td>PauY39</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001732.5">BGC0001732.5</a></td>
+              <td>other:other</td>
+              <td>33.0</td>
+              <td>94.4</td>
+              <td>159.0</td>
+              <td>7.4e-45</td>
+          </tr>
+    
+          <tr>
+              <td>BAP34766.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000078.5">BGC0000078.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>92.6</td>
+              <td>155.0</td>
+              <td>5.39e-43</td>
+          </tr>
+    
+          <tr>
+              <td>MBA5221206.1</td>
+              <td>acyl-CoA_dehydrogenase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002090.3">BGC0002090.3</a></td>
+              <td>PKS:Type I+NRPS:Type I</td>
+              <td>33.0</td>
+              <td>84.2</td>
+              <td>155.0</td>
+              <td>9.49e-43</td>
+          </tr>
+    
+          <tr>
+              <td>CAQ34915.1</td>
+              <td>putative_L-prolyl-S-PCP_Dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000986.5">BGC0000986.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>32.0</td>
+              <td>87.8</td>
+              <td>153.0</td>
+              <td>1.5e-42</td>
+          </tr>
+    
+          <tr>
+              <td>ACR33074.1</td>
+              <td>prolyl-ACP_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000017.5">BGC0000017.5</a></td>
+              <td>PKS:Type I+other:other</td>
+              <td>31.0</td>
+              <td>82.7</td>
+              <td>153.0</td>
+              <td>2.18e-42</td>
+          </tr>
+    
+          <tr>
+              <td>ATG32070.1</td>
+              <td>proline_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001750.4">BGC0001750.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>31.0</td>
+              <td>86.0</td>
+              <td>148.0</td>
+              <td>1.15e-40</td>
+          </tr>
+    
+          <tr>
+              <td>EFG10341.1</td>
+              <td>Acyl-CoA_dehydrogenase_domain_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000373.5">BGC0000373.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>92.4</td>
+              <td>148.0</td>
+              <td>1.56e-40</td>
+          </tr>
+    
+          <tr>
+              <td>CBW75456.1</td>
+              <td>Isovaleryl-CoA_dehydrogenase_(EC_1.3.99.10)</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002048.3">BGC0002048.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>94.7</td>
+              <td>141.0</td>
+              <td>4.46e-38</td>
+          </tr>
+    
+          <tr>
+              <td>QIH29225.1</td>
+              <td>flavoprotein_desaturase_PigA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002326.2">BGC0002326.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>94.7</td>
+              <td>141.0</td>
+              <td>4.46e-38</td>
+          </tr>
+    
+          <tr>
+              <td>BAG84241.1</td>
+              <td>putative_L-prolyl-PCP_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000257.5">BGC0000257.5</a></td>
+              <td>PKS:Type I</td>
+              <td>31.0</td>
+              <td>84.5</td>
+              <td>141.0</td>
+              <td>6.5e-38</td>
+          </tr>
+    
+          <tr>
+              <td>BAP16705.1</td>
+              <td>Acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000376.5">BGC0000376.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>95.2</td>
+              <td>139.0</td>
+              <td>4.9e-37</td>
+          </tr>
+    
+          <tr>
+              <td>AHL24503.1</td>
+              <td>acyl-CoA_dehydrogenase_short_chain_specific_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000806.5">BGC0000806.5</a></td>
+              <td>saccharide</td>
+              <td>37.0</td>
+              <td>57.5</td>
+              <td>137.0</td>
+              <td>8.43e-37</td>
+          </tr>
+    
+          <tr>
+              <td>KDM89829.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002412.2">BGC0002412.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>89.6</td>
+              <td>137.0</td>
+              <td>1.13e-36</td>
+          </tr>
+    
+          <tr>
+              <td>WP_141576235.1</td>
+              <td>acyl-CoA_dehydrogenase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002686.2">BGC0002686.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>90.8</td>
+              <td>135.0</td>
+              <td>1.04e-35</td>
+          </tr>
+    
+          <tr>
+              <td>WP_013663193.1</td>
+              <td>acyl-CoA_dehydrogenase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001465.5">BGC0001465.5</a></td>
+              <td>other:other</td>
+              <td>29.0</td>
+              <td>94.4</td>
+              <td>133.0</td>
+              <td>4.29e-35</td>
+          </tr>
+    
+          <tr>
+              <td>QCX41948.1</td>
+              <td>Amc11</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001957.4">BGC0001957.4</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>86.0</td>
+              <td>132.0</td>
+              <td>1.47e-34</td>
+          </tr>
+    
+          <tr>
+              <td>QHW08551.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002054.2">BGC0002054.2</a></td>
+              <td>PKS+NRPS:Type I+saccharide</td>
+              <td>28.0</td>
+              <td>86.0</td>
+              <td>132.0</td>
+              <td>1.47e-34</td>
+          </tr>
+    
+          <tr>
+              <td>CBK62749.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001115.5">BGC0001115.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>28.0</td>
+              <td>92.4</td>
+              <td>131.0</td>
+              <td>2.12e-34</td>
+          </tr>
+    
+          <tr>
+              <td>MCB8905708.1</td>
+              <td>acyl-CoA_dehydrogenase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002340.3">BGC0002340.3</a></td>
+              <td>NRPS:Type I+other:other</td>
+              <td>28.0</td>
+              <td>93.1</td>
+              <td>130.0</td>
+              <td>6.47e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AJI44179.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001193.5">BGC0001193.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>92.4</td>
+              <td>125.0</td>
+              <td>3.96e-32</td>
+          </tr>
+    
+          <tr>
+              <td>AHA34036.1</td>
+              <td>Bmp3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000890.5">BGC0000890.5</a></td>
+              <td>other:aminocoumarin</td>
+              <td>28.0</td>
+              <td>88.0</td>
+              <td>122.0</td>
+              <td>5.24e-31</td>
+          </tr>
+    
+          <tr>
+              <td>QCX41919.1</td>
+              <td>Mhr13</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001956.3">BGC0001956.3</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>86.0</td>
+              <td>122.0</td>
+              <td>6.53e-31</td>
+          </tr>
+    
+          <tr>
+              <td>QHD26311.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002479.3">BGC0002479.3</a></td>
+              <td>PKS+NRPS:Type I+saccharide</td>
+              <td>26.0</td>
+              <td>86.0</td>
+              <td>122.0</td>
+              <td>6.53e-31</td>
+          </tr>
+    
+          <tr>
+              <td>ESP90846.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000891.4">BGC0000891.4</a></td>
+              <td>other:aminocoumarin</td>
+              <td>27.0</td>
+              <td>88.3</td>
+              <td>121.0</td>
+              <td>9.98e-31</td>
+          </tr>
+    
+          <tr>
+              <td>QPP46761.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002500.2">BGC0002500.2</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>95.2</td>
+              <td>111.0</td>
+              <td>5.94e-27</td>
+          </tr>
+    
+          <tr>
+              <td>BAD97695.1</td>
+              <td>Aft10-1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000003.3">BGC0000003.3</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>103.3</td>
+              <td>106.0</td>
+              <td>4.36e-25</td>
+          </tr>
+    
+          <tr>
+              <td>AAG29788.2</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000833.4">BGC0000833.4</a></td>
+              <td>saccharide:hybrid/tailoring+other:aminocoumarin</td>
+              <td>26.0</td>
+              <td>91.6</td>
+              <td>101.0</td>
+              <td>1.36e-23</td>
+          </tr>
+    
+          <tr>
+              <td>ACR78135.1</td>
+              <td>predicted_FadE2-like_acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000312.4">BGC0000312.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>96.9</td>
+              <td>100.0</td>
+              <td>5.12e-23</td>
+          </tr>
+    
+          <tr>
+              <td>XP_011392686.1</td>
+              <td>uncharacterized_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001281.3">BGC0001281.3</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>85.2</td>
+              <td>87.0</td>
+              <td>1.97e-18</td>
+          </tr>
+    
+          <tr>
+              <td>ABB69751.1</td>
+              <td>PlaP3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000654.4">BGC0000654.4</a></td>
+              <td>terpene:Diterpene+saccharide:hybrid/tailoring</td>
+              <td>25.0</td>
+              <td>86.0</td>
+              <td>86.0</td>
+              <td>5.27e-18</td>
+          </tr>
+    
+          <tr>
+              <td>CBH32113.1</td>
+              <td>putative_acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000211.5">BGC0000211.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>90.1</td>
+              <td>67.0</td>
+              <td>8.36e-12</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

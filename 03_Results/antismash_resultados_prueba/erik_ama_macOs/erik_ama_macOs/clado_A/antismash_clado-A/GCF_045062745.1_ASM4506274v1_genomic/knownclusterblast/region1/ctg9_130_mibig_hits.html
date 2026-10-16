@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABD65932.1</td>
+              <td>transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000341.5">BGC0000341.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>99.7</td>
+              <td>109.0</td>
+              <td>7.52e-27</td>
+          </tr>
+    
+          <tr>
+              <td>GES28403.1</td>
+              <td>LacI_family_transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002407.3">BGC0002407.3</a></td>
+              <td>saccharide+other:other</td>
+              <td>28.0</td>
+              <td>94.5</td>
+              <td>93.0</td>
+              <td>4.21e-21</td>
+          </tr>
+    
+          <tr>
+              <td>WP_141576297.1</td>
+              <td>LacI_family_DNA-binding_transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002686.2">BGC0002686.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>97.1</td>
+              <td>93.0</td>
+              <td>4.79e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ADC45583.1</td>
+              <td>sugar-binding_transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000093.5">BGC0000093.5</a></td>
+              <td>PKS:Type I</td>
+              <td>27.0</td>
+              <td>98.8</td>
+              <td>92.0</td>
+              <td>7.84e-21</td>
+          </tr>
+    
+          <tr>
+              <td>QZN83607.1</td>
+              <td>LacI_family_transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002621.2">BGC0002621.2</a></td>
+              <td>other:other</td>
+              <td>28.0</td>
+              <td>88.5</td>
+              <td>90.0</td>
+              <td>3.89e-20</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

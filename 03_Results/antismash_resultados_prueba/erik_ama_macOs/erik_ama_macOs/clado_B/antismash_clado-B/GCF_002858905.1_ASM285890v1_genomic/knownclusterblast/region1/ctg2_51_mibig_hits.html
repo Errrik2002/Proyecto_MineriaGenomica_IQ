@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABL09951.1</td>
+              <td>oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000197.5">BGC0000197.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>35.0</td>
+              <td>121.4</td>
+              <td>315.0</td>
+              <td>3.72e-100</td>
+          </tr>
+    
+          <tr>
+              <td>ABV97146.1</td>
+              <td>multicopper_oxidase_type_2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000137.3">BGC0000137.3</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>118.1</td>
+              <td>258.0</td>
+              <td>2.55e-78</td>
+          </tr>
+    
+          <tr>
+              <td>AKD43531.1</td>
+              <td>Copper_oxidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001409.5">BGC0001409.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>103.1</td>
+              <td>251.0</td>
+              <td>4.32e-77</td>
+          </tr>
+    
+          <tr>
+              <td>WP_244885523.1</td>
+              <td>multicopper_oxidase_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002009.4">BGC0002009.4</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>116.5</td>
+              <td>251.0</td>
+              <td>2.07e-75</td>
+          </tr>
+    
+          <tr>
+              <td>ADE22283.1</td>
+              <td>putative_spore_coat_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000279.5">BGC0000279.5</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>107.3</td>
+              <td>235.0</td>
+              <td>1.02e-70</td>
+          </tr>
+    
+          <tr>
+              <td>AMJ52085.1</td>
+              <td>lijF</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002255.3">BGC0002255.3</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>95.3</td>
+              <td>232.0</td>
+              <td>1.76e-69</td>
+          </tr>
+    
+          <tr>
+              <td>AQW35036.1</td>
+              <td>copper_oxidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001675.5">BGC0001675.5</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>105.7</td>
+              <td>214.0</td>
+              <td>8.5e-63</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

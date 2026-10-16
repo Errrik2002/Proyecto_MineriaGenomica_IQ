@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AIG26880.1</td>
+              <td>putative_formate_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002432.2">BGC0002432.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>100.2</td>
+              <td>317.0</td>
+              <td>1.86e-97</td>
+          </tr>
+    
+          <tr>
+              <td>ATY37612.1</td>
+              <td>BreG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001536.4">BGC0001536.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>100.2</td>
+              <td>312.0</td>
+              <td>1.82e-95</td>
+          </tr>
+    
+          <tr>
+              <td>ABO15880.1</td>
+              <td>assimilatory_nitrate_reductase_catalytic_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000132.3">BGC0000132.3</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>103.1</td>
+              <td>237.0</td>
+              <td>2.05e-69</td>
+          </tr>
+    
+          <tr>
+              <td>ABO15854.1</td>
+              <td>assimilatory_nitrate_reductase_catalytic_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000130.5">BGC0000130.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>103.1</td>
+              <td>233.0</td>
+              <td>3.82e-68</td>
+          </tr>
+    
+          <tr>
+              <td>ARK19477.1</td>
+              <td>oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001540.5">BGC0001540.5</a></td>
+              <td>other:other</td>
+              <td>28.0</td>
+              <td>92.8</td>
+              <td>167.0</td>
+              <td>4.53e-44</td>
+          </tr>
+    
+          <tr>
+              <td>WP_078869217.1</td>
+              <td>molybdopterin-dependent_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001607.5">BGC0001607.5</a></td>
+              <td>other:other</td>
+              <td>27.0</td>
+              <td>92.4</td>
+              <td>155.0</td>
+              <td>3.66e-40</td>
+          </tr>
+    
+          <tr>
+              <td>ADZ13548.1</td>
+              <td>YtkK</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000466.5">BGC0000466.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>95.9</td>
+              <td>149.0</td>
+              <td>6.62e-38</td>
+          </tr>
+    
+          <tr>
+              <td>WP_016325508.1</td>
+              <td>molybdopterin-dependent_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001283.3">BGC0001283.3</a></td>
+              <td>PKS:Type I</td>
+              <td>27.0</td>
+              <td>94.1</td>
+              <td>141.0</td>
+              <td>3.02e-35</td>
+          </tr>
+    
+          <tr>
+              <td>ADF88267.1</td>
+              <td>oxidoreductase_alpha_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000981.3">BGC0000981.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>28.0</td>
+              <td>68.9</td>
+              <td>133.0</td>
+              <td>1.6e-32</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

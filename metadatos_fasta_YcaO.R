@@ -4,7 +4,7 @@ library(tidyverse)
 
 
 fasta_metadatos <- readAAStringSet("01_RawData/ycao_Thiopeptina_syomicina_GE37468_nosiheptide/YcaO_combinados_thiopeptina_syiomicina_GE_Nosiheptide.txt")
-
+class(fasta_metadatos)
 fasta_metadatos_M <- as.data.frame(fasta_metadatos)
 View(fasta_metadatos_M)
 
@@ -82,7 +82,7 @@ df_separado <- df_separado[,-2]
 metadata_genero_especie_acceso <- bind_cols(especies$especies, 
   df_separado$primera_palabra, 
   df_separado$numero_acceso_node_id)
-
+  
 
 
 metadata_genero_especie_acceso

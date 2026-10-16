@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAT70109.1</td>
+              <td>CurN</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001165.5">BGC0001165.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>40.0</td>
+              <td>104.5</td>
+              <td>201.0</td>
+              <td>1.54e-62</td>
+          </tr>
+    
+          <tr>
+              <td>WP_091316346.1</td>
+              <td>alpha/beta_fold_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002007.2">BGC0002007.2</a></td>
+              <td>terpene</td>
+              <td>38.0</td>
+              <td>96.5</td>
+              <td>175.0</td>
+              <td>2.19e-53</td>
+          </tr>
+    
+          <tr>
+              <td>AAL01057.1</td>
+              <td>putative_haloalkane_dehalogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000865.3">BGC0000865.3</a></td>
+              <td>other:other</td>
+              <td>37.0</td>
+              <td>45.1</td>
+              <td>99.0</td>
+              <td>7.73e-24</td>
+          </tr>
+    
+          <tr>
+              <td>CAD91191.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000289.5">BGC0000289.5</a></td>
+              <td>NRPS:Type I+saccharide:hybrid/tailoring</td>
+              <td>38.0</td>
+              <td>40.6</td>
+              <td>63.0</td>
+              <td>3.57e-11</td>
+          </tr>
+    
+          <tr>
+              <td>CAC37878.1</td>
+              <td>putative_epoxide_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000038.5">BGC0000038.5</a></td>
+              <td>PKS:Type I</td>
+              <td>35.0</td>
+              <td>34.0</td>
+              <td>51.0</td>
+              <td>4.98e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

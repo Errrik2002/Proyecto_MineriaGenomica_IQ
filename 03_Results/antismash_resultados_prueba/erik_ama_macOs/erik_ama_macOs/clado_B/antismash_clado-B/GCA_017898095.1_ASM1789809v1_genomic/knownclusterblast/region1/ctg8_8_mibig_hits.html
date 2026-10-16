@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABS50190.1</td>
+              <td>putative_transport_system_permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000410.5">BGC0000410.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>45.0</td>
+              <td>99.4</td>
+              <td>296.0</td>
+              <td>7.65e-100</td>
+          </tr>
+    
+          <tr>
+              <td>BAC87899.1</td>
+              <td>probable_ferric_acinetobactin_transport_system_permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000294.5">BGC0000294.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>47.0</td>
+              <td>95.9</td>
+              <td>285.0</td>
+              <td>2.56e-95</td>
+          </tr>
+    
+          <tr>
+              <td>AAR12524.1</td>
+              <td>ferric_anguibactin_transport_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002468.2">BGC0002468.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>40.0</td>
+              <td>96.8</td>
+              <td>266.0</td>
+              <td>6.73e-88</td>
+          </tr>
+    
+          <tr>
+              <td>AFO89682.1</td>
+              <td>ABC_transporter,_permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002694.2">BGC0002694.2</a></td>
+              <td>other:other</td>
+              <td>43.0</td>
+              <td>97.2</td>
+              <td>237.0</td>
+              <td>2.3e-76</td>
+          </tr>
+    
+          <tr>
+              <td>CAB53327.1</td>
+              <td>putative_iron-siderophore_permease_transmembrane_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000325.5">BGC0000325.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>24.0</td>
+              <td>87.3</td>
+              <td>87.0</td>
+              <td>5.08e-19</td>
+          </tr>
+    
+          <tr>
+              <td>WP_068925917.1</td>
+              <td>iron_chelate_uptake_ABC_transporter_family_permease_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002688.2">BGC0002688.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>24.0</td>
+              <td>92.7</td>
+              <td>79.0</td>
+              <td>9.36e-16</td>
+          </tr>
+    
+          <tr>
+              <td>MBE3202946.1</td>
+              <td>iron_chelate_uptake_ABC_transporter_family_permease_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002410.3">BGC0002410.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>24.0</td>
+              <td>87.3</td>
+              <td>68.0</td>
+              <td>2.2e-12</td>
+          </tr>
+    
+          <tr>
+              <td>TRX17522.1</td>
+              <td>Fe(3+)-hydroxamate_ABC_transporter_permease_FhuB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002329.2">BGC0002329.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>23.0</td>
+              <td>90.2</td>
+              <td>58.0</td>
+              <td>4.73e-09</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

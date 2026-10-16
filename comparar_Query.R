@@ -8,9 +8,11 @@ View(metadata_bacillus)
 print(metadata_bacillus$accession)
 
 secuencias_bacillus <- readRDS("03_Results/conjunto_noactinomicetos_YcaO/secuencias_unicas_YcaO.rds")
+class(secuencias_bacillus)
 
 secuencias_bacillus <- as.data.frame(secuencias_bacillus)
-dim(secuencias_bacillus)
-
-secuencias_bacillus1 <- subset(secuencias_bacillus, secuencias_bacillus$x)
+nombres <- rownames(secuencias_bacillus)
+rownames(secuencias_bacillus) <- NULL
+secuencias_bacillus_data_2Cols <- cbind(nombres, secuencias_bacillus)
+View(secuencias_bacillus_data_2Cols)
 

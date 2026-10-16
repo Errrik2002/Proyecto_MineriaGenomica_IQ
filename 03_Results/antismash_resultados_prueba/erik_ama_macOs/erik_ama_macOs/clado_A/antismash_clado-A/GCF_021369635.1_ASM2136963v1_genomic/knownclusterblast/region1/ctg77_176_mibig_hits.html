@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ANY57976.1</td>
+              <td>acetyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001369.3">BGC0001369.3</a></td>
+              <td>PKS</td>
+              <td>37.0</td>
+              <td>97.5</td>
+              <td>146.0</td>
+              <td>9.18e-44</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf12</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000770.4">BGC0000770.4</a></td>
+              <td>saccharide</td>
+              <td>37.0</td>
+              <td>67.3</td>
+              <td>90.0</td>
+              <td>1.27e-21</td>
+          </tr>
+    
+          <tr>
+              <td>AAR90891.1</td>
+              <td>putative_O-acetyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000787.3">BGC0000787.3</a></td>
+              <td>saccharide</td>
+              <td>31.0</td>
+              <td>59.9</td>
+              <td>75.0</td>
+              <td>3.37e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AAK77314.1</td>
+              <td>putative_acetyltransferase_PssR</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000762.3">BGC0000762.3</a></td>
+              <td>saccharide</td>
+              <td>52.0</td>
+              <td>25.7</td>
+              <td>59.0</td>
+              <td>6.04e-11</td>
+          </tr>
+    
+          <tr>
+              <td>AAD40711.1</td>
+              <td>putative_acetyl_transferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001412.3">BGC0001412.3</a></td>
+              <td>saccharide</td>
+              <td>40.0</td>
+              <td>31.2</td>
+              <td>56.0</td>
+              <td>8.83e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AAD40715.1</td>
+              <td>putative_acetyl_transferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001412.3">BGC0001412.3</a></td>
+              <td>saccharide</td>
+              <td>30.0</td>
+              <td>57.4</td>
+              <td>56.0</td>
+              <td>1.57e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AAA64646.1</td>
+              <td>type_1_capsule_synthesis_gene</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000758.4">BGC0000758.4</a></td>
+              <td>saccharide:exopolysaccharide</td>
+              <td>32.0</td>
+              <td>59.9</td>
+              <td>52.0</td>
+              <td>2.17e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ACM68693.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000298.5">BGC0000298.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>42.0</td>
+              <td>28.2</td>
+              <td>52.0</td>
+              <td>4.3e-08</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

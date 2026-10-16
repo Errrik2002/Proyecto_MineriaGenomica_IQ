@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABS74197.1</td>
+              <td>YngF</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001095.5">BGC0001095.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>58.0</td>
+              <td>95.0</td>
+              <td>273.0</td>
+              <td>2e-92</td>
+          </tr>
+    
+          <tr>
+              <td>TXL86010.1</td>
+              <td>enoyl-CoA_hydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002034.3">BGC0002034.3</a></td>
+              <td>other:other</td>
+              <td>42.0</td>
+              <td>94.6</td>
+              <td>183.0</td>
+              <td>9.41e-57</td>
+          </tr>
+    
+          <tr>
+              <td>ADE34505.1</td>
+              <td>SsfJ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000269.5">BGC0000269.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>40.0</td>
+              <td>96.5</td>
+              <td>169.0</td>
+              <td>1.94e-51</td>
+          </tr>
+    
+          <tr>
+              <td>AQZ69236.1</td>
+              <td>enoyl-CoA_hydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001635.4">BGC0001635.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>38.0</td>
+              <td>103.8</td>
+              <td>159.0</td>
+              <td>2.58e-47</td>
+          </tr>
+    
+          <tr>
+              <td>QBK15041.1</td>
+              <td>enoyl-CoA_hydratase/isomerase_ClaC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002196.2">BGC0002196.2</a></td>
+              <td>PKS</td>
+              <td>39.0</td>
+              <td>100.8</td>
+              <td>166.0</td>
+              <td>2.42e-46</td>
+          </tr>
+    
+          <tr>
+              <td>OKA09447.1</td>
+              <td>enoyl-CoA_hydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001459.5">BGC0001459.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>34.0</td>
+              <td>101.9</td>
+              <td>149.0</td>
+              <td>8.82e-44</td>
+          </tr>
+    
+          <tr>
+              <td>QYC40273.1</td>
+              <td>Enoyl-CoA_dehydratase_DpgD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002344.2">BGC0002344.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>103.5</td>
+              <td>147.0</td>
+              <td>1.13e-42</td>
+          </tr>
+    
+          <tr>
+              <td>AIG79212.1</td>
+              <td>Hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000419.5">BGC0000419.5</a></td>
+              <td>NRPS:Type I+saccharide</td>
+              <td>35.0</td>
+              <td>101.2</td>
+              <td>146.0</td>
+              <td>1.74e-42</td>
+          </tr>
+    
+          <tr>
+              <td>AIE77088.1</td>
+              <td>enoyl-CoA_hydratase-like_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000418.5">BGC0000418.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>103.8</td>
+              <td>146.0</td>
+              <td>1.83e-42</td>
+          </tr>
+    
+          <tr>
+              <td>CAC48381.1</td>
+              <td>putative_enoyl-CoA-isomerase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000311.6">BGC0000311.6</a></td>
+              <td>saccharide+NRPS:Type I</td>
+              <td>36.0</td>
+              <td>100.8</td>
+              <td>146.0</td>
+              <td>2.03e-42</td>
+          </tr>
+    
+          <tr>
+              <td>EME52962.1</td>
+              <td>enoyl-CoA_hydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001460.5">BGC0001460.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>101.2</td>
+              <td>145.0</td>
+              <td>2.58e-42</td>
+          </tr>
+    
+          <tr>
+              <td>AEI58891.1</td>
+              <td>enoyl-CoA_hydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000455.6">BGC0000455.6</a></td>
+              <td>saccharide+NRPS:Type I</td>
+              <td>36.0</td>
+              <td>100.4</td>
+              <td>145.0</td>
+              <td>4.86e-42</td>
+          </tr>
+    
+          <tr>
+              <td>OLZ50909.1</td>
+              <td>enoyl-CoA_hydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001461.5">BGC0001461.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>37.0</td>
+              <td>101.9</td>
+              <td>144.0</td>
+              <td>1.36e-41</td>
+          </tr>
+    
+          <tr>
+              <td>AYA22306.1</td>
+              <td>DpgD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001955.4">BGC0001955.4</a></td>
+              <td>saccharide+NRPS:Type I</td>
+              <td>37.0</td>
+              <td>101.9</td>
+              <td>144.0</td>
+              <td>1.36e-41</td>
+          </tr>
+    
+          <tr>
+              <td>CAD91229.1</td>
+              <td>putative_DpgD_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000289.5">BGC0000289.5</a></td>
+              <td>NRPS:Type I+saccharide:hybrid/tailoring</td>
+              <td>36.0</td>
+              <td>102.3</td>
+              <td>141.0</td>
+              <td>1.11e-40</td>
+          </tr>
+    
+          <tr>
+              <td>AAM80545.1</td>
+              <td>DpgD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000290.5">BGC0000290.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>104.6</td>
+              <td>141.0</td>
+              <td>1.65e-40</td>
+          </tr>
+    
+          <tr>
+              <td>OLZ52431.1</td>
+              <td>enoyl-CoA_hydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001462.5">BGC0001462.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>34.0</td>
+              <td>101.2</td>
+              <td>140.0</td>
+              <td>3.11e-40</td>
+          </tr>
+    
+          <tr>
+              <td>SKB24613.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002455.3">BGC0002455.3</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>95.0</td>
+              <td>139.0</td>
+              <td>8.44e-40</td>
+          </tr>
+    
+          <tr>
+              <td>UHY14138.1</td>
+              <td>enoyl-CoA_hydratase/isomerase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002671.2">BGC0002671.2</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>101.2</td>
+              <td>137.0</td>
+              <td>3.66e-39</td>
+          </tr>
+    
+          <tr>
+              <td>AKA59432.1</td>
+              <td>enoyl-CoA_hydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001202.4">BGC0001202.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>33.0</td>
+              <td>98.1</td>
+              <td>137.0</td>
+              <td>8.4e-39</td>
+          </tr>
+    
+          <tr>
+              <td>CAQ52615.1</td>
+              <td>enoyl-CoA_hydratase/isomerase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001066.5">BGC0001066.5</a></td>
+              <td>PKS:Type I</td>
+              <td>34.0</td>
+              <td>102.7</td>
+              <td>135.0</td>
+              <td>3.7e-38</td>
+          </tr>
+    
+          <tr>
+              <td>ALK27908.1</td>
+              <td>putative_enoyl-CoA_hydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001233.5">BGC0001233.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>34.0</td>
+              <td>103.1</td>
+              <td>134.0</td>
+              <td>5.89e-38</td>
+          </tr>
+    
+          <tr>
+              <td>AGS77343.1</td>
+              <td>DpgD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001178.5">BGC0001178.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>101.2</td>
+              <td>133.0</td>
+              <td>2.09e-37</td>
+          </tr>
+    
+          <tr>
+              <td>WP_015031689.1</td>
+              <td>enoyl-CoA_hydratase-related_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001819.3">BGC0001819.3</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>101.9</td>
+              <td>129.0</td>
+              <td>9.02e-36</td>
+          </tr>
+    
+          <tr>
+              <td>ACD75094.1</td>
+              <td>MenB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000913.3">BGC0000913.3</a></td>
+              <td>other:other</td>
+              <td>32.0</td>
+              <td>100.4</td>
+              <td>129.0</td>
+              <td>1.38e-35</td>
+          </tr>
+    
+          <tr>
+              <td>CAE53374.1</td>
+              <td>DpgD_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000440.5">BGC0000440.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>34.0</td>
+              <td>99.2</td>
+              <td>124.0</td>
+              <td>7.61e-34</td>
+          </tr>
+    
+          <tr>
+              <td>CAG15032.1</td>
+              <td>DpgD_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000441.4">BGC0000441.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>34.0</td>
+              <td>99.2</td>
+              <td>124.0</td>
+              <td>7.61e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AGU42425.1</td>
+              <td>Cmm17</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000842.5">BGC0000842.5</a></td>
+              <td>other:non-nrp beta-lactam</td>
+              <td>33.0</td>
+              <td>96.9</td>
+              <td>123.0</td>
+              <td>1.83e-33</td>
+          </tr>
+    
+          <tr>
+              <td>AXM43060.1</td>
+              <td>3-hydroxyacyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001945.3">BGC0001945.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>81.2</td>
+              <td>108.0</td>
+              <td>1.89e-26</td>
+          </tr>
+    
+          <tr>
+              <td>AXM42943.1</td>
+              <td>FadJ-like_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001941.3">BGC0001941.3</a></td>
+              <td>PKS:Type I</td>
+              <td>37.0</td>
+              <td>81.2</td>
+              <td>108.0</td>
+              <td>2.56e-26</td>
+          </tr>
+    
+          <tr>
+              <td>CBD77742.1</td>
+              <td>enoyl-coA-hydratase/isomerase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000974.5">BGC0000974.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>31.0</td>
+              <td>89.6</td>
+              <td>100.0</td>
+              <td>1.04e-24</td>
+          </tr>
+    
+          <tr>
+              <td>XP_011392741.1</td>
+              <td>uncharacterized_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001281.3">BGC0001281.3</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>94.6</td>
+              <td>99.0</td>
+              <td>1.12e-23</td>
+          </tr>
+    
+          <tr>
+              <td>AAF81231.1</td>
+              <td>enoyl-CoA_hydratase-like_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000243.4">BGC0000243.4</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>81.5</td>
+              <td>94.0</td>
+              <td>1.07e-22</td>
+          </tr>
+    
+          <tr>
+              <td>ADD82946.1</td>
+              <td>BatE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001099.5">BGC0001099.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>28.0</td>
+              <td>86.5</td>
+              <td>88.0</td>
+              <td>1.68e-20</td>
+          </tr>
+    
+          <tr>
+              <td>DAC80055.1</td>
+              <td>enoyl-CoA_hydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001836.3">BGC0001836.3</a></td>
+              <td>PKS:Trans-AT type I</td>
+              <td>27.0</td>
+              <td>96.9</td>
+              <td>86.0</td>
+              <td>1.93e-19</td>
+          </tr>
+    
+          <tr>
+              <td>SKB24614.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002455.3">BGC0002455.3</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>54.6</td>
+              <td>83.0</td>
+              <td>5.49e-18</td>
+          </tr>
+    
+          <tr>
+              <td>QFF92402.1</td>
+              <td>enoyl-CoA_hydratase/isomerase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002553.2">BGC0002553.2</a></td>
+              <td>other:other</td>
+              <td>34.0</td>
+              <td>63.1</td>
+              <td>71.0</td>
+              <td>1.13e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AEE88284.1</td>
+              <td>CurF</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000976.5">BGC0000976.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>25.0</td>
+              <td>88.1</td>
+              <td>67.0</td>
+              <td>2.55e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AAT70101.1</td>
+              <td>CurF</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001165.5">BGC0001165.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>25.0</td>
+              <td>88.1</td>
+              <td>67.0</td>
+              <td>2.55e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AAS98781.1</td>
+              <td>JamJ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001001.5">BGC0001001.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>26.0</td>
+              <td>77.7</td>
+              <td>67.0</td>
+              <td>2.56e-12</td>
+          </tr>
+    
+          <tr>
+              <td>QLG04864.1</td>
+              <td>PulC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002374.2">BGC0002374.2</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>73.8</td>
+              <td>67.0</td>
+              <td>2.74e-12</td>
+          </tr>
+    
+          <tr>
+              <td>BAL90256.1</td>
+              <td>putative_enoyl-CoA_hydratase/isomerase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002021.3">BGC0002021.3</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>60.8</td>
+              <td>62.0</td>
+              <td>5.08e-11</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

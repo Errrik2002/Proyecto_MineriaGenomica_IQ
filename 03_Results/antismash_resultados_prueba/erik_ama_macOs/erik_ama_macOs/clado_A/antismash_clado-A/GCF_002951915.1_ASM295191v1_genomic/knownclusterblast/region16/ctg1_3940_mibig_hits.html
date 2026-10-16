@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ANY57966.1</td>
+              <td>MtcG_beta-hydroxyacyl-ACP_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001369.3">BGC0001369.3</a></td>
+              <td>PKS</td>
+              <td>45.0</td>
+              <td>95.7</td>
+              <td>130.0</td>
+              <td>1.06e-38</td>
+          </tr>
+    
+          <tr>
+              <td>QHB92596.1</td>
+              <td>YsfI</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002547.2">BGC0002547.2</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>87.7</td>
+              <td>66.0</td>
+              <td>7.37e-14</td>
+          </tr>
+    
+          <tr>
+              <td>QRG35022.1</td>
+              <td>beta-hydroxyacyl-ACP_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002378.3">BGC0002378.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>90.1</td>
+              <td>65.0</td>
+              <td>1.5e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ACA34362.1</td>
+              <td>(3R)-hydroxymyristoyl-acyl_carrier_protein_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001152.5">BGC0001152.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>36.0</td>
+              <td>77.8</td>
+              <td>62.0</td>
+              <td>9.53e-13</td>
+          </tr>
+    
+          <tr>
+              <td>CBG74921.1</td>
+              <td>putative_polyketide_dehydratase_component</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002808.2">BGC0002808.2</a></td>
+              <td>PKS:Type I</td>
+              <td>26.0</td>
+              <td>87.0</td>
+              <td>62.0</td>
+              <td>1.73e-12</td>
+          </tr>
+    
+          <tr>
+              <td>QMX85614.1</td>
+              <td>SapG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002510.2">BGC0002510.2</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>90.1</td>
+              <td>61.0</td>
+              <td>4.3e-12</td>
+          </tr>
+    
+          <tr>
+              <td>ADQ74612.1</td>
+              <td>beta-hydroxymyristoyl-acyl_carrier_protein_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000921.5">BGC0000921.5</a></td>
+              <td>other:shikimate-derived+PKS+NRPS:Type I</td>
+              <td>33.0</td>
+              <td>66.7</td>
+              <td>60.0</td>
+              <td>9.73e-12</td>
+          </tr>
+    
+          <tr>
+              <td>QDJ74265.1</td>
+              <td>3-oxoacyl-ACP_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002109.3">BGC0002109.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>79.0</td>
+              <td>59.0</td>
+              <td>2.76e-11</td>
+          </tr>
+    
+          <tr>
+              <td>QYA95686.1</td>
+              <td>beta-hydroxyacyl-ACP_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002676.2">BGC0002676.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>83.3</td>
+              <td>56.0</td>
+              <td>6.53e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AEA30268.1</td>
+              <td>putative_3-hydroxyacyl-ACP_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000429.4">BGC0000429.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>26.0</td>
+              <td>79.6</td>
+              <td>54.0</td>
+              <td>2.44e-09</td>
+          </tr>
+    
+          <tr>
+              <td>QBA57754.1</td>
+              <td>3-oxoacyl-ACP_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002377.2">BGC0002377.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>82.7</td>
+              <td>53.0</td>
+              <td>5.97e-09</td>
+          </tr>
+    
+          <tr>
+              <td>ALG65300.1</td>
+              <td>Cal36</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001297.4">BGC0001297.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>82.1</td>
+              <td>50.0</td>
+              <td>6.2e-08</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>GES28402.1</td>
+              <td>cytokinin_riboside_5&#39;-monophosphate_phosphoribohydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002407.3">BGC0002407.3</a></td>
+              <td>saccharide+other:other</td>
+              <td>50.0</td>
+              <td>100.0</td>
+              <td>171.0</td>
+              <td>3.53e-54</td>
+          </tr>
+    
+          <tr>
+              <td>QZN83608.1</td>
+              <td>adenosine_5&#39;-monophosphate_phosphoribohydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002621.2">BGC0002621.2</a></td>
+              <td>other:other</td>
+              <td>50.0</td>
+              <td>100.0</td>
+              <td>171.0</td>
+              <td>3.53e-54</td>
+          </tr>
+    
+          <tr>
+              <td>QCX41952.1</td>
+              <td>Amc15</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001957.4">BGC0001957.4</a></td>
+              <td>PKS</td>
+              <td>38.0</td>
+              <td>86.5</td>
+              <td>103.0</td>
+              <td>1.45e-27</td>
+          </tr>
+    
+          <tr>
+              <td>QHW08547.1</td>
+              <td>TIGR00730_family_Rossman_fold_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002054.2">BGC0002054.2</a></td>
+              <td>PKS+NRPS:Type I+saccharide</td>
+              <td>38.0</td>
+              <td>86.5</td>
+              <td>103.0</td>
+              <td>1.45e-27</td>
+          </tr>
+    
+          <tr>
+              <td>QCX41923.1</td>
+              <td>Mhr17</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001956.3">BGC0001956.3</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>86.5</td>
+              <td>99.0</td>
+              <td>7.67e-26</td>
+          </tr>
+    
+          <tr>
+              <td>QHD26307.1</td>
+              <td>TIGR00730_family_Rossman_fold_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002479.3">BGC0002479.3</a></td>
+              <td>PKS+NRPS:Type I+saccharide</td>
+              <td>35.0</td>
+              <td>86.5</td>
+              <td>99.0</td>
+              <td>7.67e-26</td>
+          </tr>
+    
+          <tr>
+              <td>EKJ73454.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002163.3">BGC0002163.3</a></td>
+              <td>other:other</td>
+              <td>34.0</td>
+              <td>107.9</td>
+              <td>97.0</td>
+              <td>1.32e-23</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

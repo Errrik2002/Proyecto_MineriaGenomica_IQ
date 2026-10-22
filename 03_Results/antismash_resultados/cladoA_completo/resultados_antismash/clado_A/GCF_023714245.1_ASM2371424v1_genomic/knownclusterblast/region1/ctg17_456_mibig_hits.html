@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>MCB8905706.1</td>
+              <td>NAD(P)/FAD-dependent_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002340.3">BGC0002340.3</a></td>
+              <td>NRPS:Type I+other:other</td>
+              <td>33.0</td>
+              <td>98.3</td>
+              <td>167.0</td>
+              <td>1.97e-49</td>
+          </tr>
+    
+          <tr>
+              <td>EFG10348.1</td>
+              <td>Thioredoxin_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000373.5">BGC0000373.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>98.0</td>
+              <td>159.0</td>
+              <td>3.83e-46</td>
+          </tr>
+    
+          <tr>
+              <td>AFV30261.1</td>
+              <td>FAD-dependent_pyridine_nucleotide-disulfide_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000075.5">BGC0000075.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>99.3</td>
+              <td>149.0</td>
+              <td>2.37e-42</td>
+          </tr>
+    
+          <tr>
+              <td>ARP51737.1</td>
+              <td>thioredoxin_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001782.3">BGC0001782.3</a></td>
+              <td>other:other</td>
+              <td>31.0</td>
+              <td>99.0</td>
+              <td>140.0</td>
+              <td>3.48e-39</td>
+          </tr>
+    
+          <tr>
+              <td>AJI44183.1</td>
+              <td>thioredoxin_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001193.5">BGC0001193.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>88.4</td>
+              <td>130.0</td>
+              <td>1.6e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AFR69338.1</td>
+              <td>FAD-dependent_disulfide_oxidoreductase_SpiH</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001045.5">BGC0001045.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>30.0</td>
+              <td>88.4</td>
+              <td>127.0</td>
+              <td>1.7e-34</td>
+          </tr>
+    
+          <tr>
+              <td>BAE98166.1</td>
+              <td>putative_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000339.5">BGC0000339.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>98.7</td>
+              <td>119.0</td>
+              <td>2.42e-31</td>
+          </tr>
+    
+          <tr>
+              <td>WP_028678145.1</td>
+              <td>FAD-dependent_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001228.5">BGC0001228.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>96.4</td>
+              <td>105.0</td>
+              <td>7.79e-26</td>
+          </tr>
+    
+          <tr>
+              <td>AGN11878.1</td>
+              <td>putative_alkyl_hydroperoxide_reductase_subunit_F</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001114.5">BGC0001114.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>25.0</td>
+              <td>95.7</td>
+              <td>80.0</td>
+              <td>2.71e-16</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

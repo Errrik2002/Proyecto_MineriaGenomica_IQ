@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ACY56716.1</td>
+              <td>ThnD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000600.3">BGC0000600.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>40.0</td>
+              <td>98.6</td>
+              <td>215.0</td>
+              <td>8.08e-69</td>
+          </tr>
+    
+          <tr>
+              <td>AHI59106.1</td>
+              <td>putative_ATP_binding_protein_of_ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001005.5">BGC0001005.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>38.0</td>
+              <td>98.2</td>
+              <td>198.0</td>
+              <td>3.66e-62</td>
+          </tr>
+    
+          <tr>
+              <td>QIW19938.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002111.3">BGC0002111.3</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>36.0</td>
+              <td>97.2</td>
+              <td>186.0</td>
+              <td>1.3e-57</td>
+          </tr>
+    
+          <tr>
+              <td>KXZ21039.1</td>
+              <td>multidrug_ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002700.2">BGC0002700.2</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>37.0</td>
+              <td>97.2</td>
+              <td>186.0</td>
+              <td>1.84e-57</td>
+          </tr>
+    
+          <tr>
+              <td>AED99781.1</td>
+              <td>ABC-transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000599.5">BGC0000599.5</a></td>
+              <td>ribosomal:RiPP:Sactipeptide</td>
+              <td>42.0</td>
+              <td>82.4</td>
+              <td>179.0</td>
+              <td>6.84e-55</td>
+          </tr>
+    
+          <tr>
+              <td>CAI05930.1</td>
+              <td>putative_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000696.5">BGC0000696.5</a></td>
+              <td>saccharide</td>
+              <td>32.0</td>
+              <td>73.9</td>
+              <td>95.0</td>
+              <td>2.46e-22</td>
+          </tr>
+    
+          <tr>
+              <td>EEM79978.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001887.3">BGC0001887.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>31.0</td>
+              <td>79.2</td>
+              <td>87.0</td>
+              <td>1e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AAC35926.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000792.3">BGC0000792.3</a></td>
+              <td>saccharide</td>
+              <td>25.0</td>
+              <td>67.6</td>
+              <td>54.0</td>
+              <td>2.95e-08</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

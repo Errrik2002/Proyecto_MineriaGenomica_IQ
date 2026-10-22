@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>WP_103692576.1</td>
+              <td>DNA-binding_transcriptional_repressor_DeoR</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002336.2">BGC0002336.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>89.3</td>
+              <td>94.0</td>
+              <td>1.9e-22</td>
+          </tr>
+    
+          <tr>
+              <td>QNH85857.1</td>
+              <td>BolY</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002327.3">BGC0002327.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>89.3</td>
+              <td>93.0</td>
+              <td>7.19e-22</td>
+          </tr>
+    
+          <tr>
+              <td>FKD65_RS44010</td>
+              <td>D-beta-D-heptose_1-phosphate_adenosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002686.2">BGC0002686.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>37.0</td>
+              <td>35.2</td>
+              <td>61.0</td>
+              <td>6.04e-12</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

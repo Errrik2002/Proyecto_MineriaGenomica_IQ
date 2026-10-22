@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>KON98594.1</td>
+              <td>histidine_kinase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002122.2">BGC0002122.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>79.1</td>
+              <td>270.0</td>
+              <td>4.78e-83</td>
+          </tr>
+    
+          <tr>
+              <td>QVV57669.1</td>
+              <td>HAMP_domain-containing_histidine_kinase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002338.3">BGC0002338.3</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>40.1</td>
+              <td>124.0</td>
+              <td>1.56e-30</td>
+          </tr>
+    
+          <tr>
+              <td>AAY32961.1</td>
+              <td>putative_sensory_box_histidine_kinase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001093.3">BGC0001093.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>29.0</td>
+              <td>63.6</td>
+              <td>125.0</td>
+              <td>2.12e-29</td>
+          </tr>
+    
+          <tr>
+              <td>CAO98841.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000023.5">BGC0000023.5</a></td>
+              <td>PKS:Type I</td>
+              <td>30.0</td>
+              <td>43.9</td>
+              <td>104.0</td>
+              <td>1.47e-23</td>
+          </tr>
+    
+          <tr>
+              <td>APZ78674.1</td>
+              <td>two-component_sensor_histidine_kinase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001417.4">BGC0001417.4</a></td>
+              <td>NRPS:Type I+PKS:Iterative type I</td>
+              <td>30.0</td>
+              <td>39.0</td>
+              <td>98.0</td>
+              <td>3.07e-21</td>
+          </tr>
+    
+          <tr>
+              <td>AXG46174.1</td>
+              <td>two-component_sensor_histidine_kinase_BarA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002713.2">BGC0002713.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>38.8</td>
+              <td>93.0</td>
+              <td>2.41e-19</td>
+          </tr>
+    
+          <tr>
+              <td>EDY47142.1</td>
+              <td>histidine_kinase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000845.5">BGC0000845.5</a></td>
+              <td>other:non-nrp beta-lactam</td>
+              <td>27.0</td>
+              <td>38.3</td>
+              <td>80.0</td>
+              <td>2.67e-15</td>
+          </tr>
+    
+          <tr>
+              <td>CAB60253.1</td>
+              <td>MrsK2_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000527.5">BGC0000527.5</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>24.0</td>
+              <td>37.2</td>
+              <td>75.0</td>
+              <td>9.28e-14</td>
+          </tr>
+    
+          <tr>
+              <td>CAA12536.1</td>
+              <td>ExsG_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000802.5">BGC0000802.5</a></td>
+              <td>saccharide</td>
+              <td>31.0</td>
+              <td>23.5</td>
+              <td>64.0</td>
+              <td>4.81e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AEX55158.1</td>
+              <td>putative_sensor_histidine_kinase_SlvK</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000549.3">BGC0000549.3</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>24.0</td>
+              <td>35.8</td>
+              <td>59.0</td>
+              <td>1.12e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ABA00874.1</td>
+              <td>NsuK</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000537.3">BGC0000537.3</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>25.0</td>
+              <td>39.0</td>
+              <td>52.0</td>
+              <td>1.72e-06</td>
+          </tr>
+    
+          <tr>
+              <td>BAB08161.1</td>
+              <td>SrtK</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000556.5">BGC0000556.5</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>24.0</td>
+              <td>36.7</td>
+              <td>50.0</td>
+              <td>5.22e-06</td>
+          </tr>
+    
+          <tr>
+              <td>AOT85875.1</td>
+              <td>sensor_histidine_kinase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001789.3">BGC0001789.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>24.0</td>
+              <td>39.0</td>
+              <td>49.0</td>
+              <td>9.2e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

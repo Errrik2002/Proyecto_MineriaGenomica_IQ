@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>SQF72444.1</td>
+              <td>Siderophore_staphylobactin_ABC_transporter,_substrate-binding_protein_SirA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000943.5">BGC0000943.5</a></td>
+              <td>other:other</td>
+              <td>38.0</td>
+              <td>88.5</td>
+              <td>169.0</td>
+              <td>9.47e-50</td>
+          </tr>
+    
+          <tr>
+              <td>BAB72346.1</td>
+              <td>periplasmic_iron-compound-binding_protein_of_iron(III)_ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002683.2">BGC0002683.2</a></td>
+              <td>NRPS:Type IV</td>
+              <td>29.0</td>
+              <td>80.9</td>
+              <td>88.0</td>
+              <td>1.72e-19</td>
+          </tr>
+    
+          <tr>
+              <td>ABM30205.1</td>
+              <td>PvuB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000947.5">BGC0000947.5</a></td>
+              <td>other:other</td>
+              <td>26.0</td>
+              <td>87.9</td>
+              <td>82.0</td>
+              <td>1.52e-17</td>
+          </tr>
+    
+          <tr>
+              <td>CBG75490.1</td>
+              <td>putative_secreted_siderophore-binding_lipoprotein_(transport_system_associated)</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000423.5">BGC0000423.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>106.4</td>
+              <td>77.0</td>
+              <td>1.31e-15</td>
+          </tr>
+    
+          <tr>
+              <td>ABI87093.1</td>
+              <td>periplasmic_binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002531.3">BGC0002531.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>24.0</td>
+              <td>84.5</td>
+              <td>70.0</td>
+              <td>4.92e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AUD11996.1</td>
+              <td>OrbB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001721.3">BGC0001721.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>84.5</td>
+              <td>67.0</td>
+              <td>3.94e-12</td>
+          </tr>
+    
+          <tr>
+              <td>ABE35424.1</td>
+              <td>ABC_Fe3+-hydroxamate_transporter,_periplasmic_ligand_binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002421.2">BGC0002421.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>79.7</td>
+              <td>64.0</td>
+              <td>2.65e-11</td>
+          </tr>
+    
+          <tr>
+              <td>CAR51992.1</td>
+              <td>putative_iron_transport-related_exported_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002569.3">BGC0002569.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>24.0</td>
+              <td>84.5</td>
+              <td>62.0</td>
+              <td>1.04e-10</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

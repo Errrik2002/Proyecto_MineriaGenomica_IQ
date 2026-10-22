@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAD45543.1</td>
+              <td>SpcT</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000716.5">BGC0000716.5</a></td>
+              <td>saccharide</td>
+              <td>28.0</td>
+              <td>92.9</td>
+              <td>108.0</td>
+              <td>1.65e-25</td>
+          </tr>
+    
+          <tr>
+              <td>ABY83147.1</td>
+              <td>Azi8</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000960.5">BGC0000960.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>23.0</td>
+              <td>88.8</td>
+              <td>107.0</td>
+              <td>5.55e-25</td>
+          </tr>
+    
+          <tr>
+              <td>ACG70823.1</td>
+              <td>putative_antibiotic_transport_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000938.5">BGC0000938.5</a></td>
+              <td>other:aminocoumarin</td>
+              <td>24.0</td>
+              <td>90.3</td>
+              <td>90.0</td>
+              <td>3.57e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AZF85911.1</td>
+              <td>MFS_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001963.2">BGC0001963.2</a></td>
+              <td>PKS:Type I</td>
+              <td>24.0</td>
+              <td>69.3</td>
+              <td>72.0</td>
+              <td>1.73e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ADZ45343.1</td>
+              <td>major_facilitator_superfamily_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001020.5">BGC0001020.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>24.0</td>
+              <td>94.4</td>
+              <td>49.0</td>
+              <td>6.31e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

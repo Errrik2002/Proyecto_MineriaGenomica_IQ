@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAN89641.1</td>
+              <td>putative_aspartate-1-decarboxylase_precursor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001070.5">BGC0001070.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>64.0</td>
+              <td>89.0</td>
+              <td>144.0</td>
+              <td>2.91e-45</td>
+          </tr>
+    
+          <tr>
+              <td>WP_008704365.1</td>
+              <td>aspartate_1-decarboxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001575.4">BGC0001575.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>58.0</td>
+              <td>94.5</td>
+              <td>140.0</td>
+              <td>5.15e-44</td>
+          </tr>
+    
+          <tr>
+              <td>MBE3200468.1</td>
+              <td>aspartate_1-decarboxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002409.3">BGC0002409.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>62.0</td>
+              <td>91.3</td>
+              <td>138.0</td>
+              <td>1.14e-42</td>
+          </tr>
+    
+          <tr>
+              <td>AMK48230.1</td>
+              <td>aspartate_1-decarboxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001351.3">BGC0001351.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>59.0</td>
+              <td>90.6</td>
+              <td>133.0</td>
+              <td>1.03e-40</td>
+          </tr>
+    
+          <tr>
+              <td>MBD2892725.1</td>
+              <td>Aspartate_1-decarboxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002718.2">BGC0002718.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>54.0</td>
+              <td>90.6</td>
+              <td>125.0</td>
+              <td>1.01e-37</td>
+          </tr>
+    
+          <tr>
+              <td>WP_141586355.1</td>
+              <td>aspartate_1-decarboxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002686.2">BGC0002686.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>57.0</td>
+              <td>90.6</td>
+              <td>123.0</td>
+              <td>3.86e-37</td>
+          </tr>
+    
+          <tr>
+              <td>ABM21575.1</td>
+              <td>CrpG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000975.5">BGC0000975.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>48.0</td>
+              <td>89.0</td>
+              <td>110.0</td>
+              <td>4.4e-32</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

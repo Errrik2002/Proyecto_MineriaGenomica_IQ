@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AHI58833.1</td>
+              <td>WelT2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000668.5">BGC0000668.5</a></td>
+              <td>terpene:Monoterpene+other:other</td>
+              <td>50.0</td>
+              <td>98.1</td>
+              <td>219.0</td>
+              <td>1.93e-70</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79569.1</td>
+              <td>FimI3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001594.3">BGC0001594.3</a></td>
+              <td>other:other</td>
+              <td>49.0</td>
+              <td>98.1</td>
+              <td>215.0</td>
+              <td>4.38e-69</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79625.1</td>
+              <td>FisI3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001595.3">BGC0001595.3</a></td>
+              <td>other:other</td>
+              <td>49.0</td>
+              <td>98.1</td>
+              <td>215.0</td>
+              <td>5.49e-69</td>
+          </tr>
+    
+          <tr>
+              <td>AHB62779.1</td>
+              <td>AmbT2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001126.4">BGC0001126.4</a></td>
+              <td>terpene:Monoterpene+other:other</td>
+              <td>48.0</td>
+              <td>98.1</td>
+              <td>213.0</td>
+              <td>2.2e-68</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79602.1</td>
+              <td>FilI3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001501.5">BGC0001501.5</a></td>
+              <td>other:other</td>
+              <td>48.0</td>
+              <td>98.1</td>
+              <td>213.0</td>
+              <td>2.2e-68</td>
+          </tr>
+    
+          <tr>
+              <td>APB62265.1</td>
+              <td>indole-3-glycerol-phosphate_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001612.3">BGC0001612.3</a></td>
+              <td>other:other</td>
+              <td>48.0</td>
+              <td>98.1</td>
+              <td>213.0</td>
+              <td>2.2e-68</td>
+          </tr>
+    
+          <tr>
+              <td>AGN11894.1</td>
+              <td>TrpC_indole-3-glycerol_phosphate_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001114.5">BGC0001114.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>48.0</td>
+              <td>92.5</td>
+              <td>204.0</td>
+              <td>3.31e-65</td>
+          </tr>
+    
+          <tr>
+              <td>QUJ09153.1</td>
+              <td>Lon6</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002440.3">BGC0002440.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>39.0</td>
+              <td>95.5</td>
+              <td>156.0</td>
+              <td>3.02e-46</td>
+          </tr>
+    
+          <tr>
+              <td>PVC99869.1</td>
+              <td>indole-3-glycerol_phosphate_synthase_TrpC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002100.2">BGC0002100.2</a></td>
+              <td>NRPS:Type I+other:other</td>
+              <td>40.0</td>
+              <td>98.5</td>
+              <td>154.0</td>
+              <td>2.71e-45</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>WP_028847746.1</td>
+              <td>acetyl-CoA_C-acyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002467.2">BGC0002467.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>51.0</td>
+              <td>100.3</td>
+              <td>380.0</td>
+              <td>4.15e-130</td>
+          </tr>
+    
+          <tr>
+              <td>AAG30258.1</td>
+              <td>beta-ketothiolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000867.3">BGC0000867.3</a></td>
+              <td>other:other</td>
+              <td>49.0</td>
+              <td>100.3</td>
+              <td>361.0</td>
+              <td>7.57e-123</td>
+          </tr>
+    
+          <tr>
+              <td>AAF23365.1</td>
+              <td>PhaA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000866.5">BGC0000866.5</a></td>
+              <td>other:other</td>
+              <td>50.0</td>
+              <td>100.0</td>
+              <td>355.0</td>
+              <td>1.92e-120</td>
+          </tr>
+    
+          <tr>
+              <td>AXM42944.1</td>
+              <td>thioesterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001941.3">BGC0001941.3</a></td>
+              <td>PKS:Type I</td>
+              <td>41.0</td>
+              <td>105.5</td>
+              <td>273.0</td>
+              <td>3.18e-88</td>
+          </tr>
+    
+          <tr>
+              <td>AXM43061.1</td>
+              <td>acetyl-CoA_acetyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001945.3">BGC0001945.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>40.0</td>
+              <td>105.5</td>
+              <td>271.0</td>
+              <td>2.52e-87</td>
+          </tr>
+    
+          <tr>
+              <td>ATW51244.1</td>
+              <td>acetyl-CoA_acetyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002788.2">BGC0002788.2</a></td>
+              <td>PKS:Modular type I</td>
+              <td>40.0</td>
+              <td>103.0</td>
+              <td>267.0</td>
+              <td>9.21e-86</td>
+          </tr>
+    
+          <tr>
+              <td>ABD65931.1</td>
+              <td>acetyl-CoA_acetyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000341.5">BGC0000341.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>39.0</td>
+              <td>103.0</td>
+              <td>266.0</td>
+              <td>1.19e-85</td>
+          </tr>
+    
+          <tr>
+              <td>AFV52170.1</td>
+              <td>acyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000081.5">BGC0000081.5</a></td>
+              <td>NRPS:Type I+PKS:Iterative type I</td>
+              <td>38.0</td>
+              <td>102.8</td>
+              <td>230.0</td>
+              <td>1.01e-71</td>
+          </tr>
+    
+          <tr>
+              <td>BAA89375.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000864.3">BGC0000864.3</a></td>
+              <td>other:other</td>
+              <td>31.0</td>
+              <td>108.3</td>
+              <td>166.0</td>
+              <td>5.48e-47</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

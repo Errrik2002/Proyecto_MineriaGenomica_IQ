@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AHB82049.1</td>
+              <td>MFS_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001019.5">BGC0001019.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>31.0</td>
+              <td>93.1</td>
+              <td>167.0</td>
+              <td>1.42e-47</td>
+          </tr>
+    
+          <tr>
+              <td>EJK79844.1</td>
+              <td>arabinose_efflux_permease_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000436.5">BGC0000436.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>87.5</td>
+              <td>109.0</td>
+              <td>4.57e-26</td>
+          </tr>
+    
+          <tr>
+              <td>EIW83692.1</td>
+              <td>MFS_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002707.2">BGC0002707.2</a></td>
+              <td>terpene</td>
+              <td>26.0</td>
+              <td>53.4</td>
+              <td>66.0</td>
+              <td>3.2e-11</td>
+          </tr>
+    
+          <tr>
+              <td>EIW83691.1</td>
+              <td>MFS_general_substrate_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002707.2">BGC0002707.2</a></td>
+              <td>terpene</td>
+              <td>33.0</td>
+              <td>23.4</td>
+              <td>65.0</td>
+              <td>5.65e-11</td>
+          </tr>
+    
+          <tr>
+              <td>ADB43069.1</td>
+              <td>putative_permease_of_major_facilitator_superfamily</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000926.5">BGC0000926.5</a></td>
+              <td>other:other</td>
+              <td>21.0</td>
+              <td>76.1</td>
+              <td>61.0</td>
+              <td>8.21e-10</td>
+          </tr>
+    
+          <tr>
+              <td>CEG06576.1</td>
+              <td>MFS_family</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001928.2">BGC0001928.2</a></td>
+              <td>other:other</td>
+              <td>31.0</td>
+              <td>35.9</td>
+              <td>57.0</td>
+              <td>1.46e-08</td>
+          </tr>
+    
+          <tr>
+              <td>BCB17008.1</td>
+              <td>putative_permease_of_the_major_facilitator_superfamily</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002523.2">BGC0002523.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>22.1</td>
+              <td>56.0</td>
+              <td>4.92e-08</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

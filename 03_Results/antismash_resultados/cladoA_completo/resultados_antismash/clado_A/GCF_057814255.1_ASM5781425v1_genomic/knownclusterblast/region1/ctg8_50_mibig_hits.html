@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAH55660.1</td>
+              <td>putative_copper_transporting_P-type_ATPase_efflux_pump</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000259.3">BGC0000259.3</a></td>
+              <td>PKS</td>
+              <td>39.0</td>
+              <td>104.1</td>
+              <td>510.0</td>
+              <td>4.01e-168</td>
+          </tr>
+    
+          <tr>
+              <td>AAY28209.1</td>
+              <td>unknown</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000074.5">BGC0000074.5</a></td>
+              <td>PKS</td>
+              <td>40.0</td>
+              <td>92.0</td>
+              <td>466.0</td>
+              <td>6.53e-153</td>
+          </tr>
+    
+          <tr>
+              <td>CAH10184.1</td>
+              <td>ChaT5_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000207.5">BGC0000207.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>75.9</td>
+              <td>286.0</td>
+              <td>1.79e-85</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ46699.1</td>
+              <td>putative_heavy_metal_translocating_P-type_ATPase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000969.5">BGC0000969.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>32.0</td>
+              <td>67.0</td>
+              <td>256.0</td>
+              <td>1.72e-73</td>
+          </tr>
+    
+          <tr>
+              <td>ALD82534.1</td>
+              <td>heavy_metal_translocating_P-type_ATPase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001212.4">BGC0001212.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>29.0</td>
+              <td>69.5</td>
+              <td>226.0</td>
+              <td>2.78e-63</td>
+          </tr>
+    
+          <tr>
+              <td>MBV7329451.1</td>
+              <td>heavy_metal_translocating_P-type_ATPase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002131.4">BGC0002131.4</a></td>
+              <td>NRPS:Type I+PKS:Type I+saccharide:hybrid/tailoring</td>
+              <td>30.0</td>
+              <td>61.3</td>
+              <td>224.0</td>
+              <td>3.77e-62</td>
+          </tr>
+    
+          <tr>
+              <td>AMQ23502.1</td>
+              <td>haloacid_dehalogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002584.2">BGC0002584.2</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>26.0</td>
+              <td>73.9</td>
+              <td>129.0</td>
+              <td>2.99e-30</td>
+          </tr>
+    
+          <tr>
+              <td>CAB38587.1</td>
+              <td>putative_integral_membrane_ATPase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000315.5">BGC0000315.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>62.9</td>
+              <td>127.0</td>
+              <td>6.34e-30</td>
+          </tr>
+    
+          <tr>
+              <td>ABX24509.1</td>
+              <td>cation-transporting_ATPase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000877.5">BGC0000877.5</a></td>
+              <td>other:other</td>
+              <td>33.0</td>
+              <td>23.9</td>
+              <td>93.0</td>
+              <td>1.01e-19</td>
+          </tr>
+    
+          <tr>
+              <td>ACB01052.1</td>
+              <td>ATPase,_P-type_(transporting),_HAD_superfamily,_subfamily_IC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002470.2">BGC0002470.2</a></td>
+              <td>other:other</td>
+              <td>38.0</td>
+              <td>21.5</td>
+              <td>93.0</td>
+              <td>7.02e-19</td>
+          </tr>
+    
+          <tr>
+              <td>ALV82383.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001370.4">BGC0001370.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>23.0</td>
+              <td>43.7</td>
+              <td>74.0</td>
+              <td>4e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ABB90287.1</td>
+              <td>Ca2+_ATPase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001057.4">BGC0001057.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>25.0</td>
+              <td>41.6</td>
+              <td>65.0</td>
+              <td>3.64e-10</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

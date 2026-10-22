@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>MQS11311.1</td>
+              <td>ATP-grasp_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002282.2">BGC0002282.2</a></td>
+              <td>other:other</td>
+              <td>34.0</td>
+              <td>93.7</td>
+              <td>224.0</td>
+              <td>4.78e-69</td>
+          </tr>
+    
+          <tr>
+              <td>AVW82942.1</td>
+              <td>phosphoribosylglycinamide_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002040.3">BGC0002040.3</a></td>
+              <td>other:other</td>
+              <td>34.0</td>
+              <td>93.7</td>
+              <td>224.0</td>
+              <td>7.26e-69</td>
+          </tr>
+    
+          <tr>
+              <td>AJO72765.1</td>
+              <td>Phosphoribosylglycinamide_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001381.5">BGC0001381.5</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>95.9</td>
+              <td>219.0</td>
+              <td>7.18e-67</td>
+          </tr>
+    
+          <tr>
+              <td>AVW82902.1</td>
+              <td>phosphoribosylglycinamide_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002039.3">BGC0002039.3</a></td>
+              <td>other:other</td>
+              <td>34.0</td>
+              <td>99.0</td>
+              <td>209.0</td>
+              <td>4.63e-63</td>
+          </tr>
+    
+          <tr>
+              <td>QER91002.1</td>
+              <td>pyfJ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001985.4">BGC0001985.4</a></td>
+              <td>other:other</td>
+              <td>34.0</td>
+              <td>99.0</td>
+              <td>207.0</td>
+              <td>2.53e-62</td>
+          </tr>
+    
+          <tr>
+              <td>ARF06206.1</td>
+              <td>carboxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001593.5">BGC0001593.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>96.1</td>
+              <td>121.0</td>
+              <td>3.94e-30</td>
+          </tr>
+    
+          <tr>
+              <td>WP_232247814.1</td>
+              <td>ATP-grasp_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002536.3">BGC0002536.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>84.9</td>
+              <td>97.0</td>
+              <td>5.89e-22</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

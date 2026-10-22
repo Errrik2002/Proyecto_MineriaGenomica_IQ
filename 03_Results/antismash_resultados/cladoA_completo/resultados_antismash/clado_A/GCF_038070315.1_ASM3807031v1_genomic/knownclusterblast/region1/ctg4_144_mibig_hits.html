@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ACR50754.1</td>
+              <td>zinc-binding_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000163.5">BGC0000163.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>90.3</td>
+              <td>140.0</td>
+              <td>1.75e-38</td>
+          </tr>
+    
+          <tr>
+              <td>CAF60509.1</td>
+              <td>putative_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000704.3">BGC0000704.3</a></td>
+              <td>saccharide</td>
+              <td>30.0</td>
+              <td>82.3</td>
+              <td>130.0</td>
+              <td>7.78e-35</td>
+          </tr>
+    
+          <tr>
+              <td>CRI73790.1</td>
+              <td>L-threonine_3-dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001215.5">BGC0001215.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>80.6</td>
+              <td>128.0</td>
+              <td>8.69e-34</td>
+          </tr>
+    
+          <tr>
+              <td>WP_036055804.1</td>
+              <td>glutathione-independent_formaldehyde_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002336.2">BGC0002336.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>90.6</td>
+              <td>122.0</td>
+              <td>1.63e-31</td>
+          </tr>
+    
+          <tr>
+              <td>QCF28943.1</td>
+              <td>aldehyde_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002308.2">BGC0002308.2</a></td>
+              <td>other:other+PKS</td>
+              <td>31.0</td>
+              <td>85.8</td>
+              <td>115.0</td>
+              <td>8.39e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AEQ20407.1</td>
+              <td>Zn-dependent_alcohol_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001687.3">BGC0001687.3</a></td>
+              <td>other:other</td>
+              <td>32.0</td>
+              <td>63.0</td>
+              <td>110.0</td>
+              <td>2.27e-28</td>
+          </tr>
+    
+          <tr>
+              <td>ABY66028.1</td>
+              <td>Zn-dependent_alcohol_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001008.5">BGC0001008.5</a></td>
+              <td>PKS:Iterative type I</td>
+              <td>30.0</td>
+              <td>79.2</td>
+              <td>93.0</td>
+              <td>4.77e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ADM34147.1</td>
+              <td>dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001084.5">BGC0001084.5</a></td>
+              <td>NRPS:Type I+terpene:Hemiterpene+other:other</td>
+              <td>26.0</td>
+              <td>75.2</td>
+              <td>79.0</td>
+              <td>5.8e-16</td>
+          </tr>
+    
+          <tr>
+              <td>TRX17531.1</td>
+              <td>formaldehyde_dehydrogenase,_glutathione-independent</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002329.2">BGC0002329.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>59.0</td>
+              <td>78.0</td>
+              <td>1.57e-15</td>
+          </tr>
+    
+          <tr>
+              <td>QXL90852.1</td>
+              <td>zinc-binding_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002426.3">BGC0002426.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>24.0</td>
+              <td>57.0</td>
+              <td>57.0</td>
+              <td>8.18e-09</td>
+          </tr>
+    
+          <tr>
+              <td>OAG05545.1</td>
+              <td>PKSKA1_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002211.3">BGC0002211.3</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>70.7</td>
+              <td>55.0</td>
+              <td>1.05e-07</td>
+          </tr>
+    
+          <tr>
+              <td>OPB37946.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002206.2">BGC0002206.2</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>25.9</td>
+              <td>51.0</td>
+              <td>7.17e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AAQ82567.1</td>
+              <td>FscE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000034.5">BGC0000034.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>27.0</td>
+              <td>67.8</td>
+              <td>52.0</td>
+              <td>7.93e-07</td>
+          </tr>
+    
+          <tr>
+              <td>BAG85026.1</td>
+              <td>putative_polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000086.5">BGC0000086.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>54.1</td>
+              <td>49.0</td>
+              <td>7.33e-06</td>
+          </tr>
+    
+          <tr>
+              <td>CAQ64686.1</td>
+              <td>lasalocid_modular_polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000087.5">BGC0000087.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>54.1</td>
+              <td>49.0</td>
+              <td>7.33e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

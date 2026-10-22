@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>UMM61367.1</td>
+              <td>Tsk6</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002661.2">BGC0002661.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>104.1</td>
+              <td>190.0</td>
+              <td>8.24e-56</td>
+          </tr>
+    
+          <tr>
+              <td>ABP55213.1</td>
+              <td>L-lysine_2,3-aminomutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000142.3">BGC0000142.3</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>103.9</td>
+              <td>184.0</td>
+              <td>1.4e-53</td>
+          </tr>
+    
+          <tr>
+              <td>ALA09369.1</td>
+              <td>glutamate_2,3-_aminomutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001303.5">BGC0001303.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>103.9</td>
+              <td>182.0</td>
+              <td>5.36e-53</td>
+          </tr>
+    
+          <tr>
+              <td>AAP03121.1</td>
+              <td>arginine_aminomutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000874.5">BGC0000874.5</a></td>
+              <td>other:other</td>
+              <td>35.0</td>
+              <td>80.9</td>
+              <td>166.0</td>
+              <td>5.97e-47</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

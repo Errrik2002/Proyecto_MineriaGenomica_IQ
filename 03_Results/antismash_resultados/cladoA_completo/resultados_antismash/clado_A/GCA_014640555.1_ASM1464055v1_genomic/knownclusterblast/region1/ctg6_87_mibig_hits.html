@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ACL77544.1</td>
+              <td>Orn/DAP/Arg_decarboxylase_2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001891.3">BGC0001891.3</a></td>
+              <td>other:other</td>
+              <td>37.0</td>
+              <td>97.3</td>
+              <td>291.0</td>
+              <td>6.82e-95</td>
+          </tr>
+    
+          <tr>
+              <td>BAE07075.1</td>
+              <td>BtrK</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000693.5">BGC0000693.5</a></td>
+              <td>saccharide</td>
+              <td>38.0</td>
+              <td>100.5</td>
+              <td>291.0</td>
+              <td>1.01e-94</td>
+          </tr>
+    
+          <tr>
+              <td>CAG77429.1</td>
+              <td>putative_glutamate_decarboxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000694.3">BGC0000694.3</a></td>
+              <td>saccharide</td>
+              <td>38.0</td>
+              <td>100.5</td>
+              <td>291.0</td>
+              <td>1.28e-94</td>
+          </tr>
+    
+          <tr>
+              <td>BAD08372.1</td>
+              <td>decarboxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000167.5">BGC0000167.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>100.2</td>
+              <td>219.0</td>
+              <td>7.42e-67</td>
+          </tr>
+    
+          <tr>
+              <td>UHH90024.1</td>
+              <td>VicO</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002634.2">BGC0002634.2</a></td>
+              <td>PKS+NRPS:Type I+other:other</td>
+              <td>32.0</td>
+              <td>98.3</td>
+              <td>211.0</td>
+              <td>4.32e-64</td>
+          </tr>
+    
+          <tr>
+              <td>QBL56194.1</td>
+              <td>diaminopimelate_decarboxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002376.2">BGC0002376.2</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>93.5</td>
+              <td>210.0</td>
+              <td>1.54e-63</td>
+          </tr>
+    
+          <tr>
+              <td>ANH11406.1</td>
+              <td>MacK</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001770.4">BGC0001770.4</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>98.8</td>
+              <td>207.0</td>
+              <td>1.96e-62</td>
+          </tr>
+    
+          <tr>
+              <td>SQF72452.1</td>
+              <td>Siderophore_staphylobactin_biosynthesis_protein_SbnH</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000943.5">BGC0000943.5</a></td>
+              <td>other:other</td>
+              <td>31.0</td>
+              <td>90.3</td>
+              <td>171.0</td>
+              <td>6.03e-49</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ23063.1</td>
+              <td>probable_decarboxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000291.5">BGC0000291.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>82.4</td>
+              <td>102.0</td>
+              <td>3.08e-23</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

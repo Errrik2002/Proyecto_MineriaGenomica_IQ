@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>SQF72452.1</td>
+              <td>Siderophore_staphylobactin_biosynthesis_protein_SbnH</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000943.5">BGC0000943.5</a></td>
+              <td>other:other</td>
+              <td>41.0</td>
+              <td>95.8</td>
+              <td>329.0</td>
+              <td>5.3e-110</td>
+          </tr>
+    
+          <tr>
+              <td>AGK17156.1</td>
+              <td>diaminopimelate_decarboxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002527.2">BGC0002527.2</a></td>
+              <td>other:other</td>
+              <td>40.0</td>
+              <td>99.3</td>
+              <td>311.0</td>
+              <td>4e-103</td>
+          </tr>
+    
+          <tr>
+              <td>BAC16548.1</td>
+              <td>vibrioferrin_biosynthesis_protein_PvsE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000946.5">BGC0000946.5</a></td>
+              <td>other:other</td>
+              <td>41.0</td>
+              <td>99.0</td>
+              <td>307.0</td>
+              <td>2.06e-101</td>
+          </tr>
+    
+          <tr>
+              <td>ABM30201.1</td>
+              <td>PvsE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000947.5">BGC0000947.5</a></td>
+              <td>other:other</td>
+              <td>41.0</td>
+              <td>98.8</td>
+              <td>303.0</td>
+              <td>6.57e-100</td>
+          </tr>
+    
+          <tr>
+              <td>AQT01379.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001690.5">BGC0001690.5</a></td>
+              <td>PKS</td>
+              <td>43.0</td>
+              <td>94.0</td>
+              <td>289.0</td>
+              <td>1.6e-94</td>
+          </tr>
+    
+          <tr>
+              <td>AAW74608.1</td>
+              <td>diaminopimelate_decarboxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001408.5">BGC0001408.5</a></td>
+              <td>other:other</td>
+              <td>41.0</td>
+              <td>95.5</td>
+              <td>289.0</td>
+              <td>3.72e-94</td>
+          </tr>
+    
+          <tr>
+              <td>ATW47215.1</td>
+              <td>diaminopimelate_decarboxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002466.3">BGC0002466.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>38.0</td>
+              <td>94.5</td>
+              <td>251.0</td>
+              <td>1.16e-79</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

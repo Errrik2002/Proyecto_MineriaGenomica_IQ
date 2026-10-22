@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AOY81490.1</td>
+              <td>carbohydrate_ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002754.2">BGC0002754.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>38.0</td>
+              <td>94.9</td>
+              <td>188.0</td>
+              <td>3.05e-58</td>
+          </tr>
+    
+          <tr>
+              <td>AUD08668.1</td>
+              <td>sugar_ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001553.5">BGC0001553.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>39.0</td>
+              <td>94.9</td>
+              <td>184.0</td>
+              <td>6.29e-57</td>
+          </tr>
+    
+          <tr>
+              <td>ACR50751.1</td>
+              <td>putative_ABC_transporter_permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000163.5">BGC0000163.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>90.9</td>
+              <td>142.0</td>
+              <td>4.29e-41</td>
+          </tr>
+    
+          <tr>
+              <td>CCC21130.1</td>
+              <td>putative_ABC_transporter_inner_membrane_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000171.5">BGC0000171.5</a></td>
+              <td>PKS:Type I</td>
+              <td>33.0</td>
+              <td>97.8</td>
+              <td>121.0</td>
+              <td>1.45e-32</td>
+          </tr>
+    
+          <tr>
+              <td>QEV63761.1</td>
+              <td>carbohydrate_ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002657.2">BGC0002657.2</a></td>
+              <td>PKS+NRPS:Type I</td>
+              <td>28.0</td>
+              <td>98.9</td>
+              <td>105.0</td>
+              <td>3.3e-26</td>
+          </tr>
+    
+          <tr>
+              <td>RMI87909.1</td>
+              <td>ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002285.2">BGC0002285.2</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>27.0</td>
+              <td>92.0</td>
+              <td>97.0</td>
+              <td>3.19e-23</td>
+          </tr>
+    
+          <tr>
+              <td>ABC87504.1</td>
+              <td>sugar_transporter_intracellular_portion</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001011.5">BGC0001011.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>28.0</td>
+              <td>94.2</td>
+              <td>97.0</td>
+              <td>3.35e-23</td>
+          </tr>
+    
+          <tr>
+              <td>ACR33049.1</td>
+              <td>ABC_transport_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000495.5">BGC0000495.5</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>27.0</td>
+              <td>97.1</td>
+              <td>90.0</td>
+              <td>7.2e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ALV86849.1</td>
+              <td>Tlo3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001406.5">BGC0001406.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>24.0</td>
+              <td>65.0</td>
+              <td>74.0</td>
+              <td>6.12e-15</td>
+          </tr>
+    
+          <tr>
+              <td>ACR50750.1</td>
+              <td>putative_ABC_transporter_permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000163.5">BGC0000163.5</a></td>
+              <td>PKS</td>
+              <td>25.0</td>
+              <td>49.3</td>
+              <td>47.0</td>
+              <td>6.6e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAY37658.1</td>
+              <td>diaminobutyrate_aminotransferase_apoenzyme</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000437.5">BGC0000437.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>59.0</td>
+              <td>75.4</td>
+              <td>63.0</td>
+              <td>2.24e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AHY86404.1</td>
+              <td>putative_diaminobutyrate-2-oxoglutarate_transaminase_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000329.5">BGC0000329.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>62.0</td>
+              <td>76.9</td>
+              <td>62.0</td>
+              <td>5.73e-13</td>
+          </tr>
+    
+          <tr>
+              <td>UUQ64549.1</td>
+              <td>diaminobutyrate--2-oxoglutarate_transaminase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002768.2">BGC0002768.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>57.0</td>
+              <td>75.4</td>
+              <td>60.0</td>
+              <td>2.74e-12</td>
+          </tr>
+    
+          <tr>
+              <td>KFL51879.1</td>
+              <td>2,4-diaminobutyrate_4-aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001711.4">BGC0001711.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>49.0</td>
+              <td>81.5</td>
+              <td>58.0</td>
+              <td>1.79e-11</td>
+          </tr>
+    
+          <tr>
+              <td>WP_082045523.1</td>
+              <td>diaminobutyrate--2-oxoglutarate_transaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002001.3">BGC0002001.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>44.0</td>
+              <td>90.8</td>
+              <td>58.0</td>
+              <td>1.8e-11</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAK12084.1</td>
+              <td>EctB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000852.5">BGC0000852.5</a></td>
+              <td>other:other</td>
+              <td>57.0</td>
+              <td>98.6</td>
+              <td>491.0</td>
+              <td>6.24e-173</td>
+          </tr>
+    
+          <tr>
+              <td>AAS02095.1</td>
+              <td>ThpB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000853.3">BGC0000853.3</a></td>
+              <td>other:other</td>
+              <td>56.0</td>
+              <td>97.0</td>
+              <td>469.0</td>
+              <td>3.2e-164</td>
+          </tr>
+    
+          <tr>
+              <td>QOE83929.1</td>
+              <td>diaminobutyrate--2-oxoglutarate_transaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002052.3">BGC0002052.3</a></td>
+              <td>other:ectoine</td>
+              <td>55.0</td>
+              <td>96.3</td>
+              <td>462.0</td>
+              <td>9.15e-162</td>
+          </tr>
+    
+          <tr>
+              <td>ABB30171.1</td>
+              <td>L-2,4-diaminobutyric_acid_acetyl_transferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000855.3">BGC0000855.3</a></td>
+              <td>other:other</td>
+              <td>54.0</td>
+              <td>97.2</td>
+              <td>457.0</td>
+              <td>2.78e-159</td>
+          </tr>
+    
+          <tr>
+              <td>ACB30327.1</td>
+              <td>L-2,4-diaminobutyric_acid_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000858.3">BGC0000858.3</a></td>
+              <td>other:other</td>
+              <td>52.0</td>
+              <td>97.2</td>
+              <td>444.0</td>
+              <td>1.35e-154</td>
+          </tr>
+    
+          <tr>
+              <td>ABY40745.1</td>
+              <td>L-2,4-diaminobutyrate_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000857.3">BGC0000857.3</a></td>
+              <td>other:other</td>
+              <td>53.0</td>
+              <td>97.0</td>
+              <td>439.0</td>
+              <td>4.52e-152</td>
+          </tr>
+    
+          <tr>
+              <td>ACB30331.1</td>
+              <td>L-2,4-diaminobutyric_acid_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000859.3">BGC0000859.3</a></td>
+              <td>other:other</td>
+              <td>53.0</td>
+              <td>96.3</td>
+              <td>439.0</td>
+              <td>4.67e-152</td>
+          </tr>
+    
+          <tr>
+              <td>AAY96771.1</td>
+              <td>L-2,4-diaminobutyrat_transaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000854.3">BGC0000854.3</a></td>
+              <td>other:other</td>
+              <td>53.0</td>
+              <td>96.3</td>
+              <td>438.0</td>
+              <td>6.62e-152</td>
+          </tr>
+    
+          <tr>
+              <td>ABY40740.1</td>
+              <td>L-2,4-diaminobutyrate_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000856.3">BGC0000856.3</a></td>
+              <td>other:other</td>
+              <td>52.0</td>
+              <td>97.0</td>
+              <td>432.0</td>
+              <td>2.66e-149</td>
+          </tr>
+    
+          <tr>
+              <td>AFJ14790.1</td>
+              <td>PlpA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000403.5">BGC0000403.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>50.0</td>
+              <td>98.4</td>
+              <td>409.0</td>
+              <td>1.81e-140</td>
+          </tr>
+    
+          <tr>
+              <td>CUX79057.1</td>
+              <td>Diaminobutyrate--2-oxoglutarate_transaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001715.4">BGC0001715.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>50.0</td>
+              <td>98.4</td>
+              <td>409.0</td>
+              <td>1.81e-140</td>
+          </tr>
+    
+          <tr>
+              <td>CEK23370.1</td>
+              <td>Diaminobutyrate--2-oxoglutarate_transaminase_(Diaminobutyrate--2-oxoglutarate_aminotransferase)_(L-2,4-diaminobutyric_acid_transaminase)_(DABA_aminotransferase)</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001716.4">BGC0001716.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>49.0</td>
+              <td>96.5</td>
+              <td>405.0</td>
+              <td>7.46e-139</td>
+          </tr>
+    
+          <tr>
+              <td>ADA71975.1</td>
+              <td>L-2,4-diaminobutyrate_transaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000860.3">BGC0000860.3</a></td>
+              <td>other:other</td>
+              <td>45.0</td>
+              <td>97.4</td>
+              <td>378.0</td>
+              <td>1.7e-128</td>
+          </tr>
+    
+          <tr>
+              <td>CBG67544.1</td>
+              <td>putative_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002367.2">BGC0002367.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>49.0</td>
+              <td>93.0</td>
+              <td>363.0</td>
+              <td>1.33e-122</td>
+          </tr>
+    
+          <tr>
+              <td>AAY37658.1</td>
+              <td>diaminobutyrate_aminotransferase_apoenzyme</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000437.5">BGC0000437.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>100.7</td>
+              <td>279.0</td>
+              <td>1.67e-89</td>
+          </tr>
+    
+          <tr>
+              <td>UUQ64549.1</td>
+              <td>diaminobutyrate--2-oxoglutarate_transaminase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002768.2">BGC0002768.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>34.0</td>
+              <td>100.5</td>
+              <td>265.0</td>
+              <td>4.19e-84</td>
+          </tr>
+    
+          <tr>
+              <td>AHY86404.1</td>
+              <td>putative_diaminobutyrate-2-oxoglutarate_transaminase_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000329.5">BGC0000329.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>34.0</td>
+              <td>100.7</td>
+              <td>263.0</td>
+              <td>3.28e-83</td>
+          </tr>
+    
+          <tr>
+              <td>AFY40272.1</td>
+              <td>diaminobutyrate_aminotransferase_apoenzyme</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002633.2">BGC0002633.2</a></td>
+              <td>other:other</td>
+              <td>37.0</td>
+              <td>100.0</td>
+              <td>259.0</td>
+              <td>8.85e-82</td>
+          </tr>
+    
+          <tr>
+              <td>CZF84011.1</td>
+              <td>Diaminobutyrate--2-oxoglutarate_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002382.3">BGC0002382.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>36.0</td>
+              <td>101.6</td>
+              <td>269.0</td>
+              <td>3.85e-81</td>
+          </tr>
+    
+          <tr>
+              <td>ACB01065.1</td>
+              <td>2,4-diaminobutyrate_4-transaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002470.2">BGC0002470.2</a></td>
+              <td>other:other</td>
+              <td>37.0</td>
+              <td>99.8</td>
+              <td>258.0</td>
+              <td>5.04e-81</td>
+          </tr>
+    
+          <tr>
+              <td>AAY93435.2</td>
+              <td>2,4-diaminobutyrate_4-transaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000413.5">BGC0000413.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>104.0</td>
+              <td>258.0</td>
+              <td>5.46e-81</td>
+          </tr>
+    
+          <tr>
+              <td>ACO78744.1</td>
+              <td>Diaminobutyrate-2-oxoglutarate_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002433.3">BGC0002433.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>102.8</td>
+              <td>256.0</td>
+              <td>2.57e-80</td>
+          </tr>
+    
+          <tr>
+              <td>SDF67204.1</td>
+              <td>diaminobutyrate_aminotransferase_apoenzyme</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002422.2">BGC0002422.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>95.6</td>
+              <td>251.0</td>
+              <td>2.79e-78</td>
+          </tr>
+    
+          <tr>
+              <td>AFH75325.1</td>
+              <td>diaminobutyrate-2-oxoglutarate_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000425.5">BGC0000425.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>103.0</td>
+              <td>250.0</td>
+              <td>2.86e-78</td>
+          </tr>
+    
+          <tr>
+              <td>KFL51879.1</td>
+              <td>2,4-diaminobutyrate_4-aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001711.4">BGC0001711.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>34.0</td>
+              <td>100.5</td>
+              <td>249.0</td>
+              <td>2.88e-78</td>
+          </tr>
+    
+          <tr>
+              <td>WP_082045523.1</td>
+              <td>diaminobutyrate--2-oxoglutarate_transaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002001.3">BGC0002001.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>36.0</td>
+              <td>98.4</td>
+              <td>245.0</td>
+              <td>3.99e-76</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ96477.1</td>
+              <td>putative_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000330.5">BGC0000330.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>98.4</td>
+              <td>243.0</td>
+              <td>3.72e-75</td>
+          </tr>
+    
+          <tr>
+              <td>BCD58483.1</td>
+              <td>diaminobutyrate-2-oxoglutarate_transaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002535.2">BGC0002535.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>100.5</td>
+              <td>239.0</td>
+              <td>6.51e-74</td>
+          </tr>
+    
+          <tr>
+              <td>BAB72354.1</td>
+              <td>diaminobutyrate--pyruvate_transaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002683.2">BGC0002683.2</a></td>
+              <td>NRPS:Type IV</td>
+              <td>33.0</td>
+              <td>101.2</td>
+              <td>234.0</td>
+              <td>1.07e-71</td>
+          </tr>
+    
+          <tr>
+              <td>AKJ29408.1</td>
+              <td>2,4-diaminobutyrate_4-aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001608.4">BGC0001608.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>89.3</td>
+              <td>218.0</td>
+              <td>1.68e-66</td>
+          </tr>
+    
+          <tr>
+              <td>QPB84030.1</td>
+              <td>aminotransferase_class_III-fold_pyridoxal_phosphate-dependent_enzyme</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002675.2">BGC0002675.2</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>78.8</td>
+              <td>161.0</td>
+              <td>7.02e-43</td>
+          </tr>
+    
+          <tr>
+              <td>CAH55650.1</td>
+              <td>putative_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000259.3">BGC0000259.3</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>79.3</td>
+              <td>161.0</td>
+              <td>7.08e-43</td>
+          </tr>
+    
+          <tr>
+              <td>CAA68242.1</td>
+              <td>acetylornithine_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000895.5">BGC0000895.5</a></td>
+              <td>other:other</td>
+              <td>29.0</td>
+              <td>93.5</td>
+              <td>154.0</td>
+              <td>1.55e-42</td>
+          </tr>
+    
+          <tr>
+              <td>CAH55633.1</td>
+              <td>putative_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000258.3">BGC0000258.3</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>78.4</td>
+              <td>147.0</td>
+              <td>5.36e-38</td>
+          </tr>
+    
+          <tr>
+              <td>ABB69077.1</td>
+              <td>putative_3-acetyloctanal_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000260.3">BGC0000260.3</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>78.6</td>
+              <td>147.0</td>
+              <td>7.17e-38</td>
+          </tr>
+    
+          <tr>
+              <td>ABW87801.1</td>
+              <td>SpcS1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000715.5">BGC0000715.5</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>95.3</td>
+              <td>136.0</td>
+              <td>2.52e-35</td>
+          </tr>
+    
+          <tr>
+              <td>ADD82957.1</td>
+              <td>BatP</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001099.5">BGC0001099.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>31.0</td>
+              <td>67.7</td>
+              <td>128.0</td>
+              <td>1.72e-31</td>
+          </tr>
+    
+          <tr>
+              <td>AAC25608.1</td>
+              <td>unknown</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000919.5">BGC0000919.5</a></td>
+              <td>other:other</td>
+              <td>28.0</td>
+              <td>92.8</td>
+              <td>122.0</td>
+              <td>8.78e-31</td>
+          </tr>
+    
+          <tr>
+              <td>AAD45546.1</td>
+              <td>SpcC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000716.5">BGC0000716.5</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>96.3</td>
+              <td>123.0</td>
+              <td>9.02e-31</td>
+          </tr>
+    
+          <tr>
+              <td>ARF06207.1</td>
+              <td>ornithine--oxo-acid_transaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001593.5">BGC0001593.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>92.1</td>
+              <td>118.0</td>
+              <td>3.23e-29</td>
+          </tr>
+    
+          <tr>
+              <td>BBA31814.1</td>
+              <td>PLP-dependent_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001797.3">BGC0001797.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>32.0</td>
+              <td>57.0</td>
+              <td>115.0</td>
+              <td>5.58e-28</td>
+          </tr>
+    
+          <tr>
+              <td>CBJ82075.1</td>
+              <td>putative_Glutamate-1-semialdehyde_2,1-aminomutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001872.3">BGC0001872.3</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>71.4</td>
+              <td>99.0</td>
+              <td>9.73e-22</td>
+          </tr>
+    
+          <tr>
+              <td>CCM44332.1</td>
+              <td>putative_pfaD_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001056.5">BGC0001056.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>28.0</td>
+              <td>70.0</td>
+              <td>97.0</td>
+              <td>5.52e-21</td>
+          </tr>
+    
+          <tr>
+              <td>MDU8992540.1</td>
+              <td>aminotransferase_class_III-fold_pyridoxal_phosphate-dependent_enzyme</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002805.2">BGC0002805.2</a></td>
+              <td>other:other</td>
+              <td>29.0</td>
+              <td>78.1</td>
+              <td>95.0</td>
+              <td>7.27e-21</td>
+          </tr>
+    
+          <tr>
+              <td>EFQ61013.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001488.3">BGC0001488.3</a></td>
+              <td>other:other</td>
+              <td>26.0</td>
+              <td>80.2</td>
+              <td>94.0</td>
+              <td>2.19e-20</td>
+          </tr>
+    
+          <tr>
+              <td>WP_013310342.1</td>
+              <td>non-ribosomal_peptide_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001728.4">BGC0001728.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>29.0</td>
+              <td>68.1</td>
+              <td>94.0</td>
+              <td>4.02e-20</td>
+          </tr>
+    
+          <tr>
+              <td>BAT51061.1</td>
+              <td>aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001296.3">BGC0001296.3</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>80.5</td>
+              <td>93.0</td>
+              <td>4.52e-20</td>
+          </tr>
+    
+          <tr>
+              <td>EYT83456.1</td>
+              <td>ornithine_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001213.5">BGC0001213.5</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>88.4</td>
+              <td>92.0</td>
+              <td>8.09e-20</td>
+          </tr>
+    
+          <tr>
+              <td>WP_013310341.1</td>
+              <td>aminotransferase_class_III-fold_pyridoxal_phosphate-dependent_enzyme</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001728.4">BGC0001728.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>29.0</td>
+              <td>74.4</td>
+              <td>93.0</td>
+              <td>1.21e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AWH12644.1</td>
+              <td>Rmp9</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001759.3">BGC0001759.3</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>66.5</td>
+              <td>88.0</td>
+              <td>1.34e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AAS07756.1</td>
+              <td>putative_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000136.5">BGC0000136.5</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>66.7</td>
+              <td>87.0</td>
+              <td>2.37e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AAC01733.1</td>
+              <td>dNTP-hexose_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000136.5">BGC0000136.5</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>66.7</td>
+              <td>87.0</td>
+              <td>2.39e-18</td>
+          </tr>
+    
+          <tr>
+              <td>CAD29794.1</td>
+              <td>peptide_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001015.5">BGC0001015.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>28.0</td>
+              <td>82.3</td>
+              <td>89.0</td>
+              <td>3.06e-18</td>
+          </tr>
+    
+          <tr>
+              <td>KFL51883.1</td>
+              <td>amino_acid_adenylation_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001711.4">BGC0001711.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>29.0</td>
+              <td>72.3</td>
+              <td>89.0</td>
+              <td>3.12e-18</td>
+          </tr>
+    
+          <tr>
+              <td>QCQ67875.1</td>
+              <td>hybrid_peptide_synthetase/polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002297.2">BGC0002297.2</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>28.0</td>
+              <td>82.8</td>
+              <td>87.0</td>
+              <td>7.23e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AAF00958.1</td>
+              <td>McyE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001017.5">BGC0001017.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>29.0</td>
+              <td>74.7</td>
+              <td>85.0</td>
+              <td>4.02e-17</td>
+          </tr>
+    
+          <tr>
+              <td>OOH83074.1</td>
+              <td>pyridoxalphosphate_dependent_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001987.2">BGC0001987.2</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>36.7</td>
+              <td>84.0</td>
+              <td>9.64e-17</td>
+          </tr>
+    
+          <tr>
+              <td>SCO70304.1</td>
+              <td>Aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001433.5">BGC0001433.5</a></td>
+              <td>PKS:Type I</td>
+              <td>27.0</td>
+              <td>54.2</td>
+              <td>83.0</td>
+              <td>1.14e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AAF08795.1</td>
+              <td>MycA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001103.5">BGC0001103.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>27.0</td>
+              <td>77.7</td>
+              <td>83.0</td>
+              <td>2.25e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AZF85940.1</td>
+              <td>non-ribosomal_peptide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001963.2">BGC0001963.2</a></td>
+              <td>PKS:Type I</td>
+              <td>29.0</td>
+              <td>67.0</td>
+              <td>82.0</td>
+              <td>2.97e-16</td>
+          </tr>
+    
+          <tr>
+              <td>ABK32269.1</td>
+              <td>AmbR</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000014.5">BGC0000014.5</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>81.9</td>
+              <td>79.0</td>
+              <td>1.57e-15</td>
+          </tr>
+    
+          <tr>
+              <td>MBE8994630.1</td>
+              <td>amino_acid_adenylation_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002623.2">BGC0002623.2</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>28.0</td>
+              <td>73.0</td>
+              <td>80.0</td>
+              <td>2.11e-15</td>
+          </tr>
+    
+          <tr>
+              <td>ABS74181.1</td>
+              <td>BmyA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001090.5">BGC0001090.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>26.0</td>
+              <td>79.5</td>
+              <td>79.0</td>
+              <td>2.9e-15</td>
+          </tr>
+    
+          <tr>
+              <td>BAB69698.1</td>
+              <td>iturin_A_synthetase_A</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001098.5">BGC0001098.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>26.0</td>
+              <td>79.5</td>
+              <td>79.0</td>
+              <td>2.9e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AAO62582.1</td>
+              <td>polyketide_synthase_peptide_sythetase_fusion_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001016.5">BGC0001016.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>27.0</td>
+              <td>79.5</td>
+              <td>79.0</td>
+              <td>3.82e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AHD05679.1</td>
+              <td>putative_non-ribosomal_peptide_ligase/_polyketide_synthase_hybrid</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000402.4">BGC0000402.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>66.3</td>
+              <td>79.0</td>
+              <td>3.86e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AID65222.1</td>
+              <td>putative_aspartate_racemase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000335.4">BGC0000335.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>28.0</td>
+              <td>60.9</td>
+              <td>79.0</td>
+              <td>5.14e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AXG46169.1</td>
+              <td>glutamate-1-semialdehyde_2,1-aminomutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002713.2">BGC0002713.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>69.1</td>
+              <td>77.0</td>
+              <td>6.2e-15</td>
+          </tr>
+    
+          <tr>
+              <td>ATP76239.1</td>
+              <td>NdaF</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001705.4">BGC0001705.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>28.0</td>
+              <td>74.0</td>
+              <td>78.0</td>
+              <td>6.73e-15</td>
+          </tr>
+    
+          <tr>
+              <td>ALP32049.1</td>
+              <td>CycI</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001293.5">BGC0001293.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>55.8</td>
+              <td>76.0</td>
+              <td>1.49e-14</td>
+          </tr>
+    
+          <tr>
+              <td>BAG23204.1</td>
+              <td>putative_diaminobutyrate-pyruvate_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002673.2">BGC0002673.2</a></td>
+              <td>PKS+other:other</td>
+              <td>27.0</td>
+              <td>38.1</td>
+              <td>75.0</td>
+              <td>3.51e-14</td>
+          </tr>
+    
+          <tr>
+              <td>AHB82069.1</td>
+              <td>non_ribosomal_peptide_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001231.5">BGC0001231.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>27.0</td>
+              <td>75.6</td>
+              <td>74.0</td>
+              <td>1.9e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AHB82056.1</td>
+              <td>non_ribosomal_peptide_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001019.5">BGC0001019.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>27.0</td>
+              <td>72.3</td>
+              <td>74.0</td>
+              <td>1.91e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AEU11006.1</td>
+              <td>NpnB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001029.5">BGC0001029.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>25.0</td>
+              <td>78.8</td>
+              <td>69.0</td>
+              <td>5.93e-12</td>
+          </tr>
+    
+          <tr>
+              <td>ABC42545.1</td>
+              <td>putative_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000698.5">BGC0000698.5</a></td>
+              <td>saccharide</td>
+              <td>22.0</td>
+              <td>74.9</td>
+              <td>54.0</td>
+              <td>2.21e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

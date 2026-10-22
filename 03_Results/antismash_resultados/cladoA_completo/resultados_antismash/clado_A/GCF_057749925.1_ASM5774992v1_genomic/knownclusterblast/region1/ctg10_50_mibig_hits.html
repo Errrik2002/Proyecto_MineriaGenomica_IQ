@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAW03324.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000982.5">BGC0000982.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>35.0</td>
+              <td>100.3</td>
+              <td>170.0</td>
+              <td>5.43e-51</td>
+          </tr>
+    
+          <tr>
+              <td>QWM97329.1</td>
+              <td>alpha/beta_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002384.3">BGC0002384.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>39.0</td>
+              <td>101.0</td>
+              <td>166.0</td>
+              <td>2.06e-49</td>
+          </tr>
+    
+          <tr>
+              <td>KDN80043.1</td>
+              <td>alpha/beta_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001074.5">BGC0001074.5</a></td>
+              <td>saccharide+PKS</td>
+              <td>32.0</td>
+              <td>105.1</td>
+              <td>129.0</td>
+              <td>2.48e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AAA83422.1</td>
+              <td>RdmC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000265.5">BGC0000265.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>104.7</td>
+              <td>126.0</td>
+              <td>5.1e-34</td>
+          </tr>
+    
+          <tr>
+              <td>WP_018891725.1</td>
+              <td>alpha/beta_fold_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001558.5">BGC0001558.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>105.1</td>
+              <td>125.0</td>
+              <td>9.98e-34</td>
+          </tr>
+    
+          <tr>
+              <td>ATJ00778.1</td>
+              <td>alpha/beta_hydrolase_esterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001568.5">BGC0001568.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>105.1</td>
+              <td>123.0</td>
+              <td>5.33e-33</td>
+          </tr>
+    
+          <tr>
+              <td>CAC37878.1</td>
+              <td>putative_epoxide_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000038.5">BGC0000038.5</a></td>
+              <td>PKS:Type I</td>
+              <td>32.0</td>
+              <td>45.9</td>
+              <td>57.0</td>
+              <td>6.32e-09</td>
+          </tr>
+    
+          <tr>
+              <td>QBQ12477.1</td>
+              <td>alpha/beta_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002693.2">BGC0002693.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>43.9</td>
+              <td>53.0</td>
+              <td>1.31e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

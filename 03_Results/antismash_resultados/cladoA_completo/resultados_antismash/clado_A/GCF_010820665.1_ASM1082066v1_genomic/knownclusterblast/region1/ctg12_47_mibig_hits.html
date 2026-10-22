@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>WKB55590.1</td>
+              <td>LysR_substrate-binding_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002755.2">BGC0002755.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>86.4</td>
+              <td>126.0</td>
+              <td>5.3e-34</td>
+          </tr>
+    
+          <tr>
+              <td>WP_018960014.1</td>
+              <td>LysR_substrate-binding_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002010.4">BGC0002010.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>30.0</td>
+              <td>84.0</td>
+              <td>122.0</td>
+              <td>8.91e-33</td>
+          </tr>
+    
+          <tr>
+              <td>AFB35639.1</td>
+              <td>EsmT6</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000935.5">BGC0000935.5</a></td>
+              <td>other:aminocoumarin+PKS</td>
+              <td>28.0</td>
+              <td>83.3</td>
+              <td>110.0</td>
+              <td>4.53e-28</td>
+          </tr>
+    
+          <tr>
+              <td>ARO49583.1</td>
+              <td>LysR_family_transcription_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001441.5">BGC0001441.5</a></td>
+              <td>other:other</td>
+              <td>27.0</td>
+              <td>81.3</td>
+              <td>67.0</td>
+              <td>2.53e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AVL27076.1</td>
+              <td>LysR_family_transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001485.4">BGC0001485.4</a></td>
+              <td>other:other</td>
+              <td>25.0</td>
+              <td>65.3</td>
+              <td>63.0</td>
+              <td>7.02e-11</td>
+          </tr>
+    
+          <tr>
+              <td>SKB24654.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002455.3">BGC0002455.3</a></td>
+              <td>PKS</td>
+              <td>22.0</td>
+              <td>99.0</td>
+              <td>47.0</td>
+              <td>8.17e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

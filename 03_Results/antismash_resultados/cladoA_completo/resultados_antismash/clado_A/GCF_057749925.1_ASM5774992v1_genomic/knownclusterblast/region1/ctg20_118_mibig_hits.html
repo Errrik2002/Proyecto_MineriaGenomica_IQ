@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABQ88346.1</td>
+              <td>putative_deaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000929.3">BGC0000929.3</a></td>
+              <td>other:other</td>
+              <td>44.0</td>
+              <td>96.8</td>
+              <td>249.0</td>
+              <td>2.1e-79</td>
+          </tr>
+    
+          <tr>
+              <td>AZS52693.1</td>
+              <td>RibD-like_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001972.4">BGC0001972.4</a></td>
+              <td>other:other</td>
+              <td>44.0</td>
+              <td>96.5</td>
+              <td>234.0</td>
+              <td>1.14e-73</td>
+          </tr>
+    
+          <tr>
+              <td>QBK46613.1</td>
+              <td>ToxE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001959.4">BGC0001959.4</a></td>
+              <td>other:other</td>
+              <td>44.0</td>
+              <td>94.9</td>
+              <td>232.0</td>
+              <td>6.38e-73</td>
+          </tr>
+    
+          <tr>
+              <td>AAY90319.1</td>
+              <td>riboflavin_biosynthesis_protein_RibD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002152.2">BGC0002152.2</a></td>
+              <td>other:other</td>
+              <td>40.0</td>
+              <td>96.5</td>
+              <td>223.0</td>
+              <td>1.38e-69</td>
+          </tr>
+    
+          <tr>
+              <td>BCJ07589.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002379.3">BGC0002379.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>55.3</td>
+              <td>77.0</td>
+              <td>6.39e-16</td>
+          </tr>
+    
+          <tr>
+              <td>CCK29108.1</td>
+              <td>Riboflavin_biosynthesis_protein_RibD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000927.3">BGC0000927.3</a></td>
+              <td>other:flavin</td>
+              <td>26.0</td>
+              <td>61.2</td>
+              <td>50.0</td>
+              <td>1.99e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

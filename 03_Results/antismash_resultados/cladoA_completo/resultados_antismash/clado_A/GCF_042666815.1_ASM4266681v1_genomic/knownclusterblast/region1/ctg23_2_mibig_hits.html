@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AXG46150.1</td>
+              <td>spore_coat_protein_CotH</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002713.2">BGC0002713.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>101.8</td>
+              <td>106.0</td>
+              <td>7.42e-27</td>
+          </tr>
+    
+          <tr>
+              <td>ARD09208.1</td>
+              <td>DivU</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001576.3">BGC0001576.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>32.0</td>
+              <td>97.5</td>
+              <td>99.0</td>
+              <td>5.13e-24</td>
+          </tr>
+    
+          <tr>
+              <td>AAD38234.1</td>
+              <td>CarF</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001847.2">BGC0001847.2</a></td>
+              <td>other:other</td>
+              <td>31.0</td>
+              <td>100.4</td>
+              <td>97.0</td>
+              <td>3.86e-23</td>
+          </tr>
+    
+          <tr>
+              <td>QBK46612.1</td>
+              <td>ToxD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001959.4">BGC0001959.4</a></td>
+              <td>other:other</td>
+              <td>33.0</td>
+              <td>54.8</td>
+              <td>57.0</td>
+              <td>3.81e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AZS52694.1</td>
+              <td>formylglycine_generating_enzyme-like_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001972.4">BGC0001972.4</a></td>
+              <td>other:other</td>
+              <td>33.0</td>
+              <td>54.8</td>
+              <td>56.0</td>
+              <td>1.24e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ABQ88345.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000929.3">BGC0000929.3</a></td>
+              <td>other:other</td>
+              <td>32.0</td>
+              <td>44.5</td>
+              <td>50.0</td>
+              <td>9.91e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>SQF72449.1</td>
+              <td>Siderophore_staphylobactin_biosynthesis_protein_SbnE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000943.5">BGC0000943.5</a></td>
+              <td>other:other</td>
+              <td>35.0</td>
+              <td>99.5</td>
+              <td>312.0</td>
+              <td>1.23e-98</td>
+          </tr>
+    
+          <tr>
+              <td>BAB72352.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002683.2">BGC0002683.2</a></td>
+              <td>NRPS:Type IV</td>
+              <td>28.0</td>
+              <td>103.4</td>
+              <td>207.0</td>
+              <td>1.1e-58</td>
+          </tr>
+    
+          <tr>
+              <td>ABM30202.1</td>
+              <td>PvsD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000947.5">BGC0000947.5</a></td>
+              <td>other:other</td>
+              <td>27.0</td>
+              <td>103.7</td>
+              <td>175.0</td>
+              <td>3.14e-47</td>
+          </tr>
+    
+          <tr>
+              <td>BAC16547.1</td>
+              <td>vibrioferrin_biosynthesis_protein_PvsD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000946.5">BGC0000946.5</a></td>
+              <td>other:other</td>
+              <td>27.0</td>
+              <td>103.7</td>
+              <td>170.0</td>
+              <td>2.58e-45</td>
+          </tr>
+    
+          <tr>
+              <td>ATW47214.1</td>
+              <td>iron_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002466.3">BGC0002466.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>100.2</td>
+              <td>140.0</td>
+              <td>3.02e-35</td>
+          </tr>
+    
+          <tr>
+              <td>CDL83405.1</td>
+              <td>Aerobactin_siderophore_biosynthesis_protein_iucA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001498.5">BGC0001498.5</a></td>
+              <td>other:other</td>
+              <td>26.0</td>
+              <td>88.2</td>
+              <td>125.0</td>
+              <td>4.78e-30</td>
+          </tr>
+    
+          <tr>
+              <td>ABD31458.1</td>
+              <td>conserved_hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000944.5">BGC0000944.5</a></td>
+              <td>other:non-nrp siderophore</td>
+              <td>24.0</td>
+              <td>99.1</td>
+              <td>99.0</td>
+              <td>3.41e-21</td>
+          </tr>
+    
+          <tr>
+              <td>BAE16002.1</td>
+              <td>aerobactin_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000939.5">BGC0000939.5</a></td>
+              <td>other:other</td>
+              <td>24.0</td>
+              <td>78.2</td>
+              <td>97.0</td>
+              <td>9.45e-21</td>
+          </tr>
+    
+          <tr>
+              <td>PHM29812.1</td>
+              <td>desferrioxamine_siderophore_biosynthesis_protein_dfoC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001870.3">BGC0001870.3</a></td>
+              <td>other:other</td>
+              <td>24.0</td>
+              <td>60.5</td>
+              <td>66.0</td>
+              <td>6.74e-11</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>XP_001827192.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001996.2">BGC0001996.2</a></td>
+              <td>other:other</td>
+              <td>45.0</td>
+              <td>101.5</td>
+              <td>379.0</td>
+              <td>2.91e-127</td>
+          </tr>
+    
+          <tr>
+              <td>QOV03410.1</td>
+              <td>SpoL</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002262.2">BGC0002262.2</a></td>
+              <td>PKS</td>
+              <td>44.0</td>
+              <td>101.5</td>
+              <td>367.0</td>
+              <td>1.15e-122</td>
+          </tr>
+    
+          <tr>
+              <td>BBU42021.1</td>
+              <td>putative_2-methylcitrate_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002222.2">BGC0002222.2</a></td>
+              <td>PKS</td>
+              <td>39.0</td>
+              <td>102.1</td>
+              <td>325.0</td>
+              <td>1.96e-106</td>
+          </tr>
+    
+          <tr>
+              <td>BBG28506.1</td>
+              <td>putative_2-methylcitrate_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001913.3">BGC0001913.3</a></td>
+              <td>PKS</td>
+              <td>40.0</td>
+              <td>95.1</td>
+              <td>308.0</td>
+              <td>1.5e-99</td>
+          </tr>
+    
+          <tr>
+              <td>ANF07285.1</td>
+              <td>2-methylcitrate_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001340.3">BGC0001340.3</a></td>
+              <td>PKS:Type I</td>
+              <td>39.0</td>
+              <td>90.7</td>
+              <td>306.0</td>
+              <td>5.28e-99</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

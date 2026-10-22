@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ADE34480.1</td>
+              <td>cysteine_desulferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000269.5">BGC0000269.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>49.0</td>
+              <td>100.7</td>
+              <td>410.0</td>
+              <td>2.61e-141</td>
+          </tr>
+    
+          <tr>
+              <td>AAM94786.1</td>
+              <td>CalE4</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000033.5">BGC0000033.5</a></td>
+              <td>PKS</td>
+              <td>44.0</td>
+              <td>95.6</td>
+              <td>342.0</td>
+              <td>3.52e-115</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54251.1</td>
+              <td>PauY31</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001732.5">BGC0001732.5</a></td>
+              <td>other:other</td>
+              <td>33.0</td>
+              <td>88.7</td>
+              <td>192.0</td>
+              <td>2.4e-56</td>
+          </tr>
+    
+          <tr>
+              <td>AFI57009.1</td>
+              <td>QmnF</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000133.5">BGC0000133.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>99.8</td>
+              <td>189.0</td>
+              <td>1.26e-55</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54198.1</td>
+              <td>Pau31</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001731.5">BGC0001731.5</a></td>
+              <td>other:other</td>
+              <td>33.0</td>
+              <td>90.0</td>
+              <td>190.0</td>
+              <td>1.29e-55</td>
+          </tr>
+    
+          <tr>
+              <td>ESU17755.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002172.3">BGC0002172.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>102.0</td>
+              <td>137.0</td>
+              <td>2.54e-36</td>
+          </tr>
+    
+          <tr>
+              <td>BBQ09593.1</td>
+              <td>aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002261.2">BGC0002261.2</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>100.7</td>
+              <td>124.0</td>
+              <td>2.5e-31</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

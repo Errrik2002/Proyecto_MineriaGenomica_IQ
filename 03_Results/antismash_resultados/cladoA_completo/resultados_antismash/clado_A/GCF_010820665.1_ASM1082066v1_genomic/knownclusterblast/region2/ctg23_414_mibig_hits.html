@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ACY54550.1</td>
+              <td>aminotransferase_subfamily_I_gamma</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000884.5">BGC0000884.5</a></td>
+              <td>other:other</td>
+              <td>42.0</td>
+              <td>98.4</td>
+              <td>294.0</td>
+              <td>6.28e-97</td>
+          </tr>
+    
+          <tr>
+              <td>AGG35703.1</td>
+              <td>aminotransferase,_class_I_and_II</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000883.5">BGC0000883.5</a></td>
+              <td>other:other</td>
+              <td>36.0</td>
+              <td>90.1</td>
+              <td>207.0</td>
+              <td>3.52e-63</td>
+          </tr>
+    
+          <tr>
+              <td>QYX30483.1</td>
+              <td>PLP-dependent_(S)-gamma-hydroxy-L-arginine_cyclodehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002148.2">BGC0002148.2</a></td>
+              <td>other:other</td>
+              <td>23.0</td>
+              <td>62.0</td>
+              <td>77.0</td>
+              <td>4.35e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AAU34209.1</td>
+              <td>PLP-dependent_aminotransferase_MppP</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000388.5">BGC0000388.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>28.0</td>
+              <td>48.0</td>
+              <td>6.76e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

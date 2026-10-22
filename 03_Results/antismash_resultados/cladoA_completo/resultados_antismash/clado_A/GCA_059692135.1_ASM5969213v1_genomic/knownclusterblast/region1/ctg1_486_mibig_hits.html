@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ADB43068.1</td>
+              <td>putative_amino_acid_ligase_of_ATP-grasp_superfamily</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000926.5">BGC0000926.5</a></td>
+              <td>other:other</td>
+              <td>38.0</td>
+              <td>99.8</td>
+              <td>289.0</td>
+              <td>3.01e-94</td>
+          </tr>
+    
+          <tr>
+              <td>CAC11141.1</td>
+              <td>NikS_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000876.5">BGC0000876.5</a></td>
+              <td>other:other</td>
+              <td>27.0</td>
+              <td>84.3</td>
+              <td>139.0</td>
+              <td>1.04e-36</td>
+          </tr>
+    
+          <tr>
+              <td>ABX24497.1</td>
+              <td>putative_carboxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000877.5">BGC0000877.5</a></td>
+              <td>other:other</td>
+              <td>27.0</td>
+              <td>90.3</td>
+              <td>130.0</td>
+              <td>1.38e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ACH85565.1</td>
+              <td>NikS-like_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000283.4">BGC0000283.4</a></td>
+              <td>other:cyclitol</td>
+              <td>28.0</td>
+              <td>80.4</td>
+              <td>112.0</td>
+              <td>2.49e-27</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

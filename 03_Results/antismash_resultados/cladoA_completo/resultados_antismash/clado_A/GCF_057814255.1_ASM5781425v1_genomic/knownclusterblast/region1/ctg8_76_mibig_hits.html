@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ADE34505.1</td>
+              <td>SsfJ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000269.5">BGC0000269.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>34.0</td>
+              <td>93.0</td>
+              <td>121.0</td>
+              <td>7.04e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ABS74197.1</td>
+              <td>YngF</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001095.5">BGC0001095.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>91.1</td>
+              <td>120.0</td>
+              <td>8.79e-33</td>
+          </tr>
+    
+          <tr>
+              <td>TXL86010.1</td>
+              <td>enoyl-CoA_hydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002034.3">BGC0002034.3</a></td>
+              <td>other:other</td>
+              <td>29.0</td>
+              <td>102.3</td>
+              <td>99.0</td>
+              <td>2.04e-24</td>
+          </tr>
+    
+          <tr>
+              <td>QBK15041.1</td>
+              <td>enoyl-CoA_hydratase/isomerase_ClaC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002196.2">BGC0002196.2</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>95.3</td>
+              <td>96.0</td>
+              <td>4.41e-22</td>
+          </tr>
+    
+          <tr>
+              <td>CBD77742.1</td>
+              <td>enoyl-coA-hydratase/isomerase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000974.5">BGC0000974.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>26.0</td>
+              <td>89.9</td>
+              <td>72.0</td>
+              <td>1.1e-14</td>
+          </tr>
+    
+          <tr>
+              <td>QFF92402.1</td>
+              <td>enoyl-CoA_hydratase/isomerase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002553.2">BGC0002553.2</a></td>
+              <td>other:other</td>
+              <td>30.0</td>
+              <td>54.7</td>
+              <td>57.0</td>
+              <td>3.06e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AAF81231.1</td>
+              <td>enoyl-CoA_hydratase-like_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000243.4">BGC0000243.4</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>55.4</td>
+              <td>56.0</td>
+              <td>5.04e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AAC26135.1</td>
+              <td>nonactate_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000252.5">BGC0000252.5</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>67.1</td>
+              <td>49.0</td>
+              <td>2.34e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

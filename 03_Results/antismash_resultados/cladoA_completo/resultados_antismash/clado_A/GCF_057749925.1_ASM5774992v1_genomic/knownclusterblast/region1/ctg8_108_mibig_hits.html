@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ADC45547.1</td>
+              <td>glyoxylate_carboligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000093.5">BGC0000093.5</a></td>
+              <td>PKS:Type I</td>
+              <td>27.0</td>
+              <td>104.9</td>
+              <td>179.0</td>
+              <td>4.8e-49</td>
+          </tr>
+    
+          <tr>
+              <td>ACA34360.1</td>
+              <td>acetolactate_synthase_large_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001152.5">BGC0001152.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>25.0</td>
+              <td>87.4</td>
+              <td>124.0</td>
+              <td>5.14e-30</td>
+          </tr>
+    
+          <tr>
+              <td>EFG04560.1</td>
+              <td>Carboxyethyl_arginine_synthase_isoenzyme_1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000841.5">BGC0000841.5</a></td>
+              <td>other:non-nrp beta-lactam</td>
+              <td>25.0</td>
+              <td>100.9</td>
+              <td>109.0</td>
+              <td>6.05e-25</td>
+          </tr>
+    
+          <tr>
+              <td>QQZ01569.1</td>
+              <td>thiamine_pyrophosphate_protein_central_region</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002498.3">BGC0002498.3</a></td>
+              <td>other:other</td>
+              <td>24.0</td>
+              <td>96.9</td>
+              <td>91.0</td>
+              <td>5.57e-19</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

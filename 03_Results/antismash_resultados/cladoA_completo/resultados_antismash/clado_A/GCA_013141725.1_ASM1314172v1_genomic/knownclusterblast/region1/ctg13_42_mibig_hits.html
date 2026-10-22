@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AEI40459.1</td>
+              <td>ABC_transporter_permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002488.3">BGC0002488.3</a></td>
+              <td>other:other</td>
+              <td>70.0</td>
+              <td>100.0</td>
+              <td>453.0</td>
+              <td>8.29e-162</td>
+          </tr>
+    
+          <tr>
+              <td>BAB58628.1</td>
+              <td>oligopeptide_transporter_putative_membrane_permease_domain</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002487.3">BGC0002487.3</a></td>
+              <td>other:other</td>
+              <td>54.0</td>
+              <td>99.4</td>
+              <td>344.0</td>
+              <td>1.26e-118</td>
+          </tr>
+    
+          <tr>
+              <td>QGJ79650.1</td>
+              <td>ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002552.2">BGC0002552.2</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>95.2</td>
+              <td>144.0</td>
+              <td>1.12e-40</td>
+          </tr>
+    
+          <tr>
+              <td>WP_020636820.1</td>
+              <td>ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002011.3">BGC0002011.3</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>94.5</td>
+              <td>141.0</td>
+              <td>2.34e-39</td>
+          </tr>
+    
+          <tr>
+              <td>AEK75509.1</td>
+              <td>ABC_transporter_oligopeptide_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000001.5">BGC0000001.5</a></td>
+              <td>PKS:Type I</td>
+              <td>29.0</td>
+              <td>99.0</td>
+              <td>132.0</td>
+              <td>6.28e-36</td>
+          </tr>
+    
+          <tr>
+              <td>ARE67847.1</td>
+              <td>AbsF2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001492.5">BGC0001492.5</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>92.6</td>
+              <td>131.0</td>
+              <td>1.95e-35</td>
+          </tr>
+    
+          <tr>
+              <td>ADC45594.1</td>
+              <td>transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000093.5">BGC0000093.5</a></td>
+              <td>PKS:Type I</td>
+              <td>28.0</td>
+              <td>101.0</td>
+              <td>114.0</td>
+              <td>4.48e-29</td>
+          </tr>
+    
+          <tr>
+              <td>SPE99797.1</td>
+              <td>Glutathione_transport_system_permease_protein_GsiC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002567.2">BGC0002567.2</a></td>
+              <td>other:other</td>
+              <td>27.0</td>
+              <td>94.2</td>
+              <td>97.0</td>
+              <td>1.04e-22</td>
+          </tr>
+    
+          <tr>
+              <td>BAC73332.1</td>
+              <td>putative_peptide_ABC_transporter_permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001587.5">BGC0001587.5</a></td>
+              <td>other:other</td>
+              <td>28.0</td>
+              <td>94.8</td>
+              <td>78.0</td>
+              <td>3.18e-16</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

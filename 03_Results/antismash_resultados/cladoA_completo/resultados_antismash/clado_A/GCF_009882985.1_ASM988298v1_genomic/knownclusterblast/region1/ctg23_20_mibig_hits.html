@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABI75098.1</td>
+              <td>phenylpropionate_dioxygenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000188.5">BGC0000188.5</a></td>
+              <td>other:other</td>
+              <td>31.0</td>
+              <td>104.3</td>
+              <td>166.0</td>
+              <td>1.94e-48</td>
+          </tr>
+    
+          <tr>
+              <td>ABI75109.1</td>
+              <td>phenylpropionate_dioxygenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000188.5">BGC0000188.5</a></td>
+              <td>other:other</td>
+              <td>31.0</td>
+              <td>106.8</td>
+              <td>152.0</td>
+              <td>3.88e-43</td>
+          </tr>
+    
+          <tr>
+              <td>EDT06079.1</td>
+              <td>Rieske_(2Fe-2S)_domain_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001897.4">BGC0001897.4</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>52.3</td>
+              <td>93.0</td>
+              <td>2.98e-21</td>
+          </tr>
+    
+          <tr>
+              <td>CBW54656.1</td>
+              <td>putative_methylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000971.5">BGC0000971.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>26.0</td>
+              <td>84.9</td>
+              <td>92.0</td>
+              <td>1.38e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AMB48446.1</td>
+              <td>Rieske_[2Fe-2S]_iron-sulfur_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001357.3">BGC0001357.3</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>34.8</td>
+              <td>70.0</td>
+              <td>7.47e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ARU81130.1</td>
+              <td>CylP</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001566.3">BGC0001566.3</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>55.7</td>
+              <td>66.0</td>
+              <td>1.4e-11</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

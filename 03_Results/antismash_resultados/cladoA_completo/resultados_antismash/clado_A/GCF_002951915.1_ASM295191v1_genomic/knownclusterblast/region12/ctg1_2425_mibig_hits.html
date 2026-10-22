@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAG50506.1</td>
+              <td>putative_transposase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000780.3">BGC0000780.3</a></td>
+              <td>saccharide</td>
+              <td>42.0</td>
+              <td>76.8</td>
+              <td>149.0</td>
+              <td>4.65e-44</td>
+          </tr>
+    
+          <tr>
+              <td>QGJ79673.1</td>
+              <td>IS3_family_transposase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002552.2">BGC0002552.2</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>97.8</td>
+              <td>140.0</td>
+              <td>6.09e-40</td>
+          </tr>
+    
+          <tr>
+              <td>AAB92607.1</td>
+              <td>TnpA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000557.5">BGC0000557.5</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>31.0</td>
+              <td>98.5</td>
+              <td>122.0</td>
+              <td>3.77e-32</td>
+          </tr>
+    
+          <tr>
+              <td>AIU53932.1</td>
+              <td>putative_transposase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000607.5">BGC0000607.5</a></td>
+              <td>ribosomal:RiPP:Thiopeptide</td>
+              <td>42.0</td>
+              <td>60.5</td>
+              <td>106.0</td>
+              <td>9.79e-28</td>
+          </tr>
+    
+          <tr>
+              <td>AAD44200.1</td>
+              <td>IS1601-D</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000362.5">BGC0000362.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>98.9</td>
+              <td>107.0</td>
+              <td>3.95e-27</td>
+          </tr>
+    
+          <tr>
+              <td>AAD44216.1</td>
+              <td>transposase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000362.5">BGC0000362.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>98.9</td>
+              <td>107.0</td>
+              <td>3.95e-27</td>
+          </tr>
+    
+          <tr>
+              <td>AAD44235.1</td>
+              <td>IS1601-D</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000362.5">BGC0000362.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>98.9</td>
+              <td>107.0</td>
+              <td>3.95e-27</td>
+          </tr>
+    
+          <tr>
+              <td>AAD44223.1</td>
+              <td>IS1601-D</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000362.5">BGC0000362.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>98.9</td>
+              <td>106.0</td>
+              <td>7.66e-27</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ADE22307.1</td>
+              <td>biotin_carboxyl_carrier_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000279.5">BGC0000279.5</a></td>
+              <td>PKS</td>
+              <td>55.0</td>
+              <td>45.7</td>
+              <td>82.0</td>
+              <td>6.71e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AQP25561.1</td>
+              <td>ACC_biotin_carboxy_carrier_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001590.5">BGC0001590.5</a></td>
+              <td>PKS:Type II aromatic</td>
+              <td>46.0</td>
+              <td>51.2</td>
+              <td>82.0</td>
+              <td>8.82e-20</td>
+          </tr>
+    
+          <tr>
+              <td>ADQ55469.1</td>
+              <td>acetyl-CoA_carboxylase_biotin_carboxyl_carrier_protein_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000350.5">BGC0000350.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>48.0</td>
+              <td>48.8</td>
+              <td>78.0</td>
+              <td>1.23e-18</td>
+          </tr>
+    
+          <tr>
+              <td>ABM21736.1</td>
+              <td>PdmP2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000256.3">BGC0000256.3</a></td>
+              <td>PKS</td>
+              <td>51.0</td>
+              <td>45.1</td>
+              <td>77.0</td>
+              <td>3.51e-18</td>
+          </tr>
+    
+          <tr>
+              <td>MUL41477.1</td>
+              <td>acetyl-CoA_carboxylase_biotin_carboxyl_carrier_protein_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002045.3">BGC0002045.3</a></td>
+              <td>PKS:Type II</td>
+              <td>46.0</td>
+              <td>47.5</td>
+              <td>72.0</td>
+              <td>5.24e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AKD43511.1</td>
+              <td>Acetyl-CoA_carboxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001409.5">BGC0001409.5</a></td>
+              <td>PKS</td>
+              <td>48.0</td>
+              <td>49.4</td>
+              <td>70.0</td>
+              <td>2.53e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AAG30192.1</td>
+              <td>biotin_carboxylase_carrier_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000261.5">BGC0000261.5</a></td>
+              <td>PKS</td>
+              <td>44.0</td>
+              <td>47.5</td>
+              <td>69.0</td>
+              <td>2.66e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AFU65906.1</td>
+              <td>DacP2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000216.5">BGC0000216.5</a></td>
+              <td>PKS</td>
+              <td>49.0</td>
+              <td>46.3</td>
+              <td>72.0</td>
+              <td>4.91e-15</td>
+          </tr>
+    
+          <tr>
+              <td>ACN64838.1</td>
+              <td>PokAC3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001061.4">BGC0001061.4</a></td>
+              <td>PKS:Type II aromatic</td>
+              <td>42.0</td>
+              <td>66.0</td>
+              <td>69.0</td>
+              <td>7.36e-15</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

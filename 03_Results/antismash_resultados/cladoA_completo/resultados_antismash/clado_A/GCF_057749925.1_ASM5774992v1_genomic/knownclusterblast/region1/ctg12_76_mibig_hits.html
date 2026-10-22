@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>QBF29316.1</td>
+              <td>RNA_polymerase_sigma_factor_SigA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002294.3">BGC0002294.3</a></td>
+              <td>other:other</td>
+              <td>58.0</td>
+              <td>80.4</td>
+              <td>325.0</td>
+              <td>3.73e-109</td>
+          </tr>
+    
+          <tr>
+              <td>AQZ37121.1</td>
+              <td>RNA_polymerase_sigma_factor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001511.5">BGC0001511.5</a></td>
+              <td>PKS</td>
+              <td>54.0</td>
+              <td>80.6</td>
+              <td>295.0</td>
+              <td>3.56e-98</td>
+          </tr>
+    
+          <tr>
+              <td>AAM54109.1</td>
+              <td>RNA_polymerase_sigma_factor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000020.3">BGC0000020.3</a></td>
+              <td>PKS</td>
+              <td>53.0</td>
+              <td>80.6</td>
+              <td>292.0</td>
+              <td>1.05e-96</td>
+          </tr>
+    
+          <tr>
+              <td>BAF98617.1</td>
+              <td>putative_DNA_helicase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000651.5">BGC0000651.5</a></td>
+              <td>terpene</td>
+              <td>36.0</td>
+              <td>58.3</td>
+              <td>130.0</td>
+              <td>1.36e-32</td>
+          </tr>
+    
+          <tr>
+              <td>WP_018891761.1</td>
+              <td>SigB/SigF/SigG_family_RNA_polymerase_sigma_factor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001558.5">BGC0001558.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>59.9</td>
+              <td>87.0</td>
+              <td>4.89e-19</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

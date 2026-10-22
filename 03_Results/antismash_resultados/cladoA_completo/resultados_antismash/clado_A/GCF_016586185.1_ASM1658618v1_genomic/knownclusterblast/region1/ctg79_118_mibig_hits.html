@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAP25874.1</td>
+              <td>petrobactin_biosynthesis_protein_AsbB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000942.4">BGC0000942.4</a></td>
+              <td>other:other</td>
+              <td>44.0</td>
+              <td>96.8</td>
+              <td>533.0</td>
+              <td>9.8e-184</td>
+          </tr>
+    
+          <tr>
+              <td>CAM86882.1</td>
+              <td>conserved_hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002471.3">BGC0002471.3</a></td>
+              <td>other:other</td>
+              <td>34.0</td>
+              <td>99.4</td>
+              <td>371.0</td>
+              <td>1.13e-120</td>
+          </tr>
+    
+          <tr>
+              <td>SQF72450.1</td>
+              <td>Siderophore_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000943.5">BGC0000943.5</a></td>
+              <td>other:other</td>
+              <td>35.0</td>
+              <td>95.6</td>
+              <td>339.0</td>
+              <td>1.92e-108</td>
+          </tr>
+    
+          <tr>
+              <td>BAB72348.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002683.2">BGC0002683.2</a></td>
+              <td>NRPS:Type IV</td>
+              <td>33.0</td>
+              <td>89.5</td>
+              <td>272.0</td>
+              <td>5.86e-83</td>
+          </tr>
+    
+          <tr>
+              <td>QHG11730.1</td>
+              <td>putative_ATP-dependent_siderophore_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002620.2">BGC0002620.2</a></td>
+              <td>other:other</td>
+              <td>28.0</td>
+              <td>94.3</td>
+              <td>229.0</td>
+              <td>8.72e-67</td>
+          </tr>
+    
+          <tr>
+              <td>PHM29821.1</td>
+              <td>desferrioxamine_siderophore_biosynthesis_protein_dfoC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001870.3">BGC0001870.3</a></td>
+              <td>other:other</td>
+              <td>29.0</td>
+              <td>86.1</td>
+              <td>212.0</td>
+              <td>3.85e-59</td>
+          </tr>
+    
+          <tr>
+              <td>BAM09328.1</td>
+              <td>putative_acinetoferrin_biosynthesis_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000295.5">BGC0000295.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>74.6</td>
+              <td>193.0</td>
+              <td>1.61e-53</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

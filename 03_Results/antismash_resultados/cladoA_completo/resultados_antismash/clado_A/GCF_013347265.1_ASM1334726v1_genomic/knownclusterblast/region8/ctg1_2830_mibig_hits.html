@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BCK51620.1</td>
+              <td>putative_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002520.2">BGC0002520.2</a></td>
+              <td>PKS</td>
+              <td>52.0</td>
+              <td>102.2</td>
+              <td>178.0</td>
+              <td>4.03e-57</td>
+          </tr>
+    
+          <tr>
+              <td>CBH32815.1</td>
+              <td>putative_NADPH-dependent_FMN_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000263.5">BGC0000263.5</a></td>
+              <td>PKS</td>
+              <td>52.0</td>
+              <td>101.1</td>
+              <td>169.0</td>
+              <td>1.92e-53</td>
+          </tr>
+    
+          <tr>
+              <td>AFJ52703.1</td>
+              <td>reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001073.5">BGC0001073.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>47.0</td>
+              <td>102.2</td>
+              <td>165.0</td>
+              <td>4.04e-52</td>
+          </tr>
+    
+          <tr>
+              <td>CBH32082.1</td>
+              <td>putative_oxidoreductase/NADH-dependent_FMN_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000211.5">BGC0000211.5</a></td>
+              <td>PKS</td>
+              <td>48.0</td>
+              <td>101.1</td>
+              <td>160.0</td>
+              <td>4.11e-50</td>
+          </tr>
+    
+          <tr>
+              <td>ASZ00141.1</td>
+              <td>NADPH-dependent_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001785.5">BGC0001785.5</a></td>
+              <td>PKS</td>
+              <td>47.0</td>
+              <td>101.7</td>
+              <td>157.0</td>
+              <td>4.44e-49</td>
+          </tr>
+    
+          <tr>
+              <td>AAP69587.1</td>
+              <td>putative_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000226.5">BGC0000226.5</a></td>
+              <td>PKS</td>
+              <td>44.0</td>
+              <td>110.0</td>
+              <td>150.0</td>
+              <td>1e-45</td>
+          </tr>
+    
+          <tr>
+              <td>ADI71463.1</td>
+              <td>putative_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000203.3">BGC0000203.3</a></td>
+              <td>PKS</td>
+              <td>46.0</td>
+              <td>105.0</td>
+              <td>145.0</td>
+              <td>6.89e-44</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

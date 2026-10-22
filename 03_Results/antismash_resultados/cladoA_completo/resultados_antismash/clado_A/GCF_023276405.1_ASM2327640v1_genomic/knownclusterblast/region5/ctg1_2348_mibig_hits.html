@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>WP_009188436.1</td>
+              <td>IclR_family_transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000597.4">BGC0000597.4</a></td>
+              <td>ribosomal:RiPP:Proteusin</td>
+              <td>32.0</td>
+              <td>99.6</td>
+              <td>122.0</td>
+              <td>1.64e-33</td>
+          </tr>
+    
+          <tr>
+              <td>NP_626683.1</td>
+              <td>transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000595.3">BGC0000595.3</a></td>
+              <td>ribosomal:unmodified</td>
+              <td>32.0</td>
+              <td>99.6</td>
+              <td>120.0</td>
+              <td>8.94e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ADE22342.1</td>
+              <td>transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000065.5">BGC0000065.5</a></td>
+              <td>PKS:Iterative type I</td>
+              <td>33.0</td>
+              <td>89.1</td>
+              <td>103.0</td>
+              <td>3.85e-26</td>
+          </tr>
+    
+          <tr>
+              <td>BAU98051.1</td>
+              <td>transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001386.5">BGC0001386.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>98.0</td>
+              <td>97.0</td>
+              <td>1.22e-23</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ23047.1</td>
+              <td>transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000291.5">BGC0000291.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>88.7</td>
+              <td>87.0</td>
+              <td>2.74e-20</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>WP_013310331.1</td>
+              <td>alpha-amylase_family_glycosyl_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001728.4">BGC0001728.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>49.0</td>
+              <td>86.7</td>
+              <td>482.0</td>
+              <td>1.74e-165</td>
+          </tr>
+    
+          <tr>
+              <td>EHN79427.1</td>
+              <td>alpha-glucosidase_ScatE1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000804.5">BGC0000804.5</a></td>
+              <td>saccharide</td>
+              <td>30.0</td>
+              <td>89.7</td>
+              <td>179.0</td>
+              <td>3.22e-49</td>
+          </tr>
+    
+          <tr>
+              <td>ABC87503.1</td>
+              <td>alpha-1,_4-glucosidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001011.5">BGC0001011.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>30.0</td>
+              <td>90.2</td>
+              <td>176.0</td>
+              <td>5.62e-48</td>
+          </tr>
+    
+          <tr>
+              <td>RMI87910.1</td>
+              <td>alpha-glucosidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002285.2">BGC0002285.2</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>30.0</td>
+              <td>82.0</td>
+              <td>163.0</td>
+              <td>1.37e-43</td>
+          </tr>
+    
+          <tr>
+              <td>AAW03335.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000982.5">BGC0000982.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>24.0</td>
+              <td>51.3</td>
+              <td>74.0</td>
+              <td>1.9e-13</td>
+          </tr>
+    
+          <tr>
+              <td>WP_013310338.1</td>
+              <td>alpha-amylase_family_glycosyl_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001728.4">BGC0001728.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>24.0</td>
+              <td>50.3</td>
+              <td>67.0</td>
+              <td>2.71e-11</td>
+          </tr>
+    
+          <tr>
+              <td>EHN79425.1</td>
+              <td>alpha-amylase_ScatE2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000804.5">BGC0000804.5</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>31.9</td>
+              <td>62.0</td>
+              <td>9.93e-10</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

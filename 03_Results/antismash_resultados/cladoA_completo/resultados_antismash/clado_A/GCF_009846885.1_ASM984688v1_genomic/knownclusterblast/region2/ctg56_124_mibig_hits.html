@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ACM79821.1</td>
+              <td>ZmaV</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001059.5">BGC0001059.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>54.0</td>
+              <td>99.4</td>
+              <td>352.0</td>
+              <td>1.94e-121</td>
+          </tr>
+    
+          <tr>
+              <td>QMX85608.1</td>
+              <td>SapD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002510.2">BGC0002510.2</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>94.4</td>
+              <td>132.0</td>
+              <td>1.03e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AYJ71718.1</td>
+              <td>ornithine_cyclodeaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001942.3">BGC0001942.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>30.0</td>
+              <td>95.0</td>
+              <td>127.0</td>
+              <td>5.38e-34</td>
+          </tr>
+    
+          <tr>
+              <td>PVC99856.1</td>
+              <td>2,3-diaminopropionate_biosynthesis_protein_SbnB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002100.2">BGC0002100.2</a></td>
+              <td>NRPS:Type I+other:other</td>
+              <td>30.0</td>
+              <td>97.2</td>
+              <td>123.0</td>
+              <td>2.99e-32</td>
+          </tr>
+    
+          <tr>
+              <td>QRG35019.1</td>
+              <td>2,3-diaminopropionate_biosynthesis_protein_SbnB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002378.3">BGC0002378.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>93.8</td>
+              <td>119.0</td>
+              <td>1.13e-30</td>
+          </tr>
+    
+          <tr>
+              <td>AQX14440.1</td>
+              <td>SbnB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001671.3">BGC0001671.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>95.7</td>
+              <td>104.0</td>
+              <td>2.19e-25</td>
+          </tr>
+    
+          <tr>
+              <td>AOZ21314.1</td>
+              <td>SulG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001790.4">BGC0001790.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>96.9</td>
+              <td>101.0</td>
+              <td>2.88e-24</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

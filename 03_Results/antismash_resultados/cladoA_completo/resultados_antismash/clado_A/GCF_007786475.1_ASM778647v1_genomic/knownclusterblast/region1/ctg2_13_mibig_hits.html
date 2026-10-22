@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>SHJ39872.1</td>
+              <td>phenylacetate-CoA_ligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002826.2">BGC0002826.2</a></td>
+              <td>other:other</td>
+              <td>37.0</td>
+              <td>90.2</td>
+              <td>282.0</td>
+              <td>1.71e-90</td>
+          </tr>
+    
+          <tr>
+              <td>ADZ13554.1</td>
+              <td>YtkQ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000466.5">BGC0000466.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>24.0</td>
+              <td>83.9</td>
+              <td>138.0</td>
+              <td>6.42e-36</td>
+          </tr>
+    
+          <tr>
+              <td>BAM73635.1</td>
+              <td>bagremycin_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000889.5">BGC0000889.5</a></td>
+              <td>other:other</td>
+              <td>26.0</td>
+              <td>82.8</td>
+              <td>110.0</td>
+              <td>4.52e-26</td>
+          </tr>
+    
+          <tr>
+              <td>AVI10276.1</td>
+              <td>bagremycin_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001592.5">BGC0001592.5</a></td>
+              <td>other:other</td>
+              <td>26.0</td>
+              <td>81.4</td>
+              <td>107.0</td>
+              <td>3.84e-25</td>
+          </tr>
+    
+          <tr>
+              <td>AXO35182.1</td>
+              <td>phenylacetate-coenzyme_A_ligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001848.4">BGC0001848.4</a></td>
+              <td>other:other</td>
+              <td>26.0</td>
+              <td>77.9</td>
+              <td>100.0</td>
+              <td>1.17e-22</td>
+          </tr>
+    
+          <tr>
+              <td>ADZ13551.1</td>
+              <td>YtkN</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000466.5">BGC0000466.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>25.0</td>
+              <td>77.4</td>
+              <td>100.0</td>
+              <td>1.2e-22</td>
+          </tr>
+    
+          <tr>
+              <td>EWM63054.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000679.5">BGC0000679.5</a></td>
+              <td>terpene</td>
+              <td>26.0</td>
+              <td>77.9</td>
+              <td>100.0</td>
+              <td>1.34e-22</td>
+          </tr>
+    
+          <tr>
+              <td>EYT83440.1</td>
+              <td>coenzyme_F390_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001213.5">BGC0001213.5</a></td>
+              <td>PKS</td>
+              <td>25.0</td>
+              <td>67.6</td>
+              <td>86.0</td>
+              <td>9.01e-18</td>
+          </tr>
+    
+          <tr>
+              <td>ERM18803.1</td>
+              <td>long-chain_fatty_acid--CoA_ligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000172.5">BGC0000172.5</a></td>
+              <td>PKS</td>
+              <td>23.0</td>
+              <td>60.6</td>
+              <td>53.0</td>
+              <td>3.63e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAQ64721.1</td>
+              <td>sugar_ABC_transporter,_permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000087.5">BGC0000087.5</a></td>
+              <td>PKS</td>
+              <td>38.0</td>
+              <td>96.9</td>
+              <td>165.0</td>
+              <td>3.34e-48</td>
+          </tr>
+    
+          <tr>
+              <td>BCB17059.1</td>
+              <td>putative_simple_sugar_ABC_transporter_permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002523.2">BGC0002523.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>98.2</td>
+              <td>152.0</td>
+              <td>3.34e-43</td>
+          </tr>
+    
+          <tr>
+              <td>CAQ64720.1</td>
+              <td>sugar_uptake_ABC_transporter,_permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000087.5">BGC0000087.5</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>86.8</td>
+              <td>140.0</td>
+              <td>5.31e-39</td>
+          </tr>
+    
+          <tr>
+              <td>ATY72531.1</td>
+              <td>ATPase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001574.5">BGC0001574.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>95.1</td>
+              <td>122.0</td>
+              <td>5.56e-32</td>
+          </tr>
+    
+          <tr>
+              <td>CAF60514.1</td>
+              <td>putative_sugar_ABC-transproter_transport_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000704.3">BGC0000704.3</a></td>
+              <td>saccharide</td>
+              <td>39.0</td>
+              <td>47.5</td>
+              <td>115.0</td>
+              <td>5.41e-29</td>
+          </tr>
+    
+          <tr>
+              <td>CAF31569.1</td>
+              <td>putative_sugar_ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000705.3">BGC0000705.3</a></td>
+              <td>saccharide</td>
+              <td>39.0</td>
+              <td>47.5</td>
+              <td>115.0</td>
+              <td>5.41e-29</td>
+          </tr>
+    
+          <tr>
+              <td>QBG82542.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002587.2">BGC0002587.2</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>111.3</td>
+              <td>109.0</td>
+              <td>1.39e-26</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf248</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001200.4">BGC0001200.4</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>48.2</td>
+              <td>84.0</td>
+              <td>1.04e-17</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

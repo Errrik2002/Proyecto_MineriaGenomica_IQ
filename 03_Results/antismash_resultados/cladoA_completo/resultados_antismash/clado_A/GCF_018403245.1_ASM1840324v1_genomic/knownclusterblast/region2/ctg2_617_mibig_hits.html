@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>WKB55590.1</td>
+              <td>LysR_substrate-binding_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002755.2">BGC0002755.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>86.5</td>
+              <td>124.0</td>
+              <td>3.04e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ABU70366.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001890.3">BGC0001890.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>84.5</td>
+              <td>81.0</td>
+              <td>4.52e-17</td>
+          </tr>
+    
+          <tr>
+              <td>ARO49566.1</td>
+              <td>LysR_family_transcription_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001440.5">BGC0001440.5</a></td>
+              <td>other:other</td>
+              <td>35.0</td>
+              <td>48.5</td>
+              <td>78.0</td>
+              <td>3.05e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AVL27076.1</td>
+              <td>LysR_family_transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001485.4">BGC0001485.4</a></td>
+              <td>other:other</td>
+              <td>27.0</td>
+              <td>69.0</td>
+              <td>59.0</td>
+              <td>1.87e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AEW98126.1</td>
+              <td>transcriptional_regulator,_LysR_family</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002642.2">BGC0002642.2</a></td>
+              <td>other:other</td>
+              <td>35.0</td>
+              <td>32.0</td>
+              <td>57.0</td>
+              <td>6.88e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AJQ95673.1</td>
+              <td>transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002046.3">BGC0002046.3</a></td>
+              <td>NRPS:Type I+PKS:Trans-AT type I</td>
+              <td>23.0</td>
+              <td>91.9</td>
+              <td>56.0</td>
+              <td>1.6e-08</td>
+          </tr>
+    
+          <tr>
+              <td>CCM43853.1</td>
+              <td>bacterial_regulatory,_Fis_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001127.5">BGC0001127.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>48.5</td>
+              <td>54.0</td>
+              <td>7.59e-08</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

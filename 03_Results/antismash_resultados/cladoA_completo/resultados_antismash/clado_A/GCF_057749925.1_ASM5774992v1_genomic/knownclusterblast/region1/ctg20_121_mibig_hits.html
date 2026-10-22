@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>QXJ21792.1</td>
+              <td>diaminopimelate_decarboxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002370.2">BGC0002370.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>46.0</td>
+              <td>94.8</td>
+              <td>386.0</td>
+              <td>5.48e-131</td>
+          </tr>
+    
+          <tr>
+              <td>AGG35710.1</td>
+              <td>diaminopimelate_decarboxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000883.5">BGC0000883.5</a></td>
+              <td>other:other</td>
+              <td>45.0</td>
+              <td>95.3</td>
+              <td>368.0</td>
+              <td>2.86e-123</td>
+          </tr>
+    
+          <tr>
+              <td>KKZ73322.1</td>
+              <td>diaminopimelate_decarboxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001778.5">BGC0001778.5</a></td>
+              <td>other:other</td>
+              <td>41.0</td>
+              <td>94.8</td>
+              <td>305.0</td>
+              <td>2.42e-99</td>
+          </tr>
+    
+          <tr>
+              <td>QGA70082.1</td>
+              <td>decarboxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002517.3">BGC0002517.3</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>94.8</td>
+              <td>124.0</td>
+              <td>5.48e-31</td>
+          </tr>
+    
+          <tr>
+              <td>AAN85498.1</td>
+              <td>diaminopimelase_decarboxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001101.5">BGC0001101.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>25.0</td>
+              <td>98.0</td>
+              <td>108.0</td>
+              <td>1.84e-25</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

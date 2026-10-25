@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AFY40275.1</td>
+              <td>IucB_family_siderophore_biosynthesis_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002633.2">BGC0002633.2</a></td>
+              <td>other:other</td>
+              <td>55.0</td>
+              <td>79.0</td>
+              <td>224.0</td>
+              <td>3.29e-74</td>
+          </tr>
+    
+          <tr>
+              <td>BAB72351.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002683.2">BGC0002683.2</a></td>
+              <td>NRPS:Type IV</td>
+              <td>57.0</td>
+              <td>75.5</td>
+              <td>222.0</td>
+              <td>1.09e-73</td>
+          </tr>
+    
+          <tr>
+              <td>ACB01062.1</td>
+              <td>Siderophore_biosynthesis_protein,_IucB_family;_acetyl_transferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002470.2">BGC0002470.2</a></td>
+              <td>other:other</td>
+              <td>53.0</td>
+              <td>78.2</td>
+              <td>209.0</td>
+              <td>2.7e-68</td>
+          </tr>
+    
+          <tr>
+              <td>QHG11729.1</td>
+              <td>putative_acyl_CoA_acyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002620.2">BGC0002620.2</a></td>
+              <td>other:other</td>
+              <td>32.0</td>
+              <td>72.9</td>
+              <td>100.0</td>
+              <td>6.25e-26</td>
+          </tr>
+    
+          <tr>
+              <td>BAX07669.1</td>
+              <td>acetyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001531.5">BGC0001531.5</a></td>
+              <td>other:other</td>
+              <td>29.0</td>
+              <td>73.4</td>
+              <td>99.0</td>
+              <td>1.61e-25</td>
+          </tr>
+    
+          <tr>
+              <td>PHM29821.1</td>
+              <td>desferrioxamine_siderophore_biosynthesis_protein_dfoC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001870.3">BGC0001870.3</a></td>
+              <td>other:other</td>
+              <td>33.0</td>
+              <td>75.5</td>
+              <td>103.0</td>
+              <td>6.1e-25</td>
+          </tr>
+    
+          <tr>
+              <td>TCC25833.1</td>
+              <td>N-acetyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002692.2">BGC0002692.2</a></td>
+              <td>other:other</td>
+              <td>34.0</td>
+              <td>63.8</td>
+              <td>84.0</td>
+              <td>4.62e-20</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

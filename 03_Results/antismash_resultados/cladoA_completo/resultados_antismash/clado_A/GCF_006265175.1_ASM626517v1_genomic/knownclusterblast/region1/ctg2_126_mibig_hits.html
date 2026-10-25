@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>SHJ39796.1</td>
+              <td>phenylacetate-CoA_ligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002826.2">BGC0002826.2</a></td>
+              <td>other:other</td>
+              <td>35.0</td>
+              <td>65.1</td>
+              <td>218.0</td>
+              <td>7.5e-65</td>
+          </tr>
+    
+          <tr>
+              <td>ALE27502.1</td>
+              <td>Phenylacetate-coenzyme_A_ligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001292.5">BGC0001292.5</a></td>
+              <td>other:other</td>
+              <td>35.0</td>
+              <td>67.4</td>
+              <td>205.0</td>
+              <td>1.73e-59</td>
+          </tr>
+    
+          <tr>
+              <td>AXO35182.1</td>
+              <td>phenylacetate-coenzyme_A_ligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001848.4">BGC0001848.4</a></td>
+              <td>other:other</td>
+              <td>34.0</td>
+              <td>67.1</td>
+              <td>202.0</td>
+              <td>3.12e-58</td>
+          </tr>
+    
+          <tr>
+              <td>EWM63054.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000679.5">BGC0000679.5</a></td>
+              <td>terpene</td>
+              <td>34.0</td>
+              <td>67.1</td>
+              <td>199.0</td>
+              <td>1.43e-57</td>
+          </tr>
+    
+          <tr>
+              <td>EYT83440.1</td>
+              <td>coenzyme_F390_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001213.5">BGC0001213.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>66.9</td>
+              <td>184.0</td>
+              <td>1.52e-51</td>
+          </tr>
+    
+          <tr>
+              <td>AVI10276.1</td>
+              <td>bagremycin_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001592.5">BGC0001592.5</a></td>
+              <td>other:other</td>
+              <td>34.0</td>
+              <td>57.6</td>
+              <td>172.0</td>
+              <td>2.13e-47</td>
+          </tr>
+    
+          <tr>
+              <td>BAM73635.1</td>
+              <td>bagremycin_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000889.5">BGC0000889.5</a></td>
+              <td>other:other</td>
+              <td>32.0</td>
+              <td>64.4</td>
+              <td>169.0</td>
+              <td>2.81e-46</td>
+          </tr>
+    
+          <tr>
+              <td>AHH25595.1</td>
+              <td>PKS</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000957.5">BGC0000957.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>32.0</td>
+              <td>27.8</td>
+              <td>55.0</td>
+              <td>3.06e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

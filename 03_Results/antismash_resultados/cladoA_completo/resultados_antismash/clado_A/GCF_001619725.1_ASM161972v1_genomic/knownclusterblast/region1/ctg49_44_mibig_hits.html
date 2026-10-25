@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ARO44669.1</td>
+              <td>NAD(P)-dependent_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001769.5">BGC0001769.5</a></td>
+              <td>PKS</td>
+              <td>40.0</td>
+              <td>100.4</td>
+              <td>179.0</td>
+              <td>1.37e-54</td>
+          </tr>
+    
+          <tr>
+              <td>AXL93232.1</td>
+              <td>NAD(P)-dependent_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001895.4">BGC0001895.4</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>96.5</td>
+              <td>132.0</td>
+              <td>1.27e-36</td>
+          </tr>
+    
+          <tr>
+              <td>CAG44629.1</td>
+              <td>SriL03.12c</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000712.5">BGC0000712.5</a></td>
+              <td>saccharide</td>
+              <td>34.0</td>
+              <td>95.1</td>
+              <td>124.0</td>
+              <td>1.52e-33</td>
+          </tr>
+    
+          <tr>
+              <td>MUL41486.1</td>
+              <td>NAD(P)H-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002045.3">BGC0002045.3</a></td>
+              <td>PKS:Type II</td>
+              <td>27.0</td>
+              <td>86.7</td>
+              <td>72.0</td>
+              <td>1.97e-14</td>
+          </tr>
+    
+          <tr>
+              <td>AQW35075.1</td>
+              <td>NAD(P)-dependent_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001675.5">BGC0001675.5</a></td>
+              <td>PKS</td>
+              <td>25.0</td>
+              <td>98.6</td>
+              <td>70.0</td>
+              <td>1.41e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ABM91452.1</td>
+              <td>conserved_protein_EasG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000348.4">BGC0000348.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>53.3</td>
+              <td>50.0</td>
+              <td>9.56e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

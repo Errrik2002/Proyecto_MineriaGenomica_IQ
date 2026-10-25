@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BCN28637.1</td>
+              <td>acyl-carrier_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002441.2">BGC0002441.2</a></td>
+              <td>PKS+NRPS:Type I</td>
+              <td>39.0</td>
+              <td>83.3</td>
+              <td>50.0</td>
+              <td>1.76e-09</td>
+          </tr>
+    
+          <tr>
+              <td>BCN28633.1</td>
+              <td>acyl-carrier_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002441.2">BGC0002441.2</a></td>
+              <td>PKS+NRPS:Type I</td>
+              <td>37.0</td>
+              <td>83.3</td>
+              <td>49.0</td>
+              <td>4.98e-09</td>
+          </tr>
+    
+          <tr>
+              <td>QRG35016.1</td>
+              <td>acyl_carrier_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002378.3">BGC0002378.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>78.6</td>
+              <td>45.0</td>
+              <td>1.7e-07</td>
+          </tr>
+    
+          <tr>
+              <td>QRG35023.1</td>
+              <td>acyl_carrier_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002378.3">BGC0002378.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>78.6</td>
+              <td>45.0</td>
+              <td>1.7e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AFV52175.1</td>
+              <td>acyl-carrier_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000081.5">BGC0000081.5</a></td>
+              <td>NRPS:Type I+PKS:Iterative type I</td>
+              <td>35.0</td>
+              <td>82.1</td>
+              <td>45.0</td>
+              <td>2.02e-07</td>
+          </tr>
+    
+          <tr>
+              <td>QMX85609.1</td>
+              <td>SapA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002510.2">BGC0002510.2</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>78.6</td>
+              <td>44.0</td>
+              <td>4.8e-07</td>
+          </tr>
+    
+          <tr>
+              <td>QBA57752.1</td>
+              <td>acyl_carrier_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002377.2">BGC0002377.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>37.0</td>
+              <td>73.8</td>
+              <td>44.0</td>
+              <td>5e-07</td>
+          </tr>
+    
+          <tr>
+              <td>QHB92588.1</td>
+              <td>YsfA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002547.2">BGC0002547.2</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>79.8</td>
+              <td>43.0</td>
+              <td>9.77e-07</td>
+          </tr>
+    
+          <tr>
+              <td>WP_054234636.1</td>
+              <td>acyl_carrier_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002014.3">BGC0002014.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>33.0</td>
+              <td>72.6</td>
+              <td>41.0</td>
+              <td>7.57e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

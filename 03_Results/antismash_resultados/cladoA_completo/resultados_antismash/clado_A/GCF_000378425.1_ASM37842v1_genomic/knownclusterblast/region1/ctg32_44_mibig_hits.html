@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ALR96373.1</td>
+              <td>dihydroxy-acid_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001289.5">BGC0001289.5</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>85.0</td>
+              <td>99.8</td>
+              <td>968.0</td>
+              <td>0.0</td>
+          </tr>
+    
+          <tr>
+              <td>XP_001213593.1</td>
+              <td>dihydroxy-acid_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001475.4">BGC0001475.4</a></td>
+              <td>terpene</td>
+              <td>44.0</td>
+              <td>96.4</td>
+              <td>458.0</td>
+              <td>1.5e-155</td>
+          </tr>
+    
+          <tr>
+              <td>ABP53491.1</td>
+              <td>dihydroxyacid_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001041.4">BGC0001041.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>43.0</td>
+              <td>97.7</td>
+              <td>414.0</td>
+              <td>3.42e-138</td>
+          </tr>
+    
+          <tr>
+              <td>CEG06580.1</td>
+              <td>dihydroxy-acid_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001928.2">BGC0001928.2</a></td>
+              <td>other:other</td>
+              <td>41.0</td>
+              <td>98.9</td>
+              <td>412.0</td>
+              <td>9.22e-138</td>
+          </tr>
+    
+          <tr>
+              <td>ABP73652.1</td>
+              <td>SalH</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000145.5">BGC0000145.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>43.0</td>
+              <td>97.7</td>
+              <td>410.0</td>
+              <td>1.08e-136</td>
+          </tr>
+    
+          <tr>
+              <td>QKM21614.1</td>
+              <td>dihydroxy_acid_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002351.3">BGC0002351.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>37.0</td>
+              <td>100.2</td>
+              <td>363.0</td>
+              <td>6.79e-119</td>
+          </tr>
+    
+          <tr>
+              <td>CAD70198.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001047.4">BGC0001047.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>34.0</td>
+              <td>65.4</td>
+              <td>204.0</td>
+              <td>4.95e-60</td>
+          </tr>
+    
+          <tr>
+              <td>pseudo5478_6051</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000087.5">BGC0000087.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>33.9</td>
+              <td>69.0</td>
+              <td>2.86e-13</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

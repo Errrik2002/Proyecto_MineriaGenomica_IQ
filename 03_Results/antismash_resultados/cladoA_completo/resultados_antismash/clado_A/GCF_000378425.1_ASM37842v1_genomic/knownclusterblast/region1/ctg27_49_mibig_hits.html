@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ADZ13554.1</td>
+              <td>YtkQ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000466.5">BGC0000466.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>77.3</td>
+              <td>162.0</td>
+              <td>9.92e-45</td>
+          </tr>
+    
+          <tr>
+              <td>EYT83440.1</td>
+              <td>coenzyme_F390_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001213.5">BGC0001213.5</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>70.6</td>
+              <td>122.0</td>
+              <td>2.24e-30</td>
+          </tr>
+    
+          <tr>
+              <td>AXO35182.1</td>
+              <td>phenylacetate-coenzyme_A_ligase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001848.4">BGC0001848.4</a></td>
+              <td>other:other</td>
+              <td>31.0</td>
+              <td>66.9</td>
+              <td>122.0</td>
+              <td>3.14e-30</td>
+          </tr>
+    
+          <tr>
+              <td>EWM63054.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000679.5">BGC0000679.5</a></td>
+              <td>terpene</td>
+              <td>31.0</td>
+              <td>66.9</td>
+              <td>120.0</td>
+              <td>1.6e-29</td>
+          </tr>
+    
+          <tr>
+              <td>BAM73635.1</td>
+              <td>bagremycin_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000889.5">BGC0000889.5</a></td>
+              <td>other:other</td>
+              <td>30.0</td>
+              <td>72.8</td>
+              <td>119.0</td>
+              <td>4e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AVI10276.1</td>
+              <td>bagremycin_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001592.5">BGC0001592.5</a></td>
+              <td>other:other</td>
+              <td>29.0</td>
+              <td>77.0</td>
+              <td>113.0</td>
+              <td>4.16e-27</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

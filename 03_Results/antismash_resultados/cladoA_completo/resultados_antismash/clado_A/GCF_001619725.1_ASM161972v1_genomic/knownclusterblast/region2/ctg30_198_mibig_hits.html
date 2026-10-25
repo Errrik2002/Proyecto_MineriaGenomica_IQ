@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ATU31799.1</td>
+              <td>branched_chain_amino_acid_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001814.5">BGC0001814.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>44.0</td>
+              <td>93.8</td>
+              <td>291.0</td>
+              <td>1.52e-96</td>
+          </tr>
+    
+          <tr>
+              <td>KUM80509.1</td>
+              <td>branched_chain_amino_acid_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001562.5">BGC0001562.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>44.0</td>
+              <td>93.8</td>
+              <td>285.0</td>
+              <td>4.59e-94</td>
+          </tr>
+    
+          <tr>
+              <td>ANZ15835.1</td>
+              <td>putative_branched-chain-amino-acid_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001569.4">BGC0001569.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>41.0</td>
+              <td>97.2</td>
+              <td>280.0</td>
+              <td>5.54e-92</td>
+          </tr>
+    
+          <tr>
+              <td>AGN74874.1</td>
+              <td>branched-chain_amino_acid_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000459.5">BGC0000459.5</a></td>
+              <td>NRPS:Type I+PKS:Trans-AT type I</td>
+              <td>41.0</td>
+              <td>97.7</td>
+              <td>261.0</td>
+              <td>1.43e-84</td>
+          </tr>
+    
+          <tr>
+              <td>AJV88387.1</td>
+              <td>MfnO</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001214.5">BGC0001214.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>38.0</td>
+              <td>97.7</td>
+              <td>252.0</td>
+              <td>4.06e-81</td>
+          </tr>
+    
+          <tr>
+              <td>QBC75027.1</td>
+              <td>branched-chain_amino_acid_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001968.3">BGC0001968.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>40.0</td>
+              <td>94.9</td>
+              <td>249.0</td>
+              <td>2.51e-80</td>
+          </tr>
+    
+          <tr>
+              <td>CBF73440.1</td>
+              <td>hypothetical_branched-chain_amino-acid_transaminase,_cytosolic_(Eurofung)</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001515.4">BGC0001515.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>104.2</td>
+              <td>229.0</td>
+              <td>5.31e-72</td>
+          </tr>
+    
+          <tr>
+              <td>ABP53513.1</td>
+              <td>branched-chain_amino_acid_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001041.4">BGC0001041.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>28.0</td>
+              <td>92.4</td>
+              <td>84.0</td>
+              <td>6.94e-18</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

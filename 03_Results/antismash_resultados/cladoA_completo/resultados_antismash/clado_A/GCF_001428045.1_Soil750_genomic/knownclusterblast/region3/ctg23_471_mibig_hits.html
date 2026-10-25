@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>WP_014929842.1</td>
+              <td>glycosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001864.3">BGC0001864.3</a></td>
+              <td>ribosomal:RiPP:Glycocin</td>
+              <td>33.0</td>
+              <td>25.0</td>
+              <td>88.0</td>
+              <td>4.15e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AOF43520.1</td>
+              <td>AsmA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002586.2">BGC0002586.2</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>29.0</td>
+              <td>32.1</td>
+              <td>82.0</td>
+              <td>2.45e-16</td>
+          </tr>
+    
+          <tr>
+              <td>BAR87971.1</td>
+              <td>glycosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002674.2">BGC0002674.2</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>27.0</td>
+              <td>31.2</td>
+              <td>72.0</td>
+              <td>4.82e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf3</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000770.4">BGC0000770.4</a></td>
+              <td>saccharide</td>
+              <td>31.0</td>
+              <td>23.2</td>
+              <td>57.0</td>
+              <td>4.21e-08</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

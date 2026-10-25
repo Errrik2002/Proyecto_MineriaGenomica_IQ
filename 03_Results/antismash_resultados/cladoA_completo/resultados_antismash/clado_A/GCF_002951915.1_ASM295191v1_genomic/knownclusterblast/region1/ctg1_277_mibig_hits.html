@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ctg1_orf13</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001457.4">BGC0001457.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>53.0</td>
+              <td>97.4</td>
+              <td>204.0</td>
+              <td>6.17e-67</td>
+          </tr>
+    
+          <tr>
+              <td>AEW95642.1</td>
+              <td>ATP-dependent_Clp_protease_proteolytic_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002697.3">BGC0002697.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>52.0</td>
+              <td>97.4</td>
+              <td>204.0</td>
+              <td>1.16e-66</td>
+          </tr>
+    
+          <tr>
+              <td>AEW95641.1</td>
+              <td>ATP-dependent_Clp_protease_proteolytic_subunit_1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002697.3">BGC0002697.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>56.0</td>
+              <td>90.2</td>
+              <td>197.0</td>
+              <td>3.01e-64</td>
+          </tr>
+    
+          <tr>
+              <td>OKJ62368.1</td>
+              <td>Clp_protease_ClpP</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002147.2">BGC0002147.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>56.0</td>
+              <td>88.6</td>
+              <td>195.0</td>
+              <td>1.96e-63</td>
+          </tr>
+    
+          <tr>
+              <td>OKJ61993.1</td>
+              <td>Clp_protease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002147.2">BGC0002147.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>48.0</td>
+              <td>97.4</td>
+              <td>193.0</td>
+              <td>1.79e-62</td>
+          </tr>
+    
+          <tr>
+              <td>QED88063.1</td>
+              <td>ClpPADEP</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001967.4">BGC0001967.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>53.0</td>
+              <td>92.2</td>
+              <td>185.0</td>
+              <td>1.6e-59</td>
+          </tr>
+    
+          <tr>
+              <td>AAG06714.1</td>
+              <td>probable_Clp-family_ATP-dependent_protease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002037.3">BGC0002037.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>41.0</td>
+              <td>93.3</td>
+              <td>137.0</td>
+              <td>7.42e-41</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ACM79808.1</td>
+              <td>ZmaM</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001059.5">BGC0001059.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>38.0</td>
+              <td>91.4</td>
+              <td>328.0</td>
+              <td>1.09e-101</td>
+          </tr>
+    
+          <tr>
+              <td>AHD05623.1</td>
+              <td>cyclic_peptide_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001033.5">BGC0001033.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>39.0</td>
+              <td>93.2</td>
+              <td>305.0</td>
+              <td>9.64e-93</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ76284.1</td>
+              <td>putative_penicillin_binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000972.5">BGC0000972.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>33.0</td>
+              <td>85.8</td>
+              <td>191.0</td>
+              <td>3.23e-54</td>
+          </tr>
+    
+          <tr>
+              <td>CBJ89765.1</td>
+              <td>Beta-lactamase_class_C_involved_in_xenocoumacin_synthesis</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001054.5">BGC0001054.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>33.0</td>
+              <td>66.9</td>
+              <td>171.0</td>
+              <td>4.35e-47</td>
+          </tr>
+    
+          <tr>
+              <td>AAO23331.1</td>
+              <td>penicillin-binding_protein-like_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000397.5">BGC0000397.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>62.2</td>
+              <td>91.0</td>
+              <td>3.64e-19</td>
+          </tr>
+    
+          <tr>
+              <td>CAQ64696.1</td>
+              <td>serine-type_D-Ala-D-Ala_carboxypeptidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000087.5">BGC0000087.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>48.9</td>
+              <td>65.0</td>
+              <td>3.48e-11</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ57404.1</td>
+              <td>pbp_related_beta-lactamase_precursor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000181.5">BGC0000181.5</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>27.7</td>
+              <td>62.0</td>
+              <td>6.96e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AIJ04688.2</td>
+              <td>putative_beta-lactamase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001383.3">BGC0001383.3</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>27.7</td>
+              <td>60.0</td>
+              <td>2.75e-09</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

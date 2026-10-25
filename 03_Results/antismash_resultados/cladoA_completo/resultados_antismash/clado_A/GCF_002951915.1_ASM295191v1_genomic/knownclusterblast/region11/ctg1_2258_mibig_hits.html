@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ATU31799.1</td>
+              <td>branched_chain_amino_acid_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001814.5">BGC0001814.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>42.0</td>
+              <td>94.7</td>
+              <td>280.0</td>
+              <td>5.22e-92</td>
+          </tr>
+    
+          <tr>
+              <td>KUM80509.1</td>
+              <td>branched_chain_amino_acid_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001562.5">BGC0001562.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>42.0</td>
+              <td>94.7</td>
+              <td>280.0</td>
+              <td>8.62e-92</td>
+          </tr>
+    
+          <tr>
+              <td>ANZ15835.1</td>
+              <td>putative_branched-chain-amino-acid_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001569.4">BGC0001569.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>41.0</td>
+              <td>94.4</td>
+              <td>267.0</td>
+              <td>7.5e-87</td>
+          </tr>
+    
+          <tr>
+              <td>AGN74874.1</td>
+              <td>branched-chain_amino_acid_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000459.5">BGC0000459.5</a></td>
+              <td>NRPS:Type I+PKS:Trans-AT type I</td>
+              <td>37.0</td>
+              <td>100.0</td>
+              <td>250.0</td>
+              <td>3.33e-80</td>
+          </tr>
+    
+          <tr>
+              <td>QBC75027.1</td>
+              <td>branched-chain_amino_acid_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001968.3">BGC0001968.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>40.0</td>
+              <td>94.7</td>
+              <td>248.0</td>
+              <td>1.46e-79</td>
+          </tr>
+    
+          <tr>
+              <td>AJV88387.1</td>
+              <td>MfnO</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001214.5">BGC0001214.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>96.1</td>
+              <td>244.0</td>
+              <td>8.35e-78</td>
+          </tr>
+    
+          <tr>
+              <td>MAA_10039</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000337.4">BGC0000337.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>77.8</td>
+              <td>92.0</td>
+              <td>2.35e-20</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

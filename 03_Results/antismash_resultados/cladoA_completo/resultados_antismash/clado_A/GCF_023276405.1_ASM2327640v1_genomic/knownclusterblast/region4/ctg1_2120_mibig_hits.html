@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>WP_016325496.1</td>
+              <td>methylmalonyl-CoA_mutase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001283.3">BGC0001283.3</a></td>
+              <td>PKS:Type I</td>
+              <td>50.0</td>
+              <td>91.3</td>
+              <td>501.0</td>
+              <td>2.01e-172</td>
+          </tr>
+    
+          <tr>
+              <td>WP_033261449.1</td>
+              <td>methylmalonyl-CoA_mutase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002009.4">BGC0002009.4</a></td>
+              <td>PKS</td>
+              <td>46.0</td>
+              <td>91.7</td>
+              <td>434.0</td>
+              <td>2.78e-146</td>
+          </tr>
+    
+          <tr>
+              <td>UHY14133.1</td>
+              <td>methylmalonyl-CoA_mutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002671.2">BGC0002671.2</a></td>
+              <td>PKS</td>
+              <td>46.0</td>
+              <td>89.6</td>
+              <td>411.0</td>
+              <td>5.37e-135</td>
+          </tr>
+    
+          <tr>
+              <td>WP_019634562.1</td>
+              <td>methylmalonyl-CoA_mutase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001443.5">BGC0001443.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>50.0</td>
+              <td>64.0</td>
+              <td>368.0</td>
+              <td>2.26e-121</td>
+          </tr>
+    
+          <tr>
+              <td>ATJ34001.1</td>
+              <td>methylmalonyl-CoA_mutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001442.5">BGC0001442.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>49.0</td>
+              <td>64.7</td>
+              <td>360.0</td>
+              <td>2.16e-118</td>
+          </tr>
+    
+          <tr>
+              <td>BAE95607.1</td>
+              <td>putative_coenzyme_B12-dependent_mutase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000706.3">BGC0000706.3</a></td>
+              <td>saccharide</td>
+              <td>38.0</td>
+              <td>87.8</td>
+              <td>311.0</td>
+              <td>5.86e-97</td>
+          </tr>
+    
+          <tr>
+              <td>BAB69185.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000117.5">BGC0000117.5</a></td>
+              <td>PKS</td>
+              <td>43.0</td>
+              <td>37.6</td>
+              <td>185.0</td>
+              <td>1.11e-52</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

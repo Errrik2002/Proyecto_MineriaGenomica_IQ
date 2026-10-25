@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>NPC94434.1</td>
+              <td>ABC_transporter_substrate-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002695.2">BGC0002695.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>56.0</td>
+              <td>74.1</td>
+              <td>310.0</td>
+              <td>2.25e-104</td>
+          </tr>
+    
+          <tr>
+              <td>WP_068925918.1</td>
+              <td>iron-siderophore_ABC_transporter_substrate-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002688.2">BGC0002688.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>68.0</td>
+              <td>84.0</td>
+              <td>8.11e-18</td>
+          </tr>
+    
+          <tr>
+              <td>MBE3202940.1</td>
+              <td>iron-siderophore_ABC_transporter_substrate-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002410.3">BGC0002410.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>90.1</td>
+              <td>71.0</td>
+              <td>1.81e-13</td>
+          </tr>
+    
+          <tr>
+              <td>KGA48795.1</td>
+              <td>periplasmic_binding_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002413.3">BGC0002413.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>24.0</td>
+              <td>87.6</td>
+              <td>57.0</td>
+              <td>1.01e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AAR12526.1</td>
+              <td>ferric_anguibactin_transport_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002468.2">BGC0002468.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>56.5</td>
+              <td>52.0</td>
+              <td>5.2e-07</td>
+          </tr>
+    
+          <tr>
+              <td>BAC87902.1</td>
+              <td>probable_ferric_acinetobactin_binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000294.5">BGC0000294.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>25.0</td>
+              <td>60.6</td>
+              <td>48.0</td>
+              <td>6.92e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

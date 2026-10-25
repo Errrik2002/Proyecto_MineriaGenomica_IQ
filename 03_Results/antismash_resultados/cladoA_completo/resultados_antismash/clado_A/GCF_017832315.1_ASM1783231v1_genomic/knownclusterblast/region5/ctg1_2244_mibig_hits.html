@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>QKW93645.1</td>
+              <td>methionine_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002339.3">BGC0002339.3</a></td>
+              <td>terpene</td>
+              <td>56.0</td>
+              <td>100.5</td>
+              <td>1253.0</td>
+              <td>0.0</td>
+          </tr>
+    
+          <tr>
+              <td>BAC76507.1</td>
+              <td>probable_5-methyltetrahydrofolate-homocysteine_S-methyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000085.5">BGC0000085.5</a></td>
+              <td>PKS</td>
+              <td>41.0</td>
+              <td>101.7</td>
+              <td>787.0</td>
+              <td>5.4e-268</td>
+          </tr>
+    
+          <tr>
+              <td>ADE22277.1</td>
+              <td>methionine_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000279.5">BGC0000279.5</a></td>
+              <td>PKS</td>
+              <td>40.0</td>
+              <td>102.9</td>
+              <td>768.0</td>
+              <td>2.06e-260</td>
+          </tr>
+    
+          <tr>
+              <td>ABX71101.1</td>
+              <td>Lct18</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000238.5">BGC0000238.5</a></td>
+              <td>PKS</td>
+              <td>40.0</td>
+              <td>100.8</td>
+              <td>761.0</td>
+              <td>3.82e-258</td>
+          </tr>
+    
+          <tr>
+              <td>ABI22142.1</td>
+              <td>putative_methionine_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000422.5">BGC0000422.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>39.0</td>
+              <td>100.3</td>
+              <td>749.0</td>
+              <td>1.93e-253</td>
+          </tr>
+    
+          <tr>
+              <td>AHL46706.1</td>
+              <td>methionine_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001177.4">BGC0001177.4</a></td>
+              <td>PKS:Type II</td>
+              <td>40.0</td>
+              <td>51.0</td>
+              <td>358.0</td>
+              <td>6.96e-111</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

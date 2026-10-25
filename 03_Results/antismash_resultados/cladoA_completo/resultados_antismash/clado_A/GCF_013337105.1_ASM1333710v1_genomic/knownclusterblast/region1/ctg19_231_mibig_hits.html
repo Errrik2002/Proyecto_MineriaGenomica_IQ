@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAD70198.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001047.4">BGC0001047.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>50.0</td>
+              <td>67.7</td>
+              <td>348.0</td>
+              <td>2.59e-115</td>
+          </tr>
+    
+          <tr>
+              <td>ALR96373.1</td>
+              <td>dihydroxy-acid_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001289.5">BGC0001289.5</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>37.0</td>
+              <td>98.4</td>
+              <td>323.0</td>
+              <td>2.72e-103</td>
+          </tr>
+    
+          <tr>
+              <td>XP_001213593.1</td>
+              <td>dihydroxy-acid_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001475.4">BGC0001475.4</a></td>
+              <td>terpene</td>
+              <td>35.0</td>
+              <td>95.7</td>
+              <td>306.0</td>
+              <td>1.24e-96</td>
+          </tr>
+    
+          <tr>
+              <td>ABP53491.1</td>
+              <td>dihydroxyacid_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001041.4">BGC0001041.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>33.0</td>
+              <td>92.9</td>
+              <td>263.0</td>
+              <td>6.15e-80</td>
+          </tr>
+    
+          <tr>
+              <td>QKM21614.1</td>
+              <td>dihydroxy_acid_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002351.3">BGC0002351.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>99.5</td>
+              <td>259.0</td>
+              <td>7.02e-79</td>
+          </tr>
+    
+          <tr>
+              <td>ABP73652.1</td>
+              <td>SalH</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000145.5">BGC0000145.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>33.0</td>
+              <td>92.9</td>
+              <td>258.0</td>
+              <td>2.48e-78</td>
+          </tr>
+    
+          <tr>
+              <td>CEG06580.1</td>
+              <td>dihydroxy-acid_dehydratase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001928.2">BGC0001928.2</a></td>
+              <td>other:other</td>
+              <td>33.0</td>
+              <td>95.7</td>
+              <td>253.0</td>
+              <td>1.12e-76</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

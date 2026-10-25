@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CBJ89768.1</td>
+              <td>Putative_acyl_carrier_protein_potentially_involved_in_xenocoumacin_synthesis</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001054.5">BGC0001054.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>51.0</td>
+              <td>94.4</td>
+              <td>73.0</td>
+              <td>1.93e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AAD40107.1</td>
+              <td>ZmaD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001059.5">BGC0001059.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>37.0</td>
+              <td>81.1</td>
+              <td>64.0</td>
+              <td>6.23e-15</td>
+          </tr>
+    
+          <tr>
+              <td>WP_030403675.1</td>
+              <td>acyl_carrier_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001537.5">BGC0001537.5</a></td>
+              <td>PKS</td>
+              <td>42.0</td>
+              <td>86.7</td>
+              <td>59.0</td>
+              <td>5.92e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AJY78089.1</td>
+              <td>acyl_carrier_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001902.3">BGC0001902.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>41.0</td>
+              <td>76.7</td>
+              <td>47.0</td>
+              <td>3.15e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ACL77545.1</td>
+              <td>phosphopantetheine-binding</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001891.3">BGC0001891.3</a></td>
+              <td>other:other</td>
+              <td>36.0</td>
+              <td>74.4</td>
+              <td>45.0</td>
+              <td>1.98e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

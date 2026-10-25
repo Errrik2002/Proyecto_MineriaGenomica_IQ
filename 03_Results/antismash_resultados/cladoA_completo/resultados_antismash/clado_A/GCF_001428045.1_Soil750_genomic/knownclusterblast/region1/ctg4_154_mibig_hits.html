@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABV56605.1</td>
+              <td>ornithine_cyclodeaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000378.5">BGC0000378.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>42.0</td>
+              <td>99.7</td>
+              <td>209.0</td>
+              <td>2.39e-65</td>
+          </tr>
+    
+          <tr>
+              <td>QEO74901.1</td>
+              <td>ornithine_cyclodeaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002588.2">BGC0002588.2</a></td>
+              <td>other:other</td>
+              <td>41.0</td>
+              <td>98.5</td>
+              <td>201.0</td>
+              <td>5.06e-62</td>
+          </tr>
+    
+          <tr>
+              <td>ABP53515.1</td>
+              <td>ornithine_cyclodeaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001041.4">BGC0001041.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>37.0</td>
+              <td>100.6</td>
+              <td>183.0</td>
+              <td>2.45e-55</td>
+          </tr>
+    
+          <tr>
+              <td>CBW54665.1</td>
+              <td>ornithine_cyclodeaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000971.5">BGC0000971.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>35.0</td>
+              <td>92.0</td>
+              <td>167.0</td>
+              <td>2.95e-49</td>
+          </tr>
+    
+          <tr>
+              <td>CBL93715.1</td>
+              <td>cyclodeaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000360.5">BGC0000360.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>74.9</td>
+              <td>94.0</td>
+              <td>4.19e-21</td>
+          </tr>
+    
+          <tr>
+              <td>AAF86391.1</td>
+              <td>FkbL</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000994.5">BGC0000994.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>34.0</td>
+              <td>67.8</td>
+              <td>77.0</td>
+              <td>1.1e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AJW65405.1</td>
+              <td>lysine_cyclodeaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001195.3">BGC0001195.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>30.0</td>
+              <td>81.4</td>
+              <td>75.0</td>
+              <td>9.22e-15</td>
+          </tr>
+    
+          <tr>
+              <td>QRN75758.1</td>
+              <td>Pyridoxal-phosphate_dependent_enzyme_family</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002114.3">BGC0002114.3</a></td>
+              <td>NRPS:Type I+PKS:Trans-AT type I</td>
+              <td>25.0</td>
+              <td>84.2</td>
+              <td>59.0</td>
+              <td>1.36e-09</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AJD77033.1</td>
+              <td>putative_membrane_transport_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001435.4">BGC0001435.4</a></td>
+              <td>NRPS:Type I+PKS:Iterative type I</td>
+              <td>36.0</td>
+              <td>42.0</td>
+              <td>55.0</td>
+              <td>3.53e-09</td>
+          </tr>
+    
+          <tr>
+              <td>KDM89834.1</td>
+              <td>ArsR_family_transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002412.2">BGC0002412.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>53.0</td>
+              <td>24.4</td>
+              <td>54.0</td>
+              <td>6.67e-09</td>
+          </tr>
+    
+          <tr>
+              <td>EEP98518.1</td>
+              <td>Transcriptional_regulator,_ArsR_family/rhodanese-like_domain_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002091.3">BGC0002091.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>43.0</td>
+              <td>31.6</td>
+              <td>52.0</td>
+              <td>2.15e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54197.1</td>
+              <td>Pau30</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001731.5">BGC0001731.5</a></td>
+              <td>other:other</td>
+              <td>29.0</td>
+              <td>61.7</td>
+              <td>50.0</td>
+              <td>4.75e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54250.1</td>
+              <td>PauY30</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001732.5">BGC0001732.5</a></td>
+              <td>other:other</td>
+              <td>29.0</td>
+              <td>61.7</td>
+              <td>49.0</td>
+              <td>8.67e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

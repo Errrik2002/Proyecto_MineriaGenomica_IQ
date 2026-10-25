@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABV56605.1</td>
+              <td>ornithine_cyclodeaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000378.5">BGC0000378.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>43.0</td>
+              <td>101.2</td>
+              <td>231.0</td>
+              <td>6.97e-74</td>
+          </tr>
+    
+          <tr>
+              <td>QEO74901.1</td>
+              <td>ornithine_cyclodeaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002588.2">BGC0002588.2</a></td>
+              <td>other:other</td>
+              <td>41.0</td>
+              <td>100.0</td>
+              <td>213.0</td>
+              <td>1.21e-66</td>
+          </tr>
+    
+          <tr>
+              <td>ABP53515.1</td>
+              <td>ornithine_cyclodeaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001041.4">BGC0001041.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>38.0</td>
+              <td>99.7</td>
+              <td>198.0</td>
+              <td>3.89e-61</td>
+          </tr>
+    
+          <tr>
+              <td>CBW54665.1</td>
+              <td>ornithine_cyclodeaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000971.5">BGC0000971.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>34.0</td>
+              <td>99.7</td>
+              <td>179.0</td>
+              <td>1.53e-53</td>
+          </tr>
+    
+          <tr>
+              <td>CBL93715.1</td>
+              <td>cyclodeaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000360.5">BGC0000360.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>86.4</td>
+              <td>99.0</td>
+              <td>3.94e-23</td>
+          </tr>
+    
+          <tr>
+              <td>AWI62625.1</td>
+              <td>lysine_cyclodeaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001822.4">BGC0001822.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>85.5</td>
+              <td>92.0</td>
+              <td>8.87e-21</td>
+          </tr>
+    
+          <tr>
+              <td>SQF72446.1</td>
+              <td>Ornithine_cyclodeaminase_/_Siderophore_staphylobactin_biosynthesis_protein_SbnB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000943.5">BGC0000943.5</a></td>
+              <td>other:other</td>
+              <td>27.0</td>
+              <td>87.7</td>
+              <td>89.0</td>
+              <td>1.32e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AAF86391.1</td>
+              <td>FkbL</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000994.5">BGC0000994.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>34.0</td>
+              <td>67.3</td>
+              <td>87.0</td>
+              <td>6.9e-19</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

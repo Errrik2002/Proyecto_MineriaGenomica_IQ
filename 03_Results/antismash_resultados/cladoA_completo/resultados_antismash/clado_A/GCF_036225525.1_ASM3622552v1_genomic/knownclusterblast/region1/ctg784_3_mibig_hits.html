@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ADB43066.1</td>
+              <td>putative_transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000926.5">BGC0000926.5</a></td>
+              <td>other:other</td>
+              <td>46.0</td>
+              <td>96.4</td>
+              <td>261.0</td>
+              <td>2.29e-86</td>
+          </tr>
+    
+          <tr>
+              <td>WP_018960014.1</td>
+              <td>LysR_substrate-binding_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002010.4">BGC0002010.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>25.0</td>
+              <td>94.7</td>
+              <td>89.0</td>
+              <td>2.91e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AFO93380.1</td>
+              <td>transcriptional_regulator,_LysR_family</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000932.5">BGC0000932.5</a></td>
+              <td>other:other</td>
+              <td>26.0</td>
+              <td>80.9</td>
+              <td>70.0</td>
+              <td>1.93e-13</td>
+          </tr>
+    
+          <tr>
+              <td>WP_105850350.1</td>
+              <td>LysR_substrate-binding_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002336.2">BGC0002336.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>90.8</td>
+              <td>63.0</td>
+              <td>7.4e-11</td>
+          </tr>
+    
+          <tr>
+              <td>QNH85833.1</td>
+              <td>BolA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002327.3">BGC0002327.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>90.8</td>
+              <td>63.0</td>
+              <td>7.76e-11</td>
+          </tr>
+    
+          <tr>
+              <td>CAF33331.1</td>
+              <td>putative_lysR-family_regulatory_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000709.5">BGC0000709.5</a></td>
+              <td>saccharide</td>
+              <td>24.0</td>
+              <td>64.5</td>
+              <td>55.0</td>
+              <td>2.55e-08</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

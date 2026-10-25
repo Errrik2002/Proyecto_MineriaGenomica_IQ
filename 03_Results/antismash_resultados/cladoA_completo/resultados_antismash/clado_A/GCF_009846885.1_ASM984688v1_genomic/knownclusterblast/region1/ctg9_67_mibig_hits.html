@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AGU42433.1</td>
+              <td>Orf25</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000842.5">BGC0000842.5</a></td>
+              <td>other:non-nrp beta-lactam</td>
+              <td>32.0</td>
+              <td>36.6</td>
+              <td>134.0</td>
+              <td>1.33e-31</td>
+          </tr>
+    
+          <tr>
+              <td>QVV57693.1</td>
+              <td>putative_subtilisin-like_protease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002338.3">BGC0002338.3</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>30.3</td>
+              <td>112.0</td>
+              <td>4.47e-25</td>
+          </tr>
+    
+          <tr>
+              <td>WP_143267639.1</td>
+              <td>S8_family_serine_peptidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002011.3">BGC0002011.3</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>26.1</td>
+              <td>97.0</td>
+              <td>4.98e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AAN85481.1</td>
+              <td>subtilisin-like_secreted_protease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001101.5">BGC0001101.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>31.0</td>
+              <td>25.9</td>
+              <td>94.0</td>
+              <td>4.23e-19</td>
+          </tr>
+    
+          <tr>
+              <td>SSTG_01181</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000597.4">BGC0000597.4</a></td>
+              <td>ribosomal:RiPP:Proteusin</td>
+              <td>33.0</td>
+              <td>23.6</td>
+              <td>90.0</td>
+              <td>1.1e-17</td>
+          </tr>
+    
+          <tr>
+              <td>WP_043260784.1</td>
+              <td>S8_family_serine_peptidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000597.4">BGC0000597.4</a></td>
+              <td>ribosomal:RiPP:Proteusin</td>
+              <td>33.0</td>
+              <td>23.6</td>
+              <td>90.0</td>
+              <td>1.11e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AHJ59535.1</td>
+              <td>serine_protease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000502.5">BGC0000502.5</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>31.0</td>
+              <td>20.1</td>
+              <td>74.0</td>
+              <td>2.89e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ACY56714.1</td>
+              <td>ThnP</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000600.3">BGC0000600.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>28.0</td>
+              <td>22.5</td>
+              <td>62.0</td>
+              <td>2e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AAG48569.1</td>
+              <td>MutP</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000531.3">BGC0000531.3</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>26.0</td>
+              <td>23.8</td>
+              <td>56.0</td>
+              <td>1.63e-07</td>
+          </tr>
+    
+          <tr>
+              <td>EMC15127.1</td>
+              <td>peptidase,_S8A_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000530.5">BGC0000530.5</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>25.0</td>
+              <td>22.6</td>
+              <td>56.0</td>
+              <td>2.15e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AAD56147.1</td>
+              <td>MutP</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000533.3">BGC0000533.3</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>26.0</td>
+              <td>22.6</td>
+              <td>55.0</td>
+              <td>2.83e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

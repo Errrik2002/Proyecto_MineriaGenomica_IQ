@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AKQ99288.1</td>
+              <td>aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001484.3">BGC0001484.3</a></td>
+              <td>other:other</td>
+              <td>31.0</td>
+              <td>93.1</td>
+              <td>198.0</td>
+              <td>1.08e-58</td>
+          </tr>
+    
+          <tr>
+              <td>ABC42545.1</td>
+              <td>putative_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000698.5">BGC0000698.5</a></td>
+              <td>saccharide</td>
+              <td>25.0</td>
+              <td>77.0</td>
+              <td>106.0</td>
+              <td>5.15e-25</td>
+          </tr>
+    
+          <tr>
+              <td>KJY85282.1</td>
+              <td>glutamate-1-semialdehyde_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002491.3">BGC0002491.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>23.0</td>
+              <td>74.3</td>
+              <td>95.0</td>
+              <td>5.36e-21</td>
+          </tr>
+    
+          <tr>
+              <td>CAF34038.1</td>
+              <td>glutamate-1-semialdehyde_aminotransferase-like_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000689.3">BGC0000689.3</a></td>
+              <td>saccharide</td>
+              <td>23.0</td>
+              <td>81.0</td>
+              <td>90.0</td>
+              <td>3.1e-19</td>
+          </tr>
+    
+          <tr>
+              <td>ARV75716.1</td>
+              <td>C-6&#39;_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001603.3">BGC0001603.3</a></td>
+              <td>saccharide</td>
+              <td>23.0</td>
+              <td>81.0</td>
+              <td>90.0</td>
+              <td>3.1e-19</td>
+          </tr>
+    
+          <tr>
+              <td>CAF31439.1</td>
+              <td>putative_gentamicin_aminotransferase_III</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000696.5">BGC0000696.5</a></td>
+              <td>saccharide</td>
+              <td>23.0</td>
+              <td>81.0</td>
+              <td>90.0</td>
+              <td>3.71e-19</td>
+          </tr>
+    
+          <tr>
+              <td>BAP34749.1</td>
+              <td>glutamate-1-semialdehyde_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000078.5">BGC0000078.5</a></td>
+              <td>PKS</td>
+              <td>23.0</td>
+              <td>75.5</td>
+              <td>77.0</td>
+              <td>6.24e-15</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AEI40460.1</td>
+              <td>ABC_transporter_permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002488.3">BGC0002488.3</a></td>
+              <td>other:other</td>
+              <td>68.0</td>
+              <td>100.0</td>
+              <td>406.0</td>
+              <td>1.15e-143</td>
+          </tr>
+    
+          <tr>
+              <td>BAB58627.1</td>
+              <td>oligopeptide_transporter_putative_membrane_permease_domain</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002487.3">BGC0002487.3</a></td>
+              <td>other:other</td>
+              <td>51.0</td>
+              <td>91.9</td>
+              <td>273.0</td>
+              <td>2.93e-91</td>
+          </tr>
+    
+          <tr>
+              <td>AVI57416.1</td>
+              <td>AbmF3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001694.4">BGC0001694.4</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>85.9</td>
+              <td>137.0</td>
+              <td>2.99e-38</td>
+          </tr>
+    
+          <tr>
+              <td>AMK48241.1</td>
+              <td>putative_ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001351.3">BGC0001351.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>34.0</td>
+              <td>77.1</td>
+              <td>128.0</td>
+              <td>5.33e-35</td>
+          </tr>
+    
+          <tr>
+              <td>RLV71180.1</td>
+              <td>ABC-transport_protein,_inner_membrane_component</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001846.4">BGC0001846.4</a></td>
+              <td>saccharide:hybrid/tailoring+NRPS:Type I</td>
+              <td>33.0</td>
+              <td>94.9</td>
+              <td>127.0</td>
+              <td>2.62e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AEK75510.1</td>
+              <td>binding-protein_dependent_ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000001.5">BGC0000001.5</a></td>
+              <td>PKS:Type I</td>
+              <td>35.0</td>
+              <td>76.1</td>
+              <td>121.0</td>
+              <td>2.95e-32</td>
+          </tr>
+    
+          <tr>
+              <td>QEV63711.1</td>
+              <td>ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002657.2">BGC0002657.2</a></td>
+              <td>PKS+NRPS:Type I</td>
+              <td>27.0</td>
+              <td>90.9</td>
+              <td>89.0</td>
+              <td>4.2e-20</td>
+          </tr>
+    
+          <tr>
+              <td>FGK60_03830</td>
+              <td>ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002038.2">BGC0002038.2</a></td>
+              <td>PKS</td>
+              <td>37.0</td>
+              <td>21.9</td>
+              <td>51.0</td>
+              <td>7.38e-08</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

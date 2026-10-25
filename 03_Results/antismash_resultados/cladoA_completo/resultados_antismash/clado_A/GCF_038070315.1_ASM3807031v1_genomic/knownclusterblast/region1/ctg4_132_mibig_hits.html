@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>SCN11943.1</td>
+              <td>esterase_LipW</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001580.3">BGC0001580.3</a></td>
+              <td>PKS</td>
+              <td>40.0</td>
+              <td>80.6</td>
+              <td>172.0</td>
+              <td>4.67e-51</td>
+          </tr>
+    
+          <tr>
+              <td>APR73630.1</td>
+              <td>esterase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001625.5">BGC0001625.5</a></td>
+              <td>PKS</td>
+              <td>37.0</td>
+              <td>82.1</td>
+              <td>152.0</td>
+              <td>2.23e-43</td>
+          </tr>
+    
+          <tr>
+              <td>WP_198042327.1</td>
+              <td>alpha/beta_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002536.3">BGC0002536.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>82.1</td>
+              <td>149.0</td>
+              <td>3.66e-42</td>
+          </tr>
+    
+          <tr>
+              <td>WP_035850922.1</td>
+              <td>alpha/beta_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002536.3">BGC0002536.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>78.4</td>
+              <td>145.0</td>
+              <td>9.08e-41</td>
+          </tr>
+    
+          <tr>
+              <td>ADJ63843.1</td>
+              <td>esterase/lipase_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000424.5">BGC0000424.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>34.0</td>
+              <td>66.7</td>
+              <td>98.0</td>
+              <td>3.67e-23</td>
+          </tr>
+    
+          <tr>
+              <td>ACB01058.1</td>
+              <td>esterase/lipase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002470.2">BGC0002470.2</a></td>
+              <td>other:other</td>
+              <td>29.0</td>
+              <td>89.5</td>
+              <td>96.0</td>
+              <td>2.81e-22</td>
+          </tr>
+    
+          <tr>
+              <td>CAQ71836.1</td>
+              <td>putative_ESTERASE/LIPASE_PROTEIN</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001189.5">BGC0001189.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>65.1</td>
+              <td>88.0</td>
+              <td>2.11e-19</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

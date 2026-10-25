@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AXM43072.1</td>
+              <td>bifunctional_protein_FolD_1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001945.3">BGC0001945.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>52.0</td>
+              <td>101.1</td>
+              <td>292.0</td>
+              <td>9.57e-99</td>
+          </tr>
+    
+          <tr>
+              <td>AFM38982.1</td>
+              <td>F1_5,10-methylene-tetrahydrofolate_dehydrogenase/cyclohydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001859.4">BGC0001859.4</a></td>
+              <td>other:phosphonate</td>
+              <td>53.0</td>
+              <td>98.9</td>
+              <td>288.0</td>
+              <td>2.36e-97</td>
+          </tr>
+    
+          <tr>
+              <td>AXM42946.1</td>
+              <td>bifunctional_5,10-methylene-tetrahydrofolate_dehydrogenase/5-10-methylene-tetrahydrofolate_cyclohydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001941.3">BGC0001941.3</a></td>
+              <td>PKS:Type I</td>
+              <td>50.0</td>
+              <td>101.8</td>
+              <td>282.0</td>
+              <td>5.5e-95</td>
+          </tr>
+    
+          <tr>
+              <td>ABU70368.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001890.3">BGC0001890.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>51.0</td>
+              <td>99.3</td>
+              <td>276.0</td>
+              <td>9.85e-93</td>
+          </tr>
+    
+          <tr>
+              <td>ABC87493.1</td>
+              <td>purine_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001011.5">BGC0001011.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>48.0</td>
+              <td>100.7</td>
+              <td>257.0</td>
+              <td>4.86e-85</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

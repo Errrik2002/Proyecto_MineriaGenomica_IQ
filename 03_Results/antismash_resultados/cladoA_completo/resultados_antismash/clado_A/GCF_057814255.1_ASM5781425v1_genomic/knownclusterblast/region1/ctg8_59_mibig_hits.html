@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>QUJ09151.1</td>
+              <td>Lon4</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002440.3">BGC0002440.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>93.1</td>
+              <td>166.0</td>
+              <td>1.13e-45</td>
+          </tr>
+    
+          <tr>
+              <td>PVC99870.1</td>
+              <td>PLP-dependent_aminotransferase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002100.2">BGC0002100.2</a></td>
+              <td>NRPS:Type I+other:other</td>
+              <td>29.0</td>
+              <td>99.4</td>
+              <td>162.0</td>
+              <td>2.37e-44</td>
+          </tr>
+    
+          <tr>
+              <td>ALV86860.1</td>
+              <td>Tlo14</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001406.5">BGC0001406.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>95.4</td>
+              <td>150.0</td>
+              <td>5.05e-40</td>
+          </tr>
+    
+          <tr>
+              <td>AAY93373.1</td>
+              <td>transcriptional_regulator,_GntR_family/aminotransferase,_classes_I_and_II_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000413.5">BGC0000413.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>71.1</td>
+              <td>110.0</td>
+              <td>4.59e-26</td>
+          </tr>
+    
+          <tr>
+              <td>AIE77074.1</td>
+              <td>phenylglycine_amino_transferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000418.5">BGC0000418.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>89.1</td>
+              <td>106.0</td>
+              <td>1.14e-24</td>
+          </tr>
+    
+          <tr>
+              <td>AHD25935.1</td>
+              <td>putative_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000208.5">BGC0000208.5</a></td>
+              <td>PKS</td>
+              <td>24.0</td>
+              <td>89.1</td>
+              <td>98.0</td>
+              <td>9.86e-22</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

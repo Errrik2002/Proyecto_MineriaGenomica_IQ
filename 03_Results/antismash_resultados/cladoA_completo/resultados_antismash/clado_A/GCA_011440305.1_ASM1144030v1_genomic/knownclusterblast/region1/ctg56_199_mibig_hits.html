@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ADY00133.1</td>
+              <td>putative_inosine_monophosphate_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000104.4">BGC0000104.4</a></td>
+              <td>PKS:Type I</td>
+              <td>33.0</td>
+              <td>99.4</td>
+              <td>220.0</td>
+              <td>2.91e-65</td>
+          </tr>
+    
+          <tr>
+              <td>CDM36723.1</td>
+              <td>Probable_inosine-5&#39;-monophosphate_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001360.3">BGC0001360.3</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>101.2</td>
+              <td>220.0</td>
+              <td>3.97e-65</td>
+          </tr>
+    
+          <tr>
+              <td>AJG44383.1</td>
+              <td>MpaF&#39;</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002619.2">BGC0002619.2</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>103.6</td>
+              <td>211.0</td>
+              <td>9.79e-62</td>
+          </tr>
+    
+          <tr>
+              <td>API82662.1</td>
+              <td>putative_inosine_monophosphate_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001677.3">BGC0001677.3</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>92.0</td>
+              <td>182.0</td>
+              <td>1.17e-51</td>
+          </tr>
+    
+          <tr>
+              <td>API82669.1</td>
+              <td>putative_inosine_monophosphate_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002616.2">BGC0002616.2</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>92.0</td>
+              <td>182.0</td>
+              <td>1.17e-51</td>
+          </tr>
+    
+          <tr>
+              <td>SCF06455.1</td>
+              <td>IMP_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002435.3">BGC0002435.3</a></td>
+              <td>other:other</td>
+              <td>28.0</td>
+              <td>90.4</td>
+              <td>132.0</td>
+              <td>2.4e-33</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

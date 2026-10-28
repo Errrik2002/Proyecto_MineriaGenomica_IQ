@@ -7,7 +7,7 @@ library(geneviewer)
 
 
 #Leer los resultados de antismash
-seq_gbk <- read_gbk("03_Results/results_antismash/Gen_BankCP114205.1/CP114205.1.region003.gbk")
+seq_gbk <- read_gbk("03_Results/antismash_resultados/cladoA_completo/resultados_antismash/clado_A/GCA_011440305.1_ASM1144030v1_genomic/JAAOIW010000001.1.region001.gbk")
 seq_gbk
 
 seq_gbk[1]

@@ -17,9 +17,11 @@ conjunto_noactinomicetos_Ycao
 #son 756 secuencias
 summary(width(conjunto_noactinomicetos_Ycao))
 
+?msa()
+
 #Eliminar secuencias repetidas en caso de que tenga
 conjunto_noactinomicetos_Ycao_unicos <- conjunto_noactinomicetos_Ycao[!duplicated(as.character(conjunto_noactinomicetos_Ycao))]
-conjunto_noactinomicetos_Ycao_unicos
+length(conjunto_noactinomicetos_Ycao_unicos)
 #### Si habia repetidas, las secuencias finales son 542 secuencias
 summary(width(conjunto_noactinomicetos_Ycao_unicos))
 saveRDS(conjunto_noactinomicetos_Ycao_unicos,"03_Results/conjunto_noactinomicetos_YcaO/secuencias_unicas_YcaO.rds")
@@ -35,6 +37,17 @@ writeXStringSet(conjunto_noactinomicetos_MSA_compatible, "03_Results/conjunto_no
 conjunto_noactinomicetos_MSA_ajustado <- readAAMultipleAlignment("03_Results/conjunto_noactinomicetos_YcaO/conjunto_MSA_ajustado_clipkit.fasta")
 conjunto_noactinomicetos_MSA_ajustado_compatible <- unmasked(conjunto_noactinomicetos_MSA_ajustado)
 BrowseSeqs(conjunto_noactinomicetos_MSA_ajustado_compatible)
+
+msaConsensusSequence(conjunto_noactinomicetos_MSA_ajustado)
+
+png("04_Plots/alineamiento_conjunto.png", width = 200, height = 100)
+# 2. Create the plot
+ggmsa(conjunto_noactinomicetos_MSA_ajustado, start = 660, end = 720, char_width = 0.5, seq_name = T)+
+  geom_seqlogo()+
+  geom_msaBar()
+# 3. Close the file
+dev.off()
+
 
 #######Funcion para conocer porcentajes de Gaps
 porcentaje_de_gaps <- function(x){

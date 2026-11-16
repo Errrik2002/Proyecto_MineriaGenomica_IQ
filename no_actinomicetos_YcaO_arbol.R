@@ -1,5 +1,6 @@
 # El siguiente analisis sera para la enzima de YcaO de thiocillina, lactocillina y microccocina.
 install.packages("htmltools") 
+install.packages("htmlwidgets")
 
 library(Biostrings)
 library(msa)
@@ -11,6 +12,7 @@ library(DECIPHER)
 library(microseq)
 library(heattree)
 library(htmltools)
+library(htmlwidgets)
 
 conjunto_noactinomicetos_Ycao <- readAAStringSet("01_RawData/conjunto_thiopeptidos_no_actinomicetos/no_actinomicetos_YcaO.txt")
 conjunto_noactinomicetos_Ycao
@@ -122,7 +124,9 @@ View(metadata_claude)
 iqtree_conjunto_noactinomicetos_Ycao_ML <- read.tree("03_Results/conjunto_noactinomicetos_YcaO/conjunto_MSA_ajustado_clipkit.fasta.treefile")
 
 metadata_Query <- readRDS("03_Results/conjunto_noactinomicetos_YcaO/metadata_homologos.rds")
-heat_tree(iqtree_conjunto_noactinomicetos_Ycao_ML, metadata = metadata_Query)
+arbol_html <- heat_tree(iqtree_conjunto_noactinomicetos_Ycao_ML, metadata = metadata_Query)
+saveWidget(arbol_html, "03_Results/arbol_conjunto.html", selfcontained = TRUE)
+
 
 ##### Candidatos #######
 candidato1 <- subset(metadata_Query, metadata_Query$accession == "MBP3040987.1")

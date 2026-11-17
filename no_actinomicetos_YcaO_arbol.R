@@ -4,6 +4,7 @@ install.packages("htmlwidgets")
 
 library(Biostrings)
 library(msa)
+??heattree
 library(seqinr)
 library(ggmsa)
 library(ape)
@@ -42,9 +43,9 @@ BrowseSeqs(conjunto_noactinomicetos_MSA_ajustado_compatible)
 
 msaConsensusSequence(conjunto_noactinomicetos_MSA_ajustado)
 
-png("04_Plots/alineamiento_conjunto.png", width = 200, height = 100)
+png("04_Plots/alineamiento_conjunto.png", width = 40, height = 20)
 # 2. Create the plot
-ggmsa(conjunto_noactinomicetos_MSA_ajustado, start = 660, end = 720, char_width = 0.5, seq_name = T)+
+ggmsa(conjunto_noactinomicetos_MSA_ajustado, start = 670, end = 720, char_width = 0.5, seq_name = T)+
   geom_seqlogo()+
   geom_msaBar()
 # 3. Close the file
